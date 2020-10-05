@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function WarehouseList() {
+export default function InventoryList() {
   return <div></div>;
 }
