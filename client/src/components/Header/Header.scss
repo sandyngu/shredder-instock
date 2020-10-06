@@ -1,1 +1,77 @@
-@import '../../partials/global';
+@import  '../../partials/global';
+// NavLink {
+//     &:hover {
+//         border-bottom: 3px solid white;
+//     }
+// }
+
+.navbar {
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $graphite;
+    // &__logo-container {
+    //     // justify-content: center;
+    // }
+    &__img {
+        width: 40vw;
+        margin-top: 20%;
+        // justify-content: center;
+    }
+    // &__links {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    // }
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // margin: 10vw;
+        padding: 0;
+        
+        // text-align: center;
+
+    }
+    &__warehouses {
+        color: $white;
+        font-size: .88rem;
+        // font-family: $Titillium Web;
+        text-decoration: none;
+        margin-right: 10vw;
+        width: 50%;
+        // &:hover {
+        //     border-bottom: 3px solid white;
+        // }
+    }
+    &__inventory {
+        color: $white;
+        font-size: .88rem;
+        text-decoration: none;
+        margin-left: 10vw;
+        width: 50%;
+    }
+    
+    &__warehouses--active {
+        font-weight: bold;
+        // border: red($color: #000000);
+        // border: 1px solid green;
+        background-color: $instock-black;
+        border-radius: 7px;
+        // &:hover {
+        //     border-bottom: 3px solid white;
+        // }
+        // width: 30vw;
+        // border-bottom: 3px solid $white;
+    }
+    // &__warehouses, a:hover {
+    //     color: red;
+    //   }
+}
+
+// .navbar__warehouses:hover {
+//     border-bottom: 3px solid white;
+// }
