@@ -5,14 +5,26 @@ import Edit from "../../assets/Icons/edit-24px.svg";
 import Right from "../../assets/Icons/chevron_right-24px.svg";
 import Search from "../../assets/Icons/search-24px.svg";
 import "./inventoryList.scss";
+// import axios from "axios";
 
 class InventoryList extends React.Component {
-  // state = {
-  //   inventoryList: [],
-  //   singleItem: [],
-  // };
+  state = {
+    inventoryList: [],
+    singleItem: [],
+  };
 
-  // componentDidMount() {}
+  // componentDidMount() {
+  //   axios
+  //     .get("http://localhost:8080/inventories")
+  //     .then((response) => {
+  //       this.setState({
+  //         inventoryList: response.data,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }
 
   // componentDidUpdate() {}
 
