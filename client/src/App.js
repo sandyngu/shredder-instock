@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WarehousesList from './components/WarehousesList/WarehousesList';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  render() {
   return (
     <BrowserRouter>
       <div className="App">
@@ -13,6 +14,7 @@ function App() {
       </div>
     </BrowserRouter>
   );
+ }
 }
 
 export default App;
