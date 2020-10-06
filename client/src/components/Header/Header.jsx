@@ -16,7 +16,7 @@ const Header = () => {
                 <div className='navbar__links'>
                     <ul className='navbar__list'>
                         <NavLink to='/warehouses' className='navbar__warehouses' activeClassName='navbar__warehouses--active'>Warehouses</NavLink>
-                        <NavLink to='/inventory' className='navbar__inventory' activeClassName='navbar__warehouses--active'>Inventory</NavLink>
+                        <NavLink to='/inventories' className='navbar__inventory' activeClassName='navbar__warehouses--active'>Inventory</NavLink>
                     </ul>
                 </div>
             </div>
