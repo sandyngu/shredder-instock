@@ -22,14 +22,14 @@
     background-image: url(../../assets/Icons/search-24px.svg);
     background-repeat: no-repeat;
     background-position: right;
-    width: 272px;
+    width: 85vw;
     height: 36px;
     border-radius: 20px;
     padding: 0.75rem 1.875rem 0.75rem 1.25rem;
     border: 1px solid #bdc5d5;
   }
   &__button {
-    width: 272px;
+    width: 85vw;
     height: 36px;
     border-radius: 20px;
     margin-top: 16px;
@@ -79,6 +79,7 @@
     font-size: 11px;
     line-height: 16px;
     margin: 16px 0 0 0;
+    font-weight: 600;
   }
   &__category {
     font-size: 13px;
@@ -95,6 +96,7 @@
     font-size: 11px;
     line-height: 16px;
     margin: 0;
+    font-weight: 600;
   }
   &__status {
     font-size: 11px;
@@ -114,6 +116,7 @@
     font-size: 11px;
     line-height: 16px;
     margin: 16px 0 0 0;
+    font-weight: 600;
   }
   &__quantity {
     font-size: 13px;
@@ -130,6 +133,7 @@
     font-size: 11px;
     line-height: 16px;
     margin: 16px 0 0 0;
+    font-weight: 600;
   }
   &__warehouse {
     font-size: 13px;
