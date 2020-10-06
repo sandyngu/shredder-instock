@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import Logo from './assets/Logo/InStock-Logo_2x.png';
 
+import './Header.scss';
+
 class Navbar extends Component {
     render () {
         return (
