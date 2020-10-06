@@ -1,0 +1,153 @@
+@import "../../partials/_global.scss";
+
+.inventoryList {
+  margin: 24px;
+  font-family: "Titillium Web";
+  &__title-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__title {
+    color: #13182c;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__search {
+    background-image: url(../../assets/Icons/search-24px.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 272px;
+    height: 36px;
+    border-radius: 20px;
+    padding: 0.75rem 1.875rem 0.75rem 1.25rem;
+    border: 1px solid #bdc5d5;
+  }
+  &__button {
+    width: 272px;
+    height: 36px;
+    border-radius: 20px;
+    margin-top: 16px;
+    background-color: $instock-indigo;
+    border: none;
+    color: #ffffff;
+  }
+  &__parent-section {
+    display: flex;
+  }
+  &__section-left {
+    width: 148px;
+  }
+  &__section-right {
+    width: 148px;
+  }
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__item-heading {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  &__item {
+    display: flex;
+    width: 55px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    color: $instock-indigo;
+  }
+  &__category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__category-heading {
+    width: 51px;
+    height: 16px;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+  }
+  &__category {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 0 75px 0;
+    color: #13182c;
+  }
+  &__status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__status-heading {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+  }
+  &__status {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    color: $green;
+    background-color: #e1e1e1;
+    border-radius: 28px;
+    width: 65px;
+  }
+  &__quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__quantity-heading {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+  }
+  &__quantity {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    color: #13182c;
+  }
+  &__warehouse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__warehouse-heading {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+  }
+  &__warehouse {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    color: #13182c;
+  }
+  &__action-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__action-heading {
+    display: none;
+  }
+  &__sort-icon {
+    display: none;
+  }
+  &__heading-color {
+    color: $slate;
+  }
+}
