@@ -1,30 +1,41 @@
 const express = require('express');
 const { route } = require('./warehouses_routes');
 const router = express.Router();
+const warehouses = require("../warehouses.json");
+const bodyParser = require("body-parser");
+const cors = require('cors');
 
-// Get inventory objects
+router.use(cors());
+router.use(bodyParser.json());
 
-router.get('/warehouses', (req, res) => {
-    res.send('warehouse object');
+// Get warehouse objects
+
+router.get('/', (_req, res) => {
+    res.send(warehouses);
 })
 
-// Create inventory objects 
+// Get single warehouse object by id
 
-router.post('/warehouses', (req, res) => {
+router.get('/:id', (_req, res) => {
+    res.send(warehouses);
+})
+
+// Create warehouse object 
+
+router.post('/', (req, res) => {
     res.json('warehouse object');
 })
 
-// Edit inventory objects
+// Edit warehouse objects
 
-router.edit('/warehouses', (req, res) => {
+router.put('/', (req, res) => {
     res.json('warehouses object');
 })
 
 // Delete inventory objects
 
-router.delete('/warehouses', (req, res) => {
+router.delete('/', (req, res) => {
     res.json('warehouses object');
-
 })
 
 module.exports = router
