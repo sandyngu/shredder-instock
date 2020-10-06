@@ -20,7 +20,7 @@ button {
         @include tablet {
             align-items: center;
             justify-content: space-between;
-            margin: 7px 5%;
+            margin: 15px 4%;
         }
 
         &-title {
@@ -29,7 +29,7 @@ button {
             margin: 25px 0 12px 0;
 
             @include tablet {
-                margin: 20px 0 0 0;
+                margin: 10px 0 0 0;
             }
         }
         &-container {
@@ -38,7 +38,9 @@ button {
             @include tablet { 
                 width: 52%;
             }
-
+            @include desktop {
+                width: 42%;
+            }
         }
         &-form {
 
@@ -73,6 +75,10 @@ button {
 
                 @include tablet {
                     height: 38px;
+                    max-width: 200px;
+                }
+                @include desktop {
+                    width: 55%;
                 }
             }
         }
@@ -107,6 +113,7 @@ button {
 
         &-actions {
             width: 50px;
+            padding-left: 10px;
         }
     }
 }

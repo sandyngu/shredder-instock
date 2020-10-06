@@ -18,6 +18,9 @@ a {
     @include tablet {
         display: flex;
         justify-content: space-around;
+        border-bottom: 1px solid $cloud;
+        border-top: none;
+        margin-top: 5px;
     }
 
     &__container {
@@ -39,6 +42,10 @@ a {
     &-info {
         height: 57px;
         width: 120px;
+
+        @include desktop {
+            width: 230px;
+        }
         
         &-heading {
             margin: 3px auto;
@@ -77,5 +84,8 @@ a {
                  display: none;
              }
         }
+    }
+    &__icon-edit {
+        padding-left: 10px;
     }
 }

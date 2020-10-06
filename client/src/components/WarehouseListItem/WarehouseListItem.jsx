@@ -16,7 +16,7 @@ function WarehouseListItem() {
                             <Link to='/'>
                                 <p className="warehouse-list__city">Manhattan</p>
                             </Link>
-                                <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow"/>
+                            <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />
                         </div>
                     </div>
                     <div className="warehouse-list-info">
@@ -32,16 +32,16 @@ function WarehouseListItem() {
                             <h4 className="warehouse-list-info-heading">CONTACT INFORMATION</h4>
                             <p className="warehouse-list__contact-info-phone">+ 1 (629) 555-0129</p>
                             <p className="warehouse-list__contact-info-email">paujila@instock.com</p>
-                        </div>      
+                        </div>
                     </div>
-                <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
-                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete"/>
-                    <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit"/>
-                </div>
+                    <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
+                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
+                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                    </div>
                 </div>
                 <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile">
-                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete"/>
-                    <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit"/>
+                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
+                    <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                 </div>
             </div>
         </>
