@@ -17,15 +17,36 @@ button {
         flex-wrap: wrap;
         margin: 7px 6.5%;
 
+        @include tablet {
+            align-items: center;
+            justify-content: space-between;
+            margin: 7px 5%;
+        }
+
         &-title {
             font-weight: 600;
             color: $instock-black;
-            margin: 20px 0 15px 0;
+            margin: 25px 0 15px 0;
+
+            @include tablet {
+                margin: 20px 0 0 0;
+            }
         }
         &-container {
             width: 100%;
+
+            @include tablet { 
+                width: 52%;
+            }
+
         }
         &-form {
+
+            @include tablet {
+                display: flex;
+                height: 38px;
+                margin-top: 10px;
+            }
             
             &-search {
                 background-image: url('../../assets/icons/search-24px.svg');
@@ -36,6 +57,10 @@ button {
                 padding: 8px 15px;
                 width: stretch;
                 margin-bottom: 18px;
+
+                @include tablet {
+                    margin: 0 15px 0 0;
+                }
             }
             &-button {
                 background-color: $instock-indigo;
@@ -45,6 +70,10 @@ button {
                 border: none;
                 padding: 10px;
                 margin-bottom: 8px;
+
+                @include tablet {
+                    height: 38px;
+                }
             }
         }
     }
