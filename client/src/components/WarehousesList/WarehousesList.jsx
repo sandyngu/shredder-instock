@@ -15,25 +15,27 @@ function WarehousesList() {
                     </form>
                 </div>
             </div>
-            <div className="warehouses__headings">
-                <div className="warehouses__title warehouses__title-warehouse">
-                    <h4 className="warehouses__headings-warehouse">WAREHOUSE</h4>
-                    <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
-                </div>
-                <div className="warehouses__title warehouses__title-address">
-                    <h4 className="warehouses__headings-warehouse">ADDRESS</h4>
-                    <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
-                </div>
-                <div className="warehouses__title warehouses__title-contact-name">
-                    <h4 className="warehouses__headings-warehouse">CONTACT NAME</h4>
-                    <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
-                </div>
-                <div className="warehouses__title warehouses__title-contact-info">
-                    <h4 className="warehouses__headings-warehouse">CONTACT INFORMATION</h4>
-                    <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
-                </div>
-                <div className="warehouses__title warehouses__title-actions">
-                    <h4 className="warehouses__headings-warehouse">ACTIONS</h4>
+            <div className="warehouses__headings-container">
+                <div className="warehouses__headings">
+                    <div className="warehouses__title warehouses__title-warehouse">
+                        <h4 className="warehouses__heading warehouses__headings-warehouse">WAREHOUSE</h4>
+                        <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
+                    </div>
+                    <div className="warehouses__title warehouses__title-address">
+                        <h4 className="warehouses__heading warehouses__headings-warehouse">ADDRESS</h4>
+                        <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
+                    </div>
+                    <div className="warehouses__title warehouses__title-contact-name">
+                        <h4 className="warehouses__heading warehouses__headings-warehouse">CONTACT NAME</h4>
+                        <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
+                    </div>
+                    <div className="warehouses__title warehouses__title-contact-info">
+                        <h4 className="warehouses__heading warehouses__headings-warehouse">CONTACT INFORMATION</h4>
+                        <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
+                    </div>
+                    <div className="warehouses__title warehouses__title-actions">
+                        <h4 className="warehouses__heading warehouses__headings-warehouse">ACTIONS</h4>
+                    </div>
                 </div>
             </div>
             <WarehouseListItem />

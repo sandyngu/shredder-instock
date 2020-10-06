@@ -34,8 +34,12 @@ function WarehouseListItem() {
                             <p className="warehouse-list__contact-info-email">paujila@instock.com</p>
                         </div>      
                     </div>
+                <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
+                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete"/>
+                    <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit"/>
                 </div>
-                <div className="warehouse-list__icon-container">
+                </div>
+                <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile">
                     <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete"/>
                     <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit"/>
                 </div>
