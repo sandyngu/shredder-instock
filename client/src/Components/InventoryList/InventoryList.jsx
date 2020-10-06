@@ -1,5 +1,6 @@
 import React from "react";
 
 export default function InventoryList() {
-  return <div></div>;
+  return;
+  <div></div>;
 }
