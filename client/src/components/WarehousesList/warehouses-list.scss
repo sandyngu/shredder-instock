@@ -80,5 +80,18 @@ button {
     &__headings {
         background-color: $light-grey; 
         display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+
+            &-icon {
+                width: 17px;
+            }
+        }
+    }
+    &__title {
+        display: flex;
+        margin: 0;
     }
 }

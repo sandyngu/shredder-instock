@@ -17,23 +17,23 @@ function WarehousesList() {
             </div>
             <div className="warehouses__headings">
                 <div className="warehouses__title warehouses__title-warehouse">
-                    <p className="warehouses__headings-warehouse">WAREHOUSE</p>
+                    <h4 className="warehouses__headings-warehouse">WAREHOUSE</h4>
                     <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
                 </div>
                 <div className="warehouses__title warehouses__title-address">
-                    <p className="warehouses__headings-warehouse">ADDRESS</p>
+                    <h4 className="warehouses__headings-warehouse">ADDRESS</h4>
                     <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
                 </div>
                 <div className="warehouses__title warehouses__title-contact-name">
-                    <p className="warehouses__headings-warehouse">CONTACT NAME</p>
+                    <h4 className="warehouses__headings-warehouse">CONTACT NAME</h4>
                     <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
                 </div>
                 <div className="warehouses__title warehouses__title-contact-info">
-                    <p className="warehouses__headings-warehouse">CONTACT INFORMATION</p>
+                    <h4 className="warehouses__headings-warehouse">CONTACT INFORMATION</h4>
                     <img src={Arrows} alt="Arrows" className="warehouses__headings-icon"/>
                 </div>
                 <div className="warehouses__title warehouses__title-actions">
-                    <p className="warehouses__headings-warehouse">ACTIONS</p>
+                    <h4 className="warehouses__headings-warehouse">ACTIONS</h4>
                 </div>
             </div>
             <WarehouseListItem />
