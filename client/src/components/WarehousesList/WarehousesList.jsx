@@ -1,6 +1,7 @@
 import React from 'react'
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
+import './warehouses-list.scss';
 
 function WarehousesList() {
     return (
@@ -10,7 +11,7 @@ function WarehousesList() {
                 <div className="warehouses__header-container">
                     <form className="warehouses__header-form">
                         <input type="text" name="search" className="warehouses__header-form-search" placeholder="Search..."/>
-                        <button className="warehosues__header-form-button">+ Add New Warehouse</button>
+                        <button className="warehouses__header-form-button">+ Add New Warehouse</button>
                     </form>
                 </div>
             </div>
