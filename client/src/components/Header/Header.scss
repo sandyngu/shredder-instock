@@ -12,6 +12,9 @@
     flex-direction: column;
     align-items: center;
     background-color: $graphite;
+    @include tablet {
+        height: 40vw;
+    }
     // &__logo-container {
     //     // justify-content: center;
     // }
