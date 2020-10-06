@@ -22,12 +22,15 @@ button {
             color: $instock-black;
             margin: 20px 0 15px 0;
         }
+        &-container {
+            width: 100%;
+        }
         &-form {
             
             &-search {
                 background-image: url('../../assets/icons/search-24px.svg');
                 background-repeat: no-repeat;
-                background-position: 235px;
+                background-position: 96%;
                 border-radius: 20px;
                 border: 1px solid $cloud;
                 padding: 8px 15px;
