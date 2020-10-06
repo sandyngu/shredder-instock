@@ -5,6 +5,11 @@ import './warehouses-list.scss';
 import Header from '../Header/Header'
 
 class WarehousesList extends React.Component {
+
+    state = {
+        
+    }
+
     render() {
         return (
             <div className="warehouses">
