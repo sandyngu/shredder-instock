@@ -46,12 +46,12 @@ h4 {
     }
 }
 p { 
-    font-size: $p3-mobile-fontsize;
+    font-size: $p2-mobile-fontsize;
     
     @include tablet {
-        font-size: $p3-desktab-fontsize;
+        font-size: $p2-desktab-fontsize;
     }
     @include desktop {
-        font-size: $p3-desktab-fontsize;
+        font-size: $p2-desktab-fontsize;
     }
 }    
