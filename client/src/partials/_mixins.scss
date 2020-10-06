@@ -1,5 +1,10 @@
 @import 'variables';
 
+body {
+    font-family: 'Titillium Web';
+    margin: 0 auto;
+}
+
 h1 {
     font-size: $h1-mobile-fontsize;
 
