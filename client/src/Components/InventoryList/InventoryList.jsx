@@ -5,7 +5,7 @@ import Edit from "../../assets/Icons/edit-24px.svg";
 import Right from "../../assets/Icons/chevron_right-24px.svg";
 import Search from "../../assets/Icons/search-24px.svg";
 import "./inventoryList.scss";
-// import axios from "axios";
+import axios from "axios";
 
 class InventoryList extends React.Component {
   state = {
@@ -13,22 +13,25 @@ class InventoryList extends React.Component {
     singleItem: [],
   };
 
-  // componentDidMount() {
-  //   axios
-  //     .get("http://localhost:8080/inventories")
-  //     .then((response) => {
-  //       this.setState({
-  //         inventoryList: response.data,
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
+  componentDidMount() {
+    axios
+      .get("http://localhost:8080/inventories")
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          inventoryList: response.data,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(this.state.inventoryList);
+  }
 
   // componentDidUpdate() {}
 
   render() {
+    // if (this.state.inventoryList.hasOwnProperty("id")) {
     return (
       <>
         <div className="inventoryList">
@@ -69,7 +72,7 @@ class InventoryList extends React.Component {
                 </p>
 
                 <p className="inventoryList__item">
-                  Television
+                  {this.state.itemName}
                   <img
                     className="inventoryList__chevron-right-icon"
                     src={Right}
@@ -86,7 +89,7 @@ class InventoryList extends React.Component {
                     alt="Sort Icon"
                   ></img>
                 </p>
-                <p className="inventoryList__category">Electronics</p>
+                <p className="inventoryList__category">{this.state.category}</p>
               </div>
             </section>
 
@@ -100,7 +103,7 @@ class InventoryList extends React.Component {
                     alt="Sort Icon"
                   ></img>
                 </p>
-                <p className="inventoryList__status">IN STOCK</p>
+                <p className="inventoryList__status">{this.state.status}</p>
               </div>
               <div className="inventoryList__quantity-container">
                 <p className="inventoryList__quantity-heading inventoryList__heading-color">
@@ -111,7 +114,7 @@ class InventoryList extends React.Component {
                     alt="Sort Icon"
                   ></img>
                 </p>
-                <p className="inventoryList__quantity">500</p>
+                <p className="inventoryList__quantity">{this.state.quantity}</p>
               </div>
               <div className="inventoryList__warehouse-container">
                 <p className="inventoryList__warehouse-heading inventoryList__heading-color">
@@ -122,7 +125,9 @@ class InventoryList extends React.Component {
                     alt="Sort Icon"
                   ></img>
                 </p>
-                <p className="inventoryList__warehouse">Manhattan</p>
+                <p className="inventoryList__warehouse">
+                  {this.state.warehouseName}
+                </p>
               </div>
             </section>
           </section>
@@ -147,6 +152,9 @@ class InventoryList extends React.Component {
         <hr className="inventoryList__list-divider" />
       </>
     );
+    //   } else {
+    //     return <div>LOADING...</div>;
+    //   }
   }
 }
 export default InventoryList;
