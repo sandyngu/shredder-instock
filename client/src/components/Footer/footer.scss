@@ -1,0 +1,21 @@
+@import '../../partials/global';
+
+.footer__text {
+    font-size: $p3-mobile-fontsize;
+    background-color: $light-grey;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: center;
+    color: $instock-black;
+    padding: 37px;
+    width: stretch;
+    position: absolute;
+    bottom: -1182px;
+
+    @include tablet {
+        bottom: -325px;
+    }
+    @include desktop {
+        bottom: -205px;
+    }
+}

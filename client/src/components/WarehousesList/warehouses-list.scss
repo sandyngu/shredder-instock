@@ -18,11 +18,11 @@ button {
     margin: 0 17px 100px 17px;
 
     @include tablet {
-        margin: 0 4%;
+        margin: 0 4% 100px 4%;
         top: 95px;
     }
     @include desktop {
-        margin: 0 10%;
+        margin: 0 10% 150px 10%;
     }
 
     &__divider {    
