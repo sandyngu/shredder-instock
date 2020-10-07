@@ -68,9 +68,9 @@ const EditWarehouse = () => {
                             <button className="edit-warehouse__button-save">Save</button>
                         </div>
                     </form>
-                    <footer>
+                    {/* <footer className="edit-warehouse__footer">
                         <p>THIS IS A FOOOTER</p>
-                    </footer>
+                    </footer> */}
             </div>
 
         )

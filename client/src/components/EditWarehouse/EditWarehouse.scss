@@ -2,9 +2,10 @@
 
 .edit-warehouse {
     width: auto;
-    height: 900px;
-    margin-left: 16px;
-    margin-right: 16px;
+    height: 923.5px;
+    // margin-left: 16px;
+    // margin-right: 16px;
+    margin-bottom: 20px;
     padding-bottom: 10%;
     // border: 2px solid black;
     background: $white;
@@ -12,8 +13,8 @@
     border-radius: 3px;
 
     position: absolute;
-    left: 2.27%;
-    right: 2.27%;
+    left: 4.5%;
+    right: 4.5%;
     top: 15%;
     // bottom: 90.32%;
     // display: flex;
@@ -37,6 +38,9 @@
     &__title {
         margin-top: 32px;
     }
+    // &__form {
+    //     margin-bottom: 30px;
+    // }
     &__warehouse-title {
         margin-left: 23px;
         margin-bottom: 24px;
@@ -239,16 +243,23 @@
         border-radius: 20px;
     }
     &__button-container {
-        margin-left: 23px;
-        margin-right: 23px; 
+        height: 68px;
+        // padding-top: 20px;
+        // width: 100%;
+        // margin-left: 23px;
+        // margin-right: 23px; 
+        // margin-bottom: 30px;
         display: flex;
         justify-content: space-between;
+        background-color: $light-grey;
     }
     &__button-cancel {
         height: 36px;
-        width: 46%;
+        width: 41%;
         box-sizing: border-box;
-        margin: 0;
+        // margin: 0;
+        margin-top: 16px;
+        margin-left: 23px;
         border-radius: 20px;
         background: $white;
         border: 1px solid #BDC5D5;
@@ -257,9 +268,11 @@
     }
     &__button-save {
         height: 36px;
-        width: 46%;
+        width: 41%;
         box-sizing: border-box;
-        margin: 0;
+        // margin: 0;
+        margin-top: 16px;
+        margin-right: 23px;
         border-radius: 20px;
         background: $instock-indigo;
         border: none;
@@ -269,6 +282,9 @@
         font-size: $h3-mobile-fontsize;
         // padding-top: 8px;
     }
+    // &__footer {
+        
+    // }
 
 }
 
