@@ -29,6 +29,7 @@ a {
         flex-direction: column;
         height: 120px;
         margin: 15px 6.5%;
+        align-items: center;
 
         @include tablet {
             flex-direction: row;
@@ -52,7 +53,7 @@ a {
         }
         
         &-heading {
-            margin: 2px auto 5px auto;
+            margin: 3px auto 5px auto;
 
             @include tablet {
                 display: none;
@@ -85,7 +86,7 @@ a {
         display: flex;
         justify-content: space-between;
         margin: 7px 6.5%;
-        padding-bottom: 17px;
+        padding-bottom: 7px;
 
         @include tablet {
             margin: 0;

@@ -5,33 +5,35 @@ import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
 
-function WarehouseListItem() {
+function WarehouseListItem(props) {
+
     return (
         <>
-            <div className="warehouse-list">
+            {props.warehousesList.map(warehouse =>
+            <div className="warehouse-list" key={warehouse.id}>
                 <div className="warehouse-list__container">
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
                             <Link to='/'>
-                                <p className="warehouse-list__city">Manhattan</p>
+                                <p className="warehouse-list__city">{warehouse.name}</p>
                             </Link>
                             <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />
                         </div>
                     </div>
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">ADDRESS</h4>
-                        <p className="warehouse-list__address">503 Broadway, New York, USA</p>
+                        <p className="warehouse-list__address">{warehouse.address}, {warehouse.city}, {warehouse.country}</p>
                     </div>
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">CONTACT NAME</h4>
-                        <p className="warehouse-list__contact-name">Parmin Aujila</p>
+                        <p className="warehouse-list__contact-name">{warehouse.contact.name}</p>
                     </div>
                     <div className="warehouse-list__contact-info">
                         <div className="warehouse-list-info">
                             <h4 className="warehouse-list-info-heading">CONTACT INFORMATION</h4>
-                            <p className="warehouse-list__contact-info-phone">+ 1 (629) 555-0129</p>
-                            <p className="warehouse-list__contact-info-email">paujila@instock.com</p>
+                            <p className="warehouse-list__contact-info-phone">{warehouse.contact.phone}</p>
+                            <p className="warehouse-list__contact-info-email">{warehouse.contact.email}</p>
                         </div>
                     </div>
                     <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
@@ -44,6 +46,7 @@ function WarehouseListItem() {
                     <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                 </div>
             </div>
+            )}
         </>
     )
 };
