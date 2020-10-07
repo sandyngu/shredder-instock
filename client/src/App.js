@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WarehousesList from './components/WarehousesList/WarehousesList';
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class App extends React.Component {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route path='/' exact component={WarehousesList}/>
+          <Route path='/warehouses' exact component={WarehousesList}/>
         </Switch>
       </div>
     </BrowserRouter>

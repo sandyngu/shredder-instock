@@ -52,7 +52,7 @@ button {
                 width: 57%;
             }
             @include desktop {
-                width: 42%;
+                width: 37%;
             }
         }
         &-form {
@@ -89,10 +89,10 @@ button {
 
                 @include tablet {
                     height: 38px;
-                    width: 300px;
+                    width: 165px;
                 }
                 @include desktop {
-                    width: 250px;
+                    width: 170px;
                 }
             }
         }

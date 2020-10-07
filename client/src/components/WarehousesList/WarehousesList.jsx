@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import Header from '../Header/Header';
-import Footer from '../../assets/logo/InStock-Logo_1x.png'
 import './warehouses-list.scss';
 
 class WarehousesList extends React.Component {
@@ -15,7 +15,6 @@ class WarehousesList extends React.Component {
     componentDidMount() {
         axios.get('http://localhost:8080/warehouses')
             .then(res => {
-                console.log(res.data);
             this.setState({
                 warehousesList: res.data
             });
@@ -33,7 +32,9 @@ class WarehousesList extends React.Component {
                     <div className="warehouses__header-container">
                         <form className="warehouses__header-form">
                             <input type="text" name="search" className="warehouses__header-form-search" placeholder="Search..." />
-                            <button className="warehouses__header-form-button">+ Add New Warehouse</button>
+                            <Link to="/warehouses/add-warehouse">
+                                <button className="warehouses__header-form-button">+ Add New Warehouse</button>
+                            </Link>
                         </form>
                     </div>
                 </div>
@@ -62,7 +63,6 @@ class WarehousesList extends React.Component {
                 </div>
                 <WarehouseListItem warehousesList={this.state.warehousesList}/>
             </div>
-            <p3 className="warehouses__footer-text">© InStock Inc. All Rights Reserved.</p3>
             </>
         );
     };

@@ -15,7 +15,7 @@ function WarehouseListItem(props) {
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
-                            <Link to='/'>
+                            <Link to={`/warehouses/${warehouse.id}`}>
                                 <p className="warehouse-list__city">{warehouse.name}</p>
                             </Link>
                             <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />
@@ -37,13 +37,21 @@ function WarehouseListItem(props) {
                         </div>
                     </div>
                     <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
-                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
-                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                        <Link to='/warehouses/delete-warehouse'>
+                            <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
+                        </Link>
+                        <Link to='/warehouses/edit-warehouse'>
+                            <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                        </Link>
                     </div>
                 </div>
                 <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile">
-                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
-                    <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                    <Link to='/warehouses/delete-warehouse'>
+                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
+                    </Link>
+                    <Link to='/warehouses/edit-warehouse'>
+                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                    </Link>
                 </div>
             </div>
             )}
