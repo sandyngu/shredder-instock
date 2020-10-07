@@ -1,17 +1,26 @@
 @import "../../partials/global";
+@import "../Header/Header.scss";
+
+
+
 
 .delete{
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
     text-align: left;
-    padding:4%;
+    padding:4%;g
+
     @include tablet{
         border:2px solid red;
         margin:auto;
         width:77%;
         padding:2% 2% 4% 8%;
         border-radius:4px;
+        @include desktop{
+            width:50%;
+            padding: 1% 1% 2% 4%;
+        }
     }
     &__close-icon{
         height:25px;
@@ -50,6 +59,9 @@
             margin-left:auto;
             width:30%;
             justify-content: space-between;
+            @include desktop{
+                padding-right:6%;
+            }
         }
             &-cancel{
                 border: 1.5px solid $cloud;
