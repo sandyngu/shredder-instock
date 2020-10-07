@@ -9,7 +9,7 @@ class App extends React.Component {
     <Router>
       <Header />
       <Switch>
-        <div>Hello</div>
+        <div>Hello World</div>
       </Switch>
     </Router>
   );
