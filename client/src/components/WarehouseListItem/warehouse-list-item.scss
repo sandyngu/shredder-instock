@@ -43,12 +43,16 @@ a {
         height: 57px;
         width: 120px;
 
+        @include tablet {
+            height: 50px;
+        }
+
         @include desktop {
             width: 230px;
         }
         
         &-heading {
-            margin: 3px auto;
+            margin: 2px auto 5px auto;
 
             @include tablet {
                 display: none;
@@ -59,7 +63,23 @@ a {
         display: flex;
     }
     &__city {
-        vertical-align: top;
+        padding-right: 5px;
+
+        @include tablet{
+            padding-top: 10px;
+        }
+    }
+    &__address {
+
+        @include desktop {
+            padding-top: 10px;
+        }
+    }
+    &__contact-name {
+
+        @include tablet {
+            padding-top: 10px;
+        }
     }
     &__icon-container {
         display: flex;
@@ -69,6 +89,10 @@ a {
 
         @include tablet {
             margin: 0;
+        }
+
+        @include desktop {
+            padding-top: 10px;
         }
 
         &-desktab {
@@ -83,6 +107,12 @@ a {
             @include tablet {
                  display: none;
              }
+        }
+    }
+    &__icon-arrow {
+
+        @include tablet {
+            padding-top: 9px;
         }
     }
     &__icon-edit {

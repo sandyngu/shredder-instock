@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
@@ -7,7 +8,14 @@ import Header from '../Header/Header'
 class WarehousesList extends React.Component {
 
     state = {
-        
+        warehouseslist: []
+    }
+
+    componentDidMount() {
+        axios.get('/')
+            .then(res => {
+                console.log(res);
+            })
     }
 
     render() {
