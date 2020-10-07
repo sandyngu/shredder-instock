@@ -2,45 +2,32 @@
 
 .edit-warehouse {
     width: auto;
-    height: 923.5px;
-    // margin-left: 16px;
-    // margin-right: 16px;
-    margin-bottom: 20px;
-    padding-bottom: 10%;
-    // border: 2px solid black;
+    height: 935.5px;
+    margin-top: 0;
+    margin-bottom: 96px;
     background: $white;
     box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 3px;
-
     position: absolute;
     left: 4.5%;
     right: 4.5%;
-    top: 15%;
-    // bottom: 90.32%;
-    // display: flex;
-    // justify-content: center;
-    // margin-right: 3%;
-    // margin-left: 20%;
+    top: 16%;
 
     &__header-container {
         display: flex;
         justify-content: left;
-        // padding-bottom: 20px;
-        margin-top: 20px;
+        margin-top: 0;
         border-bottom: 1px solid $cloud;
     }
     &__back-img {
-        // margin-top: 10px;
         margin-left: 20px;
-        margin-top: 44px;
+        margin-top: 34px;
         margin-right: 10px;
     }
     &__title {
-        margin-top: 32px;
+        margin-top: 23px;
+        margin-bottom: 22px;
     }
-    // &__form {
-    //     margin-bottom: 30px;
-    // }
     &__warehouse-title {
         margin-left: 23px;
         margin-bottom: 24px;
@@ -49,7 +36,6 @@
         list-style: none;
         width: 100%;
         padding: 0 0 10px 0;
-        // padding-bottom: 10px;
         border-bottom: 1px solid $cloud;
     }
     &__warehouse-list-name {
@@ -59,7 +45,6 @@
         margin-right: 23px;
     }
     &__warehouse-list-name-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -69,8 +54,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -81,7 +64,6 @@
         margin-right: 23px;
     }
     &__warehouse-list-street-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -91,8 +73,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -103,7 +83,6 @@
         margin-right: 23px;
     }
     &__warehouse-list-city-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -113,8 +92,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -125,7 +102,6 @@
         margin-right: 23px;
     }
     &__warehouse-list-country-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -135,8 +111,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -155,7 +129,6 @@
         margin-right: 23px;
     }
     &__contact-list-name-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -165,8 +138,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -177,7 +148,6 @@
         margin-right: 23px;
     }
     &__contact-list-position-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -187,8 +157,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -199,7 +167,6 @@
         margin-right: 23px;
     }
     &__contact-list-phone-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -209,8 +176,6 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        // margin-left: 0;
-        // margin-right: 0;
         margin-bottom: 16px;
         border-radius: 20px;
     }
@@ -222,7 +187,6 @@
        
     }
     &__contact-list-email-label {
-        // margin-left: 23px;
         margin-bottom: 4px;
         font-size: $h3-mobile-fontsize;
         font-weight: 600;
@@ -232,23 +196,12 @@
         width: 100%;
         box-sizing: border-box; 
         border: 1px solid $cloud;
-        // font-weight: 400;
-        // font-size: $p2-mobile-fontsize;
-        // width: 87%;
-        // margin-left: 0;
-        // margin-right: 0;
-        // margin-left: 23px;
-        // margin-right: 23px;
         margin-bottom: 16px;
         border-radius: 20px;
     }
     &__button-container {
-        height: 68px;
-        // padding-top: 20px;
-        // width: 100%;
-        // margin-left: 23px;
-        // margin-right: 23px; 
-        // margin-bottom: 30px;
+        height: 68.32px;
+        overflow: hidden;
         display: flex;
         justify-content: space-between;
         background-color: $light-grey;
@@ -257,39 +210,34 @@
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        // margin: 0;
         margin-top: 16px;
         margin-left: 23px;
         border-radius: 20px;
         background: $white;
         border: 1px solid #BDC5D5;
-        font-family: "Titillium Web";
         font-weight: 600;
     }
     &__button-save {
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        // margin: 0;
         margin-top: 16px;
         margin-right: 23px;
         border-radius: 20px;
         background: $instock-indigo;
         border: none;
-        font-family: "Titillium Web";
         color: $white;
         font-weight: 600;
         font-size: $h3-mobile-fontsize;
-        // padding-top: 8px;
     }
-    // &__footer {
-        
-    // }
+}
 
+input {
+    font-family: 'Titillium Web';
+    padding-left: 16px;
 }
 
 ::placeholder {
-    padding-left: 16px;
     font-weight: 400;
     font-size: $p2-mobile-fontsize;
     color: $instock-black;
