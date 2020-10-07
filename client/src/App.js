@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import EditWarehouse from './components/editWarehouse/EditWarehouse';
+import EditWarehouse from './components/EditWarehouse/EditWarehouse';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
