@@ -1,0 +1,45 @@
+@import "../partials/global";
+
+.delete{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    text-align: left;
+    padding:4%;
+    &__close-icon{
+        height:25px;
+        margin-left:auto;
+    }
+    &__text-container{
+        margin:0;
+        margin-bottom:90vw;
+    }
+    &__text-container-subtitle{
+        font-size: $p1-mobile-fontsize;
+    }
+    &__button-container{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-evenly;
+            &-cancel{
+                border: 1.5px solid $cloud;
+                background-color:$white;
+                color:$graphite;
+                border-radius:20px;
+                font-size:$p2-mobile-fontsize;
+                min-width:45%;
+                height:36px;
+                padding:0;
+            }
+            &-delete{
+                border-style:none;
+                border-radius:20px;
+                color:$white;
+                background-color: $red;
+                font-size:$p2-mobile-fontsize;
+                min-width:45%;
+                height:36px;
+                padding:0;
+            } 
+}
+}
