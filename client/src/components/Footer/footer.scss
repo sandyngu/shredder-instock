@@ -1,0 +1,11 @@
+@import '../../partials/global';
+
+.footer__text {
+    font-size: $p3-mobile-fontsize;
+    background-color: $light-grey;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: center;
+    color: $instock-black;
+    padding: 37px;
+}
