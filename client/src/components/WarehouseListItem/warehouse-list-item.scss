@@ -27,25 +27,29 @@ a {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        height: 120px;
-        margin: 15px 6.5%;
-        align-items: center;
+        height: 130px;
+        padding: 15px 6.5% 5px 6.5%;
+
+        &:hover {
+            background-color: $cloud;
+        }
 
         @include tablet {
             flex-direction: row;
-            margin: 10px 4%;
-            height: 50px;
+            align-items: center;
+            padding: 10px 4%;
+            height: auto;
             width: 100%;
             justify-content: space-between;
         }
     }
 
     &-info {
-        height: 57px;
         width: 120px;
+        height: 55px;
 
         @include tablet {
-            height: 50px;
+            height: auto;
         }
 
         @include desktop {
@@ -53,7 +57,7 @@ a {
         }
         
         &-heading {
-            margin: 3px auto 5px auto;
+            margin: 3px auto;
 
             @include tablet {
                 display: none;
@@ -65,35 +69,35 @@ a {
     }
     &__city {
         padding-right: 5px;
-
-        @include tablet{
-            padding-top: 10px;
-        }
     }
     &__address {
+        width: 125px;
 
+        @include tablet {
+            width: 100px;
+        }
         @include desktop {
-            padding-top: 10px;
+            width: auto;
         }
     }
     &__contact-name {
+        width: 120px;
+    }
+    &__contact-info {
 
         @include tablet {
-            padding-top: 10px;
+            padding-right: 50px;
         }
     }
+
     &__icon-container {
         display: flex;
         justify-content: space-between;
-        margin: 7px 6.5%;
+        margin: 0 6.5%;
         padding-bottom: 7px;
 
         @include tablet {
             margin: 0;
-        }
-
-        @include desktop {
-            padding-top: 10px;
         }
 
         &-desktab {
@@ -108,12 +112,6 @@ a {
             @include tablet {
                  display: none;
              }
-        }
-    }
-    &__icon-arrow {
-
-        @include tablet {
-            padding-top: 9px;
         }
     }
     &__icon-edit {

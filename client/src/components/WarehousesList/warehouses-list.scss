@@ -8,10 +8,6 @@ button {
     font-family: 'Titillium Web';
 }
 
-body {
-    background-color: #F7F8F9;
-}
-
 .warehouses {
     border-radius: 4px;
     background: white;
@@ -30,13 +26,14 @@ body {
     &__header {
         display: flex;
         flex-wrap: wrap;
-        margin: 8px 6.5%;
-        padding-bottom: 2px;
+        padding: 15px 7%;
+        margin: 0;
 
         @include tablet {
             align-items: center;
             justify-content: space-between;
-            margin: 15px 4%;
+            padding: 15px 4%;
+            margin: 0;
         }
 
         &-title {
@@ -123,17 +120,32 @@ body {
     &__title {
         display: flex;
         margin: 0;
-         
-        @include tablet {
-            width: 150px;
+        
+        &-address {
+            padding-left: 25px;
+
+            @include desktop {
+                padding-left: 70px;
+            }
+        }
+        &-contact-name {
+            padding-left: 22px;
+
+            @include desktop {
+                padding-left: 140px;
+            }
+        }
+        &-contact-info {
+            padding-right: 5px;
+
+            @include desktop {
+                padding-right: 60px;
+            }
         }
 
         &-actions {
             width: 50px;
             padding-left: 10px;
         }
-    }
-    &__footer-text { 
-        
     }
 }

@@ -6,6 +6,7 @@ import './Header.scss';
 
 const Header = () => {
         return (
+            <>
             <div className='navbar'>
                 <div className='navbar__logo-container'>
                     <NavLink to='/warehouses'>
@@ -19,6 +20,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
+            </>
         )
     };
 

@@ -1,5 +1,9 @@
 @import  '../../partials/global';
 
+body {
+    background-color: $light-grey;
+}
+
 .navbar {
     position: relative;
     width: 100%;
@@ -92,3 +96,4 @@
 a:hover {
     text-decoration: underline ;
 }
+
