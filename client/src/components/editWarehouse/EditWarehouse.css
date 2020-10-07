@@ -83,8 +83,10 @@ p {
 }
 
 .edit-warehouse {
-  width: 82%;
-  margin-left: 7%;
+  width: 91%;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 10%;
   border: 2px solid black;
 }
 .edit-warehouse__header-container {
@@ -100,11 +102,14 @@ p {
 }
 .edit-warehouse__back-img {
   margin-top: 10px;
-  margin-left: 15px;
+  margin-left: 20px;
   margin-right: 10px;
 }
 .edit-warehouse__title {
   margin: 0;
+}
+.edit-warehouse__warehouse-title {
+  margin-left: 23px;
 }
 .edit-warehouse__warehouse-list {
   list-style: none;
@@ -119,10 +124,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__warehouse-list-name-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__warehouse-list-name-input {
   height: 36px;
-  width: 90%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__warehouse-list-street {
@@ -134,25 +147,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__warehouse-list-street-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__warehouse-list-street-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
-  border-radius: 20px;
-}
-.edit-warehouse__warehouse-list-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.edit-warehouse__warehouse-list-name-input {
-  height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__warehouse-list-city {
@@ -164,10 +170,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__warehouse-list-city-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__warehouse-list-city-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__warehouse-list-country {
@@ -179,11 +193,22 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__warehouse-list-country-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__warehouse-list-country-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
+}
+.edit-warehouse__contact-title {
+  margin-left: 23px;
 }
 .edit-warehouse__contact-list {
   list-style: none;
@@ -198,10 +223,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__contact-list-name-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__contact-list-name-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__contact-list-position {
@@ -213,10 +246,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__contact-list-position-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__contact-list-position-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__contact-list-phone {
@@ -228,10 +269,18 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__contact-list-phone-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__contact-list-phone-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  width: 87%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .edit-warehouse__contact-list-email {
@@ -243,20 +292,44 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.edit-warehouse__contact-list-email-label {
+  margin-left: 23px;
+  margin-bottom: 4px;
+}
 .edit-warehouse__contact-list-email-input {
   height: 36px;
-  width: 95%;
-  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 87%;
+  margin-left: 23px;
+  margin-right: 23px;
+  margin-bottom: 16px;
   border-radius: 20px;
+}
+.edit-warehouse__button-container {
+  margin-left: 23px;
+  margin-right: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .edit-warehouse__button-cancel {
   height: 36px;
-  width: 40%;
+  width: 46%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
   border-radius: 20px;
 }
 .edit-warehouse__button-save {
   height: 36px;
-  width: 40%;
+  width: 46%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
   border-radius: 20px;
 }
 /*# sourceMappingURL=EditWarehouse.css.map */

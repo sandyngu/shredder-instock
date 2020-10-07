@@ -64,7 +64,7 @@ const EditWarehouse = () => {
                             </ul>
                         </div>
                         <div className="edit-warehouse__button-container">
-                            <button className="edit-warehouse__button-save">Cancel</button>
+                            <button className="edit-warehouse__button-cancel">Cancel</button>
                             <button className="edit-warehouse__button-save">Save</button>
                         </div>
                     </form>
