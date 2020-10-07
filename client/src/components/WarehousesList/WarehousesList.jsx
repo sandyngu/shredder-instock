@@ -3,7 +3,6 @@ import axios from 'axios';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
-import Header from '../Header/Header'
 
 class WarehousesList extends React.Component {
 
@@ -12,7 +11,7 @@ class WarehousesList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/')
+        axios.get('/warehouses')
             .then(res => {
                 console.log(res);
             })
