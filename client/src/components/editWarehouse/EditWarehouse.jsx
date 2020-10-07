@@ -1,12 +1,14 @@
-import React, { Component } from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import BackArrow from '../../assets/icons/arrow_back-24px.svg';
+
+import './EditWarehouse.scss'
 
 
 
 const EditWarehouse = () => {
         return (
-
+        
             <div className="edit-warehouse">
                 <div className="edit-warehouse__header-container">
                     <Link to='/warehouses'>
@@ -14,12 +16,11 @@ const EditWarehouse = () => {
                     </Link>
                     <h1 className="edit-warehouse__title">Edit Warehouse</h1>
                 </div>
-                <div className="edit-warehouse__warehouse-container">
-                    <div className="edit-warehouse__title">
-                        <h2>Warehouse Details</h2>
-                    </div>
                     <form className="edit-warehouse__form">
                         <div className="edit-warehouse__warehouse-container">
+                            <div className="edit-warehouse__warehouse-title">
+                                <h2>Warehouse Details</h2>
+                            </div>
                             <ul className="edit-warehouse__warehouse-list">
                                 <li className="edit-warehouse__warehouse-list-name">
                                     <label className="edit-warehouse__warehouse-list-name-label">Warehouse Name</label>
@@ -40,10 +41,13 @@ const EditWarehouse = () => {
                             </ul>
                         </div>
                         <div className="edit-warehouse__contact-container">
+                            <div className="edit-warehouse__contact-title">
+                                <h2>Contact Details</h2>
+                            </div>
                             <ul className="edit-warehouse__contact-list">
                                 <li className="edit-warehouse__contact-list-name">
                                     <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' placeholder='Graeme' className="edit-warehouse__contact-list-name-input"/>
+                                    <input type='text' placeholder='Graeme' required className="edit-warehouse__contact-list-name-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
@@ -59,14 +63,13 @@ const EditWarehouse = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div className="edit-warehouse__button-container">
                             <button className="edit-warehouse__button-save">Cancel</button>
                             <button className="edit-warehouse__button-save">Save</button>
                         </div>
                     </form>
-                </div>
-
             </div>
+
         )
     };
 

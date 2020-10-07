@@ -1,0 +1,169 @@
+@import  '../../partials/global';
+
+.edit-warehouse {
+    width: 82%;
+    margin-left: 7%;
+    border: 2px solid black;
+    // margin-right: 3%;
+    // margin-left: 20%;
+
+    &__header-container {
+        display: flex;
+        justify-content: left;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        border-bottom: 2px solid black;
+    }
+    &__back-img {
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+    &__title {
+        margin: 0;
+    }
+    &__warehouse-list {
+        list-style: none;
+        padding: 0;
+    }
+    &__warehouse-list-name {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__warehouse-list-name-label {
+        
+    // }
+    &__warehouse-list-name-input {
+        height: 36px;
+        width: 90%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__warehouse-list-street {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__warehouse-list-street-label {
+        
+    // }
+    &__warehouse-list-street-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__warehouse-list-name {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__warehouse-list-name-label {
+        
+    // }
+    &__warehouse-list-name-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__warehouse-list-city {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__warehouse-list-city-label {
+        
+    // }
+    &__warehouse-list-city-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__warehouse-list-country {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__warehouse-list-country-label {
+        
+    // }
+    &__warehouse-list-country-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    // &__contact-tile {
+
+    // }
+    &__contact-list {
+        list-style: none;
+        padding: 0;
+    }
+    &__contact-list-name {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__contact-list-name-label {
+        
+    // }
+    &__contact-list-name-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__contact-list-position {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__contact-list-position-label {
+        
+    // }
+    &__contact-list-position-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__contact-list-phone{
+        display: flex;
+        flex-direction: column;
+    }
+    // &__contact-list-phone-label {
+        
+    // }
+    &__contact-list-phone-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    &__contact-list-email {
+        display: flex;
+        flex-direction: column;
+    }
+    // &__contact-list-email-label {
+        
+    // }
+    &__contact-list-email-input {
+        height: 36px;
+        width: 95%;
+        margin: 0;
+        border-radius: 20px;
+    }
+    // &__button-container {
+        
+    // }
+    &__button-cancel {
+        height: 36px;
+        width: 40%;
+        // margin: 0;
+        border-radius: 20px;
+    }
+    &__button-save {
+        height: 36px;
+        width: 40%;
+        // margin: 0;
+        border-radius: 20px;
+    }
+
+}
