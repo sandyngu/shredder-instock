@@ -40,6 +40,9 @@ const EditWarehouse = () => {
                                 </li>
                             </ul>
                         </div>
+                        <div>
+                            <div className="edit-warehouse__border-styling"></div>
+                        </div>
                         <div className="edit-warehouse__contact-container">
                             <div className="edit-warehouse__contact-title">
                                 <h2>Contact Details</h2>
@@ -69,10 +72,7 @@ const EditWarehouse = () => {
                         </div>
                     </form>
               </div>
-            
-        
+              
         )
     };
-
-
-export default EditWarehouse; 
+export default EditWarehouse;
