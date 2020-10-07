@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import EditWarehouse from './components/EditWarehouse/EditWarehouse';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -11,7 +11,7 @@ class App extends React.Component {
       <Header />
       <EditWarehouse />
       <Switch>
-        <div>Hello World</div>
+        <div>Happy Wednesday</div>
       </Switch>
     </Router>
   );
