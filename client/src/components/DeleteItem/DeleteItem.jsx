@@ -10,7 +10,6 @@ function DeleteItem(props) {
 
     return (
         <>
-            <Header />
             <section className="delete">
                 <img className="delete__close-icon" src={closeIcon} alt='Close' />
                 <div className="delete__text-container">
