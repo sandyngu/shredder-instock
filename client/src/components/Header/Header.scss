@@ -1,11 +1,6 @@
 @import  '../../partials/global';
 
 .navbar {
-<<<<<<< HEAD
-    position: relative;
-    width: 100%;
-=======
->>>>>>> development
     height: 136px;
     display: flex;
     background-color: $graphite;
@@ -24,7 +19,6 @@
             flex-direction: row;
             margin: 0 1%;
         }
-
         @include desktop {
             margin: 0 8%;
         }
@@ -32,9 +26,6 @@
     &__logo-container {
         @include tablet {
             margin-left: 25px;
-        }
-        @include desktop {
-            
         }
     }
     &__img {
@@ -99,6 +90,6 @@
 };
 
 a:hover {
-    text-decoration: underline ;
+    text-decoration: underline;
 }
 

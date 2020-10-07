@@ -61,6 +61,7 @@ class WarehousesList extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className="warehouses__divider"></div>
                 <WarehouseListItem warehousesList={this.state.warehousesList}/>
             </div>
             </>

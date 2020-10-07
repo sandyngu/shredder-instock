@@ -16,11 +16,21 @@ button {
     width: stretch;
     top: 140px;
     margin: 0 17px 100px 17px;
-    padding-bottom: 13px;
 
     @include tablet {
-        margin: 0 35px 100px 35px;
+        margin: 0 4%;
         top: 95px;
+    }
+    @include desktop {
+        margin: 0 10%;
+    }
+
+    &__divider {    
+        border-top: 1px solid $cloud;  
+        
+        @include tablet {
+            display: none;
+        }
     }
 
     &__header {
@@ -39,7 +49,7 @@ button {
         &-title {
             font-weight: 600;
             color: $instock-black;
-            margin: 20px 0 12px 0;
+            margin: 12px 0;
 
             @include tablet {
                 margin: 10px 0 0 0;
@@ -52,10 +62,11 @@ button {
                 width: 57%;
             }
             @include desktop {
-                width: 37%;
+                width: 48%;
             }
         }
         &-form {
+            padding-bottom: 5px;
 
             @include tablet {
                 display: flex;
@@ -91,9 +102,6 @@ button {
                     height: 38px;
                     width: 165px;
                 }
-                @include desktop {
-                    width: 170px;
-                }
             }
         }
     }
@@ -114,35 +122,33 @@ button {
         }
     }
     &__heading {
-        margin: 8px 0;
-        
+        margin: 8px 0; 
     }
     &__title {
         display: flex;
         margin: 0;
         
         &-address {
-            padding-left: 25px;
+            padding-left: 34px;
 
             @include desktop {
                 padding-left: 70px;
             }
         }
         &-contact-name {
-            padding-left: 22px;
+            padding-left: 42px;
 
             @include desktop {
-                padding-left: 140px;
+                padding-left: 150px;
             }
         }
         &-contact-info {
-            padding-right: 5px;
+            padding-right: 15px;
 
             @include desktop {
-                padding-right: 60px;
+                padding-right: 20px;
             }
         }
-
         &-actions {
             width: 50px;
             padding-left: 10px;
