@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import DeleteItem from '../src/components/DeleteItem/DeleteItem';
 import Header from '../src/components/Header/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
