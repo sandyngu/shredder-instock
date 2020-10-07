@@ -1,3 +1,9 @@
+@import './partials/global';
+
+body {
+  background-color: $light-grey;
+}
+
 .App {
   text-align: center;
 }
