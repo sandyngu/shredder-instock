@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import InventoryList from "./Components/InventoryList/InventoryList";
 import Header from "./Components/Header/Header";
 import { BrowserRouter as Router } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
 
 class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
         <Router>
           <Header />
           <InventoryList />
+          <Footer />
         </Router>
       </div>
     );
