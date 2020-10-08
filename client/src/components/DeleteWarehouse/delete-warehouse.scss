@@ -5,10 +5,7 @@
     margin: 0;
 
     @include tablet {
-        width: 90%;
-    }
-    @include desktop {
-        width: 59%;
+        width: 680px;
     }
 
     &__container {
@@ -21,22 +18,10 @@
             margin: 0 9%;
             padding: 18px 0 40px 0;
         }
-        @include desktop {
-            width: 90%;
-            margin: 0 10%;
-            padding: 18px 0 40px 0;
-        }
     }
     &__icon {
         margin-left: 94%;
         width: 26px;
-
-        @include tablet {
-            margin-left: 95%;
-        }
-        @include desktop {
-            margin-left: 93%;
-        }
     }
     &__heading {
         line-height: 36px;
