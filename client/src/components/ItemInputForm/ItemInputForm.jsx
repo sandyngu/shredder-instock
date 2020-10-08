@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './ItemInputForm.scss';
+import Dropdown from '../../assets/icons/arrow_drop_down-24px.svg';
 
 function ItemInputForm() {
 
@@ -27,13 +28,16 @@ function ItemInputForm() {
                 <h2 className="item-form__title">Item Availability</h2>
                 <label className="item-form__label">Status</label>
                 <div className="item-form__status-container">
-                    <input className="item-form__status-option" type="radio" value="In Stock" name="stockStatus" />
-                    <input className="item-form__status-option" type="radio" value="Out of Stock" name="stockStatus" />
+                    <input className="item-form__status-option" type="radio" value="In Stock" name="stockStatus"/>
+                    <p>In stock</p> 
+                    <input className="item-form__status-option" type="radio" value="Out of Stock" name="stockStatus"/>
+                    <p>Out of stock</p>
                 </div>
                 <label className="item-form__label">Quantity</label>
                 <input className="item-form__input" type="text" placeHolder="0" name="quantity" />
                 <label className="item-form__label">Warehouse</label>
                 <select className="item-form__dropdown">
+                    <img src={Dropdown}/>
                     <option value="">Please select</option>
                     <option value="Manhatten">Manhatten</option>
                     <option value="King West">King West</option>
