@@ -23,9 +23,6 @@ class WarehousesList extends React.Component {
             .catch(err => console.log(err));
     };
 
-    componentDidUpdate() {
-        
-    }
 
     render() {
         return (
