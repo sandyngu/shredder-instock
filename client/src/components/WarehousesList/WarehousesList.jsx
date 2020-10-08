@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
+import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
 
@@ -68,7 +69,8 @@ class WarehousesList extends React.Component {
                     </div>
                 </div>
                 <div className="warehouses__divider"></div>
-                <WarehouseListItem warehousesList={this.state.warehousesList}/>
+                <WarehouseListItem warehousesList={this.state.warehousesList} deleteModal={this.deleteModal}/>
+                <DeleteWarehouse warehousesList={this.state.warehousesList} display={this.state.display} />
             </div>
             </>
         );

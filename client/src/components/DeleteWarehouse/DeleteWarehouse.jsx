@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import Exit from '../../assets/icons/close-24px.svg';
 import './delete-warehouse.scss';
 
-function DeleteWarehouse() {
+function DeleteWarehouse(props) {
+    if (!props.display) {
+        return null;
+    }
     return (
         <div className="delete-warehouse">
             <div className="delete-warehouse__container">
