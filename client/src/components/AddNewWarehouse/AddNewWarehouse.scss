@@ -6,6 +6,7 @@
     height: 935.5px;
     margin-top: 0;
     margin-bottom: 96px;
+    // margin-bottom: 126px;
     background: $white;
     box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 3px;
@@ -45,6 +46,7 @@
         margin-bottom: 22px;
     }
     &__form {
+        // height: 500px;
         @include tablet {
             display: flex;
             flex-wrap: wrap;
@@ -272,6 +274,7 @@
     }
     &__button-container {
         height: 68.32px;
+        // height: 80px;
         overflow: hidden;
         display: flex;
         justify-content: space-between;
