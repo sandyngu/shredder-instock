@@ -34,6 +34,19 @@
         border-radius:20px;
         height:36px;
         margin-bottom:5%;
-
     }
+    &__button{
+        display:flex;
+        justify-content: space-between;
+            &-cancel{
+                height:36px;
+                border-radius:20px;
+                width:45%;
+            }
+            &-add{
+                height:36px;
+                border-radius:20px;
+                width:45%;
+            }
+}
 }
