@@ -37,9 +37,7 @@ function WarehouseListItem(props) {
                         </div>
                     </div>
                     <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
-                        <Link to='/warehouses/delete-warehouse'>
-                            <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" />
-                        </Link>
+                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.deleteModal();}}/>
                         <Link to='/warehouses/edit-warehouse'>
                             <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                         </Link>
