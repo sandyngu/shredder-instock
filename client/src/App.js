@@ -16,8 +16,8 @@ class App extends React.Component {
         <div>Happy Wednesday</div>
       </Switch>
     </Router>
-  );
- };
-};
+    );
+  }
+}
 
 export default App;
