@@ -1,16 +1,24 @@
 import React from "react";
-import Sort from "../../assets/icons2/sort-24px.svg";
-import Delete from "../../assets/icons2/delete_outline-24px.svg";
-import Edit from "../../assets/icons2/edit-24px.svg";
-import Right from "../../assets/icons2/chevron_right-24px.svg";
-import Search from "../../assets/icons2/search-24px.svg";
+import Sort from "../../assets/Icons/sort-24px.svg";
+import Delete from "../../assets/Icons/delete_outline-24px.svg";
+import Edit from "../../assets/Icons/edit-24px.svg";
+import Right from "../../assets/Icons/chevron_right-24px.svg";
+import Search from "../../assets/Icons/search-24px.svg";
 import "./inventoryList.scss";
 import axios from "axios";
+// import DeleteItem from "./DeleteItem/DeleteItem";
 
 class InventoryList extends React.Component {
   state = {
     inventoryList: [],
     singleItem: [],
+
+    display: false,
+  };
+  showModal = (e) => {
+    this.setState({
+      display: true,
+    });
   };
 
   componentDidMount() {
@@ -185,9 +193,11 @@ class InventoryList extends React.Component {
                             alt="Sort Icon"
                           ></img>
                         </p>
-                        <p className="inventoryList__warehouse">
-                          {item.warehouseName}
-                        </p>
+                        <a href={item.warehouseName}>
+                          <p className="inventoryList__warehouse" key={item.id}>
+                            {item.warehouseName}
+                          </p>
+                        </a>
                       </div>
                     </section>
                     <section className="inventoryList__action-section inventoryList__action-section-hide">
@@ -196,11 +206,18 @@ class InventoryList extends React.Component {
                           ACTIONS
                         </p>
                         <div className="inventoryList__action-logo-container">
-                          <img
-                            className="inventoryList__delete-icon"
-                            src={Delete}
-                            alt="Delete Icon"
-                          />
+                          <button
+                            onClick={(e) => {
+                              this.showModal();
+                            }}
+                          >
+                            <img
+                              className="inventoryList__delete-icon"
+                              src={Delete}
+                              alt="Delete Icon"
+                            />
+                          </button>
+
                           <img
                             className="inventoryList__edit-icon"
                             src={Edit}
@@ -221,6 +238,7 @@ class InventoryList extends React.Component {
                           src={Delete}
                           alt="Delete Icon"
                         />
+
                         <img
                           className="inventoryList__edit-icon"
                           src={Edit}
@@ -235,6 +253,7 @@ class InventoryList extends React.Component {
             );
           })}
         </div>
+        {/* <DeleteItem display={this.state.display} /> */}
       </>
     );
   }
