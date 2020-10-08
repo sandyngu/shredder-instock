@@ -1,0 +1,49 @@
+@import '../../partials/global';
+
+.delete-warehouse {
+    background-color: white; 
+    width: 100%;
+    height: 100%;
+
+    &__container {
+        width: 92%;
+        margin: 0 auto;
+        padding: 15px 0 25px 0;
+    }
+    &__icon {
+        margin-left: 93%;
+        width: 26px;
+    }
+    &__heading {
+        line-height: 36px;
+    }
+    &__text {
+        font-size: $p1-mobile-fontsize;
+        line-height: 26px;
+        color: $instock-black;
+        margin-bottom: 375px;
+    }
+    &__button-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        font-family: 'Titillium Web';
+        border-radius: 20px;
+        border: none;
+        padding: 7px 16px;
+        width: 48%;
+        font-size: $p2-mobile-fontsize;
+
+        &-cancel {
+            border: 1px solid $cloud;
+            background-color: white;
+            font-weight: 600;
+            color: $slate;
+        }
+        &-delete {
+            background-color: $red;
+            color: white;
+        }
+    }
+}
