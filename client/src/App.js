@@ -6,7 +6,6 @@ import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 import Header from "./components/Header/Header";
 import './App.scss';
 
-
 class App extends React.Component {
   render() {
   return (
