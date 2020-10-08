@@ -14,11 +14,15 @@
     right: 4.5%;
     top: 16%;
     @include tablet {
+        left: 4%;
+        right: 4%;
         top: 11.2%;
         height: 586px;
         margin-bottom: 265px;
     }
     @include desktop {
+        left: 123px;
+        right: 123px;
         margin-bottom: 0;
         
     }
