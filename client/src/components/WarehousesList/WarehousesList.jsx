@@ -8,7 +8,9 @@ import './warehouses-list.scss';
 class WarehousesList extends React.Component {
 
     state = {
-        warehousesList: []
+        warehousesList: [],
+
+        display: false
     }
 
     componentDidMount() {
@@ -20,6 +22,12 @@ class WarehousesList extends React.Component {
             })
             .catch(err => console.log(err));
     };
+
+    deleteModal = (e) => {
+        this.setState({
+          display: true,
+        });
+      };
 
     render() {
         return (
