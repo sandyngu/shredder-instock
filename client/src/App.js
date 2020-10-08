@@ -1,21 +1,21 @@
 import React from 'react';
 import './App.scss';
-import DeleteItem from '../src/components/DeleteItem/DeleteItem';
-import Header from '../src/components/Header/Header';
-import { BrowserRouter as Router } from 'react-router-dom';
-
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
-        <Router>
-          <Header />
-          <DeleteItem />
-        </Router>
-      </div>
-    );
-  };
+  return (
+    <Router>
+      <Header />
+      <Footer />
+      <Switch>
+        <div>Happy Wednesday</div>
+      </Switch>
+    </Router>
+  );
+ };
 };
 
 export default App;
