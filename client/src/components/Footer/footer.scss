@@ -1,21 +1,21 @@
-@import '../../partials/global';
+// @import '../../partials/global';
 
-.footer__text {
-    font-size: $p3-mobile-fontsize;
-    background-color: $light-grey;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: center;
-    color: $instock-black;
-    padding: 37px;
-    width: stretch;
-    position: absolute;
-    bottom: -1182px; /*change this to whatever value works for you*/
+// .footer__text {
+//     font-size: $p3-mobile-fontsize;
+//     background-color: $light-grey;
+//     margin: 0 auto;
+//     text-align: center;
+//     vertical-align: center;
+//     color: $slate;
+//     padding: 37px;
+//     width: stretch;
+//     position: absolute;
+//     bottom: -1182px; /*change this to whatever value works for you*/
 
-    @include tablet {
-        bottom: -325px; /*change this to whatever value works for you*/
-    }
-    @include desktop {
-        bottom: -205px; /*change this to whatever value works for you*/
-    }
-}
+//     @include tablet {
+//         bottom: -325px; /*change this to whatever value works for you*/
+//     }
+//     @include desktop {
+//         bottom: -205px; /*change this to whatever value works for you*/
+//     }
+// }
