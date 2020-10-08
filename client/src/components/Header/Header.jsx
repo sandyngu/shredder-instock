@@ -20,14 +20,14 @@ const Header = () => {
             <Link
               to="/warehouses"
               className="navbar__link navbar__warehouses"
-              activeClassName="navbar__warehouses--active"
+            //   activeClassName="navbar__warehouses--active"
             >
               Warehouses
             </Link>
             <Link
               to="/inventories"
               className="navbar__link navbar__inventory"
-              activeClassName="navbar__warehouses--active"
+            //   activeClassname="navbar__warehouses--active"
             >
               Inventory
             </Link>

@@ -3,8 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import './warehouses-list.scss';
 
 class WarehousesList extends React.Component {
@@ -65,7 +63,6 @@ class WarehousesList extends React.Component {
                 <div className="warehouses__divider"></div>
                 <WarehouseListItem warehousesList={this.state.warehousesList}/>
             </div>
-            <Footer />
             </>
         );
     };
