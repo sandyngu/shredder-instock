@@ -15,7 +15,10 @@
     @include tablet {
         top: 11.2%;
         height: 586px;
-        margin-bottom: 320px;
+        margin-bottom: 265px;
+    }
+    @include desktop {
+        margin-bottom: 0;
     }
     &__header-container {
         display: flex;
@@ -284,7 +287,7 @@
         border: 1px solid #BDC5D5;
         font-weight: 600;
         @include tablet {
-            width: 9.7%;
+            width: 72px;
             height: 38px;
         }
     }
@@ -301,7 +304,7 @@
         font-weight: 600;
         font-size: $h3-mobile-fontsize;
         @include tablet {
-            width: 8.2%;
+            width: 138px;
             height: 38px;
             margin-left: 16px;
         }
@@ -313,6 +316,14 @@ input {
     font-family: 'Titillium Web';
     padding-left: 16px;
 }
+
+input:focus {
+    border-radius: 20px;
+    border: 1px solid $instock-indigo;
+    outline: none;
+    // field is req: border: $red;
+
+  }
 
 ::placeholder {
     font-weight: 400;
