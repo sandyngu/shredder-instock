@@ -1,5 +1,14 @@
 @import '../../partials/global';
 
+button {
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
 .delete-warehouse {
     background-color: white; 
     margin: 0;
