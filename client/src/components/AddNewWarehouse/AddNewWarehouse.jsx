@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BackArrow from '../../assets/icons/arrow_back-24px.svg';
+// import Exclamation from '../../assets/icons/error-24px.svg';
 
 import './AddNewWarehouse.scss'
 
@@ -13,7 +14,7 @@ const AddNewWarehouse = () => {
                     <Link to='/warehouses'>
                         <img src={BackArrow} className="edit-warehouse__back-img" alt="Go back"/>
                     </Link>
-                    <h1 className="edit-warehouse__title">Edit Warehouse</h1>
+                    <h1 className="edit-warehouse__title">Add New Warehouse</h1>
                 </div>
                     <form className="edit-warehouse__form">
                         <div className="edit-warehouse__warehouse-container">
@@ -23,19 +24,19 @@ const AddNewWarehouse = () => {
                             <ul className="edit-warehouse__warehouse-list">
                                 <li className="edit-warehouse__warehouse-list-name">
                                     <label className="edit-warehouse__warehouse-list-name-label">Warehouse Name</label>
-                                    <input type='text' placeholder='King West' className="edit-warehouse__warehouse-list-name-input"/>
+                                    <input type='text' placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-street">
                                     <label className="edit-warehouse__warehouse-list-street-label">Street Address</label>
-                                    <input type='text' placeholder='469 King Street West' className="edit-warehouse__warehouse-list-street-input"/>
+                                    <input type='text' placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-city">
                                     <label className="edit-warehouse__warehouse-list-city-label">City</label>
-                                    <input type='text' placeholder='Toronto' className="edit-warehouse__warehouse-list-city-input"/>
+                                    <input type='text' placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-country">
                                     <label className="edit-warehouse__warehouse-list-country-label">Country</label>
-                                    <input type='text' placeholder='CAN' className="edit-warehouse__warehouse-list-country-input"/>
+                                    <input type='text' placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
                                 </li>
                             </ul>
                         </div>
@@ -49,25 +50,25 @@ const AddNewWarehouse = () => {
                             <ul className="edit-warehouse__contact-list">
                                 <li className="edit-warehouse__contact-list-name">
                                     <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' placeholder='Graeme' required className="edit-warehouse__contact-list-name-input"/>
+                                    <input type='text' placeholder='Contact Name' required className="edit-warehouse__contact-list-name-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' placeholder='Warehouse Manager' className="edit-warehouse__contact-list-position-input"/>
+                                    <input type='text' placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-phone">
                                     <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
-                                    <input type='text' placeholder='+1 (647) 504-0911' className="edit-warehouse__contact-list-phone-input"/>
+                                    <input type='text' placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-email">
                                     <label className="edit-warehouse__contact-list-email-label">Email</label>
-                                    <input type='text' placeholder='glyon@instock.com' className="edit-warehouse__contact-list-email-input"/>
+                                    <input type='text' placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
                                 </li>
                             </ul>
                         </div>
                         <div className="edit-warehouse__button-container">
                             <button className="edit-warehouse__button-cancel">Cancel</button>
-                            <button className="edit-warehouse__button-save">Save</button>
+                            <button className="edit-warehouse__button-add">+ Add Warehouse</button>
                         </div>
                     </form>
               </div>

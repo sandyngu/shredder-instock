@@ -10,12 +10,12 @@
     padding: 37px;
     width: stretch;
     position: absolute;
-    bottom: -1182px; /*change this to whatever value works for you*/
+    bottom: -275px; /*change this to whatever value works for you*/
 
     @include tablet {
-        bottom: -325px; /*change this to whatever value works for you*/
+        bottom: -50px; /*change this to whatever value works for you*/
     }
     @include desktop {
-        bottom: -205px; /*change this to whatever value works for you*/
+        bottom: 95px; /*change this to whatever value works for you*/
     }
 }
