@@ -5,10 +5,10 @@
     margin: 0;
 
     @include tablet {
-        width: 85%;
+        width: 90%;
     }
     @include desktop {
-        width: 58%;
+        width: 59%;
     }
 
     &__container {
@@ -18,7 +18,7 @@
 
         @include tablet {
             width: 90%;
-            margin: 0 8%;
+            margin: 0 9%;
             padding: 18px 0 40px 0;
         }
         @include desktop {
@@ -64,7 +64,7 @@
 
         @include tablet {
             width: 27%;
-            margin-left: 67%;
+            margin-left: 64%;
         }
         @include desktop {
             margin-left: 62%;
