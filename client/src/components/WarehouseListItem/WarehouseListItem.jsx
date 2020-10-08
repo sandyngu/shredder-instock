@@ -10,7 +10,10 @@ function WarehouseListItem(props) {
     return (
         <>
             {props.warehousesList.map(warehouse =>
+<<<<<<< HEAD
             <>
+=======
+>>>>>>> development
             <div className="warehouse-list" key={warehouse.id}>
                 <div className="warehouse-list__container">
                     <div className="warehouse-list-info">
@@ -55,7 +58,10 @@ function WarehouseListItem(props) {
                     </Link>
                 </div>
             </div>
+<<<<<<< HEAD
             </>
+=======
+>>>>>>> development
             )}
         </>
     )
