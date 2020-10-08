@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
-import DeleteWarehouse from './components/DeleteWarehouse/DeleteWarehouse';
 import Header from "./components/Header/Header";
 import './App.scss';
 
@@ -12,7 +11,6 @@ class App extends React.Component {
     <Router>
       <Header />
       <Switch>
-        <Route path='/warehouses/delete-warehouse' component={DeleteWarehouse}/>
         <Route
             exact
             path="/"
