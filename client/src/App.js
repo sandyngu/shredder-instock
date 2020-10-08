@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.scss";
-import InventoryList from "./Components/InventoryList/InventoryList";
-import Header from "./Components/Header/Header";
+import InventoryList from "./components/InventoryList/InventoryList";
+import Header from "./components/Header/Header";
 import { BrowserRouter as Router } from "react-router-dom";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 class App extends React.Component {
   render() {
