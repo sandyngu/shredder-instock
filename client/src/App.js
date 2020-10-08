@@ -1,20 +1,42 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import WarehousesList from './components/WarehousesList/WarehousesList';
-import './App.scss';
+import React from "react";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import InventoryList from "./Components/InventoryList/InventoryList";
+// import WarehousesList from "./components/WarehousesList/WarehousesList";
 
 class App extends React.Component {
   render() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route path='/warehouses' exact component={WarehousesList}/>
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
- };
-};
+    return (
+      <Router>
+        <Header />
+        {/* <Switch>
+          <Route
+            exact
+            path="/"
+            component={() => {
+              return <WarehousesList />;
+            }}
+          />
+          <Route
+            path="/warehouses"
+            component={() => {
+              return <WarehousesList />;
+            }}
+          />
+          <Route
+            path="/inventories"
+            component={() => {
+              return <InventoryList />;
+            }}
+          /> */}
+        <div>Happy Wednesday</div>
+        {/* </Switch> */}
+        <Footer />
+      </Router>
+    );
+  }
+}
 
 export default App;
