@@ -6,7 +6,7 @@ import Right from "../../assets/Icons/chevron_right-24px.svg";
 import Search from "../../assets/Icons/search-24px.svg";
 import "./inventoryList.scss";
 import axios from "axios";
-// import DeleteItem from "./DeleteItem/DeleteItem";
+import DeleteItem from "../DeleteItem/DeleteItem";
 
 class InventoryList extends React.Component {
   state = {
@@ -253,7 +253,7 @@ class InventoryList extends React.Component {
             );
           })}
         </div>
-        {/* <DeleteItem display={this.state.display} /> */}
+        <DeleteItem display={this.state.display} />
       </>
     );
   }
