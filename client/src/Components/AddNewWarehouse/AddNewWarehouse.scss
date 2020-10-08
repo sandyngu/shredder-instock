@@ -1,0 +1,344 @@
+@import  '../../partials/global';
+
+
+.edit-warehouse {
+    width: auto;
+    height: 935.5px;
+    margin-top: 0;
+    margin-bottom: 96px;
+    // margin-bottom: 126px;
+    background: $white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    left: 4.5%;
+    right: 4.5%;
+    top: 16%;
+    @include tablet {
+        left: 4%;
+        right: 4%;
+        top: 11.2%;
+        height: 586px;
+        margin-bottom: 265px;
+    }
+    @include desktop {
+        left: 123px;
+        right: 123px;
+        margin-bottom: 0;
+        
+    }
+    &__header-container {
+        display: flex;
+        justify-content: left;
+        margin-top: 0;
+        border-bottom: 1px solid $cloud;
+    }
+    &__back-img {
+        margin-left: 20px;
+        margin-top: 34px;
+        margin-right: 10px;
+        @include tablet {
+            margin-top: 39px;
+        }
+    }
+    &__title {
+        margin-top: 23px;
+        margin-bottom: 22px;
+    }
+    &__form {
+        // height: 500px;
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+    &__warehouse-container {
+        @include tablet {
+            width: 50%;
+            flex: 1;
+        }
+    }
+    &__warehouse-title {
+        margin-left: 23px;
+        margin-bottom: 24px;
+    }
+    &__warehouse-list {
+        list-style: none;
+        width: 100%;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid $cloud;
+        @include tablet {
+            border-bottom: none;
+        }
+    }
+    &__warehouse-list-name {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__warehouse-list-name-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__warehouse-list-name-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__warehouse-list-street {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__warehouse-list-street-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__warehouse-list-street-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__warehouse-list-city {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__warehouse-list-city-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__warehouse-list-city-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__warehouse-list-country {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__warehouse-list-country-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__warehouse-list-country-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__border-styling {
+        @include tablet {
+        border-right: 1px solid $cloud;
+        position: absolute;
+        top: 21.5%;
+        left: 50%;
+        bottom: 17%;
+        }
+    }
+    &__contact-container {
+        @include tablet {
+            width: 50%;
+            flex: 1;
+        }
+    }
+    &__contact-title {
+        margin-left: 23px;
+        margin-bottom: 24px;
+    }
+    &__contact-list {
+        list-style: none;
+        padding: 0;
+    }
+    &__contact-list-name {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__contact-list-name-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__contact-list-name-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__contact-list-position {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__contact-list-position-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__contact-list-position-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__contact-list-phone{
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+    }
+    &__contact-list-phone-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__contact-list-phone-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__contact-list-email {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+        margin-right: 23px;
+       
+    }
+    &__contact-list-email-label {
+        margin-bottom: 4px;
+        font-size: $h3-mobile-fontsize;
+        font-weight: 600;
+    }
+    &__contact-list-email-input {
+        height: 36px;
+        width: 100%;
+        box-sizing: border-box; 
+        border: 1px solid $cloud;
+        margin-bottom: 16px;
+        border-radius: 20px;
+        @include tablet {
+            height: 38px;
+        }
+    }
+    &__button-container {
+        height: 68.32px;
+        // height: 80px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        background-color: $light-grey;
+        @include tablet {
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+    &__button-cancel {
+        height: 36px;
+        width: 41%;
+        box-sizing: border-box;
+        margin-top: 16px;
+        margin-left: 23px;
+        border-radius: 20px;
+        background: $white;
+        color: $slate;
+        border: 1px solid #BDC5D5;
+        font-weight: 600;
+        font-size: $h3-mobile-fontsize;
+        @include tablet {
+            width: 72px;
+            height: 38px;
+        }
+
+    }
+    &__button-add {
+        height: 36px;
+        width: 41%;
+        box-sizing: border-box;
+        margin-top: 16px;
+        margin-right: 23px;
+        border-radius: 20px;
+        background: $instock-indigo;
+        border: none;
+        color: $white;
+        font-weight: 600;
+        font-size: $h3-mobile-fontsize;
+        @include tablet {
+            width: 138px;
+            height: 38px;
+            margin-left: 16px;
+        }
+    }
+}
+
+
+input {
+    font-family: 'Titillium Web';
+    padding-left: 16px;
+    color: $instock-black;
+}
+
+input:focus {
+    border-radius: 20px;
+    border: 1px solid $instock-indigo;
+    outline: none;
+    // field is req: border: $red;
+
+  }
+
+::placeholder {
+    font-weight: 400;
+    font-size: $p2-mobile-fontsize;
+    color: $slate;
+};
