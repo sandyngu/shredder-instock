@@ -27,7 +27,6 @@ class WarehousesList extends React.Component {
     render() {
         return (
             <>
-            <Header />
             <div className="warehouses">
                 <div className="warehouses__header">
                     <h1 className="warehouses__header-title">Warehouses</h1>
