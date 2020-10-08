@@ -3,9 +3,8 @@
 .additem{
     display:flex;
     flex-direction:column;
-    width:95%;
+    width:876px;
     width: auto;
-    height:874px;
     margin-top: 0;
     margin-bottom: 96px;
     background: $white;
@@ -15,15 +14,24 @@
     left: 4.5%;
     right: 4.5%;
     top: 16%;
+    @include tablet{
+
+    }
     &__top{
         display:flex;
         flex-direction: row;
         padding:5%;
         border-bottom: 1px solid $cloud;
+        @include tablet{
+            align-content: center;
+        }
             &-arrow{
                 display:flex;
                 align-self: flex-start;
                 padding-top:4%;
+                @include tablet{
+                    padding-top:0;
+                }
             }
             &-title{
                 margin:0 0;
@@ -32,6 +40,6 @@
     &__import{
         display:flex;
         flex-direction:column;
-        padding:0% 6%;
+
     }
 }

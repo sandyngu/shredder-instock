@@ -3,47 +3,123 @@
 .item-form{
     display:flex;
     flex-direction: column;
+    @include tablet{
+        flex-direction:column;
+    }
+    &__masterdiv{
+        @include tablet{
+        display:flex;
+        flex-direction:row;
+    }
+    }
     &__details{
         display:flex;
         flex-direction:column;
-        border-bottom: 1px solid $cloud;
+        @include tablet{
+            width:50%;
+        }
+
     }
     &__availability{
         display:flex;
         flex-direction:column;
+        @include tablet{
+            width:50%;
+        }
     }
     &__title{
+        margin: 5% 0 5% 5%;
 
     }
     &__label{
         font-size: $p2-mobile-fontsize;
         font-weight:600;
-        margin:2% 0 2% 0;
+        margin:2% 0 2% 5%;
+        @include tablet{
+            margin-top:7%;
+        }
     }
     &__input{
         border-radius:20px;
         height:36px;
         max-height:36px;
         margin-bottom:5%;
+        width:85%;
+        max-width:85%;
+        margin:auto;
         border: 1px solid $cloud;
+        @include tablet{
+            margin-top:0;
+            margin-bottom:0;
+        }
     }
     &__description-input{
         border-radius:20px;
         height:120px;
         max-height:120px;
         margin-bottom:5%;
-        border: 1px solid $cloud;
+        width:85%;
+        max-width:85%;
+        margin:auto;
+        border: 0.5px solid $cloud;
+        resize:none;
     }
     &__dropdown{
         border-radius:20px;
         height:36px;
         max-height:36px;
-        margin-bottom:5%;
-        border: 1px solid $cloud;
+        width:90%;
+        max-width:90%;
+        margin:auto;
+        border: 0.5px solid $cloud;
+        @include tablet{
+            margin-top:0;
+            margin-bottom:0;
+        }
     }
+
+    &__line{
+        border:.5px solid $cloud;
+        margin: 7% 0 0 0;
+        @include tablet{
+        
+        }
+    }
+    &__status{
+        display:flex;
+        flex-direction:row;
+        justify-content: left;
+        margin:0% 0 2% 5%;
+        &-subcontainer{
+            display:flex;
+            flex-direction:row;
+            justify-content: left;
+            width:50%;
+            @include tablet{
+                width:40%;
+                @include desktop{
+                    width:20%;
+                }
+            }
+            &-text{
+                margin:0 5%;
+            }
+        }
+    }
+
     &__button{
         display:flex;
         justify-content: space-between;
+        align-items: center;
+        height:68px;
+        background-color:$light-grey;
+        padding-left:5%;
+        padding-right:5%;
+        margin: 7% 0 0 0;
+        @include tablet{
+            display: flex;
+            justify-content:flex-end;
+        }
             &-cancel{
                 background-color:$white;
                 color:$slate;
@@ -62,9 +138,50 @@
                 width:45%;
                 border:none;
             }
+            &-box{
+                @include tablet{
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width:30%;
+                }
+            }
         }
-    &__status-container{
-        display:flex;
-        flex-direction:row;
-    }
+
+}
+
+::placeholder{
+    font-family:'Titillium Web';
+    color:$slate;
+    
+}
+
+textarea{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+    padding-top:2%;
+    
+}
+
+select{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+    appearance: none;
+    background-image:url(../../assets/icons/arrow_drop_down-24px.svg);
+    background-repeat:no-repeat;
+    background-position: right;
+}
+
+option{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+}
+
+input{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
 }
