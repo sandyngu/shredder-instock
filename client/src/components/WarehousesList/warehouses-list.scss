@@ -6,6 +6,10 @@ input {
 
 button {
     font-family: 'Titillium Web';
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .warehouses {
