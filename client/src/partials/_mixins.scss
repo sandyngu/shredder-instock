@@ -1,7 +1,9 @@
 @import './variables';
+@import './colors';
 
 body {
     font-family: 'Titillium Web';
+    color: $slate;
     margin: 0 auto;
 }
 
