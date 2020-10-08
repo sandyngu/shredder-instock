@@ -1,0 +1,161 @@
+@import '../../partials/global';
+
+input {
+    font-family: 'Titillium Web';
+}
+
+button {
+    font-family: 'Titillium Web';
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.warehouses {
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    position: absolute;
+    width: stretch;
+    top: 140px;
+    margin: 0 17px 100px 17px;
+
+    @include tablet {
+        margin: 0 4% 100px 4%;
+        top: 95px;
+    }
+    @include desktop {
+        margin: 0 10% 150px 10%;
+    }
+
+    &__divider {    
+        border-top: 1px solid $cloud;  
+        
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 7%;
+        margin: 0;
+
+        @include tablet {
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 4%;
+            margin: 0;
+        }
+
+        &-title {
+            font-weight: 600;
+            color: $instock-black;
+            margin: 12px 0;
+
+            @include tablet {
+                margin: 10px 0 0 0;
+            }
+        }
+        &-container {
+            width: 100%;
+
+            @include tablet { 
+                width: 57%;
+            }
+            @include desktop {
+                width: 48%;
+            }
+        }
+        &-form {
+            padding-bottom: 5px;
+
+            @include tablet {
+                display: flex;
+                height: 38px;
+                margin-top: 10px;
+            }
+            
+            &-search {
+                background-image: url('../../assets/icons/search-24px.svg');
+                background-repeat: no-repeat;
+                background-position: 94%;
+                border-radius: 20px;
+                border: 1px solid $cloud;
+                padding: 7px 16px;
+                width: stretch;
+                margin-bottom: 15px;
+
+                @include tablet {
+                    margin: 0 15px 0 0;
+                }
+            }
+            &-button {
+                background-color: $instock-indigo;
+                color: white;
+                width: stretch;
+                border-radius: 20px;
+                border: none;
+                padding: 0 16px;
+                margin-bottom: 5px;
+                height: 36px;
+
+                @include tablet {
+                    height: 38px;
+                    width: 165px;
+                }
+            }
+        }
+    }
+    &__headings-container {
+        background-color: $light-grey;
+    }
+    &__headings { 
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 4%;
+
+            &-icon {
+                width: 17px;
+            }
+        }
+    }
+    &__heading {
+        margin: 8px 0; 
+    }
+    &__title {
+        display: flex;
+        margin: 0;
+        
+        &-address {
+            padding-left: 34px;
+
+            @include desktop {
+                padding-left: 70px;
+            }
+        }
+        &-contact-name {
+            padding-left: 42px;
+
+            @include desktop {
+                padding-left: 150px;
+            }
+        }
+        &-contact-info {
+            padding-right: 15px;
+
+            @include desktop {
+                padding-right: 20px;
+            }
+        }
+        &-actions {
+            width: 50px;
+            padding-left: 10px;
+        }
+    }
+}

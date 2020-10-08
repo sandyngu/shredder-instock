@@ -8,7 +8,26 @@ class App extends React.Component {
   return (
     <Router>
       <Switch>
-        <Route path='/' component={DeleteWarehouse}/>
+        <Route path='/warehouses/delete-warehouse' component={DeleteWarehouse}/>
+        <Route
+            exact
+            path="/"
+            component={() => {
+              return <WarehousesList />;
+            }}
+          />
+          <Route
+            path="/warehouses"
+            component={() => {
+              return <WarehousesList />;
+            }}
+          />
+          <Route
+            path="/inventories"
+            component={() => {
+              return <InventoryList />;
+            }}
+          />
       </Switch>
     </Router>
   );
