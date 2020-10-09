@@ -10,7 +10,6 @@ class WarehousesList extends React.Component {
 
     state = {
         warehousesList: [],
-
         display: false
     }
 
@@ -24,11 +23,17 @@ class WarehousesList extends React.Component {
             .catch(err => console.log(err));
     };
 
-    deleteModal = (e) => {
+    activateModal = (e) => {
         this.setState({
           display: true,
         });
       };
+
+    closeModal = (e) => {
+        this.setState({
+            display: false
+        });
+    };
 
     render() {
         return (
@@ -69,9 +74,11 @@ class WarehousesList extends React.Component {
                     </div>
                 </div>
                 <div className="warehouses__divider"></div>
-                <WarehouseListItem warehousesList={this.state.warehousesList} deleteModal={this.deleteModal}/>
-                <DeleteWarehouse warehousesList={this.state.warehousesList} display={this.state.display} />
+                {this.state.warehousesList.map(warehouse =>
+                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} activateModal={this.activateModal} />
+                )}
             </div>
+            <DeleteWarehouse display={this.state.display} closeModal={this.closeModal}/>
             </>
         );
     };

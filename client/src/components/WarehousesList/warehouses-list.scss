@@ -88,6 +88,10 @@ button {
                 width: stretch;
                 margin-bottom: 15px;
 
+                    &:focus {
+                        outline: none;
+                    }
+
                 @include tablet {
                     margin: 0 15px 0 0;
                 }
