@@ -19,7 +19,7 @@ button {
     position: absolute;
     width: stretch;
     top: 140px;
-    margin: 0 17px 0 17px;
+    margin: 0 17px;
 
     @include tablet {
         margin: 0 4% 100px 4%;

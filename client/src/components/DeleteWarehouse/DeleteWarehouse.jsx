@@ -5,6 +5,7 @@ import './delete-warehouse.scss';
 
 function DeleteWarehouse(props) {
     console.log(props)
+
     if (!props.display) {
         return null;
     }
@@ -20,7 +21,7 @@ function DeleteWarehouse(props) {
                     <Link to='/warehouses' className="delete-warehouse__cancel">
                         <button className="delete-warehouse__button delete-warehouse__button-cancel" onClick={() => props.closeModal()}>Cancel</button>
                     </Link>
-                    <button className="delete-warehouse__button delete-warehouse__button-delete">Delete</button>
+                    <button className="delete-warehouse__button delete-warehouse__button-delete" onClick={() => props.deleteWarehouse(props.id, props.name, props.address, props.city, props.country, props.contact.name, props.contact.position, props.contact.phone, props.contact.email)}>Delete</button>
                 </div>
             </div>
         </div>

@@ -13,14 +13,16 @@ button {
     background-color: white; 
     position: absolute;
     z-index: 2;
-    top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    border: 1px solid black;
+    
+    border: 1px solid $cloud;
+    width: stretch;
 
     @include tablet {
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         top: 190px;
         width: 672px;
     }

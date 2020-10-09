@@ -19,13 +19,13 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/warehouses"
+            exact path="/warehouses"
             component={() => {
               return <WarehousesList />;
             }}
           />
           <Route
-            path="/inventories"
+            exact path="/inventories"
             component={() => {
               return <InventoryList />;
             }}

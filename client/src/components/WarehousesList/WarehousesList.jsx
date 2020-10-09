@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
-// import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
+import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
 
@@ -34,6 +34,27 @@ class WarehousesList extends React.Component {
             display: false
         });
     };
+    
+    deleteWarehouse = (id, name, address, city, country, contactname, position, phone, email) => {
+        let deletedWarehouse = {
+            id: id,
+            name: name,
+            address: address,
+            city: city,
+            country: country,
+            contact: {
+              name: contactname,
+              position: position,
+              phone: phone,
+              email: email
+            }
+          }
+        axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => console.log(err));
+    }
 
     render() {
         return (
@@ -75,14 +96,16 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} closeModal={this.closeModal} activateModal={this.activateModal} />
+                <>
+                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} />
+                    <DeleteWarehouse display={this.state.display} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} deleteWarehouse= {this.deleteWarehouse} closeModal={this.closeModal} />
+                </>
                 )}
             </div>
             <div className="empty"></div>
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
             </div>
-            {/* <DeleteWarehouse display={this.state.display} closeModal={this.closeModal}/> */}
             </>
         );
     };

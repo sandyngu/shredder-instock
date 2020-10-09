@@ -35,7 +35,17 @@ router.put('/', (req, res) => {
 // Delete inventory objects
 
 router.delete('/', (req, res) => {
-    res.json('warehouses object');
+    const { deletedWarehouse } = req.body
+
+    let index = warehouses.findIndex((warehouse) => warehouse === deletedWarehouse);
+        console.log(index)
+        console.log(res)
+        
+        let newWarehousesList = warehouses;
+        const warehouses = newWarehousesList.splice(index, 1)
+
+    res.json(warehouses);
+    res.send(warehouses)
 })
 
 module.exports = router

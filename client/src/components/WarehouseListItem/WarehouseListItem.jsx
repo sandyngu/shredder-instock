@@ -4,7 +4,7 @@ import Delete from '../../assets/icons/delete_outline-24px.svg';
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
-import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
+// import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
     const { name, address, city, country, contact, id } = props
@@ -45,15 +45,13 @@ function WarehouseListItem(props) {
                     </div>
                 </div>
                 <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile">
-                    <Link to='/warehouses/delete-warehouse'>
-                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
-                    </Link>
+                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
                     <Link to='/warehouses/edit-warehouse'>
                         <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                     </Link>
                 </div>
             </div>
-            <DeleteWarehouse display={props.display} closeModal={props.closeModal} name={name} id={id}/>
+            {/* <DeleteWarehouse display={props.display} closeModal={props.closeModal} /> */}
         </>
     )
 };
