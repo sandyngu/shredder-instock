@@ -1,10 +1,5 @@
 @import '../../partials/global';
 
-body {
-    background-color: rgba(0,0,0,0.9);
-    width: 100%;
-}
-
 button {
     &:hover {
         cursor: pointer;
@@ -17,6 +12,7 @@ button {
 .delete-warehouse {
     background-color: white; 
     position: absolute;
+    z-index: 2;
     top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +70,7 @@ button {
         align-items: center;
 
         @include tablet {
-            width: 26%;
+            width: 25%;
             margin-left: 64%;
         }
         @include desktop {
@@ -82,7 +78,11 @@ button {
         }
     }
     &__cancel {
-        width: 43%;
+        width: 48%;
+
+        @include tablet {
+            width: 45%;
+        }
     }
     &__button {
         font-family: 'Titillium Web';
@@ -92,6 +92,7 @@ button {
         width: 48%;
         height: 36px;
         font-size: $p2-mobile-fontsize;
+        text-align: center;
 
         @include tablet {
             text-align: center;
