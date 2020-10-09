@@ -19,7 +19,7 @@ button {
     position: absolute;
     width: stretch;
     top: 140px;
-    margin: 0 17px 100px 17px;
+    margin: 0 17px;
 
     @include tablet {
         margin: 0 4% 100px 4%;
@@ -87,6 +87,10 @@ button {
                 padding: 7px 16px;
                 width: stretch;
                 margin-bottom: 15px;
+
+                    &:focus {
+                        outline: none;
+                    }
 
                 @include tablet {
                     margin: 0 15px 0 0;
@@ -157,5 +161,32 @@ button {
             width: 50px;
             padding-left: 10px;
         }
+    }
+}
+
+.empty {
+    height: 1670px;
+
+    @include tablet {
+        height: 785px;
+    }
+    @include desktop {
+        height: 653px;
+    }
+}
+
+.footer__text {
+    font-size: $p3-mobile-fontsize;
+    background-color: $light-grey;
+    font-weight: normal;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: center;
+    color: $slate;
+    padding: 40px;
+    width: stretch;
+
+    @include tablet {
+        font-size: $p3-desktab-fontsize;
     }
 }
