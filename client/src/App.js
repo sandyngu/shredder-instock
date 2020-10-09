@@ -2,14 +2,13 @@ import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import InventoryList from "./components/InventoryList/InventoryList";
+import Inventories from "./components/Inventories/Inventories";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
-
+import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
 
 class App extends React.Component {
   render() {
     return (
-
       <Router>
         <Header />
         <Switch>
@@ -27,9 +26,16 @@ class App extends React.Component {
             }}
           />
           <Route
+            exact
             path="/inventories"
             component={() => {
-              return <InventoryList />;
+              return <Inventories />;
+            }}
+          />
+          <Route
+            path="/inventories/:id"
+            render={(routeProps) => {
+              return <WarehouseInventory {...routeProps} />;
             }}
           />
         </Switch>

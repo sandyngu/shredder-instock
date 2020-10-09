@@ -8,6 +8,12 @@
   flex-wrap: wrap;
   text-align: left;
   padding: 4%;
+  background: $white;
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 
   @include tablet {
     border: 2px solid red;
@@ -20,6 +26,7 @@
       padding: 1% 1% 2% 4%;
     }
   }
+
   &__close-icon {
     height: 25px;
     margin-left: auto;
