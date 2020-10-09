@@ -77,12 +77,15 @@
             margin-bottom:0;
         }
     }
-
     &__line{
         border:.5px solid $cloud;
         margin: 7% 0 0 0;
         @include tablet{
-        
+            border-right: 1px solid $cloud;
+            position: absolute;
+            top: 14.5%;
+            left: 50%;
+            bottom: 17%;
         }
     }
     &__status{
@@ -106,7 +109,6 @@
             }
         }
     }
-
     &__button{
         display:flex;
         justify-content: space-between;
@@ -126,8 +128,11 @@
                 height:36px;
                 max-height:36px;
                 border-radius:20px;
-                width:45%;
+                width:50%;
                 border: 1px solid $cloud;
+                @include tablet {
+                    width:45%;
+                }
             }
             &-add{
                 background-color:$instock-indigo;
@@ -139,21 +144,26 @@
                 border:none;
             }
             &-box{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width:100%;
                 @include tablet{
-                    display:flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    width:30%;
+
+                    width:35%;
                 }
             }
         }
 
 }
 
+link{
+
+}
+
 ::placeholder{
     font-family:'Titillium Web';
-    color:$slate;
-    
+    color:$slate;    
 }
 
 textarea{
@@ -171,7 +181,7 @@ select{
     appearance: none;
     background-image:url(../../assets/icons/arrow_drop_down-24px.svg);
     background-repeat:no-repeat;
-    background-position: right;
+    background-position: 96% 50%;
 }
 
 option{
