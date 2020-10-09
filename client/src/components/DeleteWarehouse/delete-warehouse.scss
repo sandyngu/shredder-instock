@@ -1,0 +1,114 @@
+@import '../../partials/global';
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.delete-warehouse {
+    background-color: white; 
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    border: 1px solid black;
+
+    @include tablet {
+        top: 190px;
+        width: 672px;
+    }
+
+    &__container {
+        width: 92%;
+        margin: 0 auto;
+        padding: 15px 0 25px 0;
+
+        @include tablet {
+            width: 90%;
+            margin: 0 9%;
+            padding: 15px 0 35px 0;
+        }
+    }
+    &__icon {
+        margin-left: 94%;
+        width: 26px;
+    }
+    &__heading {
+        line-height: 36px;
+        color: $instock-black;
+
+        @include tablet {
+            margin: 0 0 20px 0;
+        }
+    }
+    &__text {
+        font-size: $p1-mobile-fontsize;
+        font-weight: normal;
+        margin: 0;
+
+        line-height: 26px;
+        color: $instock-black;
+        margin-bottom: 375px;
+        
+        @include tablet {
+            width: 544px;
+            margin-bottom: 30px;
+            font-size: $p1-desktab-fontsize;
+            line-height: 28px;
+        }
+    }
+    &__button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet {
+            width: 25%;
+            margin-left: 64%;
+        }
+        @include desktop {
+            margin-left: 62%;
+        }
+    }
+    &__cancel {
+        width: 48%;
+
+        @include tablet {
+            width: 45%;
+        }
+    }
+    &__button {
+        font-family: 'Titillium Web';
+        border-radius: 20px;
+        border: none;
+        padding: 7px 16px;
+        width: 48%;
+        height: 36px;
+        font-size: $p2-mobile-fontsize;
+        text-align: center;
+
+        @include tablet {
+            text-align: center;
+            width: 43%;
+        }
+
+        &-cancel {
+            border: 1px solid $cloud;
+            background-color: white;
+            font-weight: 600;
+            color: $slate;
+            width: 100%;
+        }
+        &-delete {
+            background-color: $red;
+            color: white;
+        }
+    }
+}
