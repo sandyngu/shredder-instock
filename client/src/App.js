@@ -5,11 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 
-
 class App extends React.Component {
   render() {
     return (
-
       <Router>
         <Header />
         <Switch>
@@ -21,13 +19,13 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/warehouses"
+            exact path="/warehouses"
             component={() => {
               return <WarehousesList />;
             }}
           />
           <Route
-            path="/inventories"
+            exact path="/inventories"
             component={() => {
               return <InventoryList />;
             }}
