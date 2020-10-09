@@ -1,0 +1,374 @@
+@import "../../partials/_global.scss";
+
+.inventoryList {
+  position: absolute;
+  top: 140px;
+  background: $white;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+
+  padding-top: 15px;
+  right: 20px;
+  left: 20px;
+  @include tablet {
+    top: 95px;
+  }
+  @include desktop {
+    width: 85vw;
+    left: 89px;
+    right: 47px;
+  }
+  &__main {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__title {
+    color: $instock-black;
+    font-weight: 600;
+    font-size: $h1-mobile-fontsize;
+    line-height: 36px;
+    width: 115px;
+    height: 36px;
+    margin-left: 6.4vw;
+    @include tablet {
+      margin-left: 32px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__form-sub {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6.4vw;
+    @include tablet {
+      display: flex;
+      margin-left: 6.4vw;
+      width: 100%;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-end;
+    }
+  }
+  &__search {
+    background-image: url('../../assets/icons/search-24px.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 78.666vw;
+    height: 36px;
+    border-radius: 20px;
+    padding: 0.75rem 1.875rem 0.75rem 1rem;
+    border: 1px solid $cloud;
+    @include tablet {
+      width: 24.0885vw;
+      height: 38px;
+    }
+    @include desktop {
+      width: 22.833vw;
+    }
+  }
+  &__button {
+    width: 78.666vw;
+    height: 36px;
+    border-radius: 20px;
+    margin-top: 16px;
+    background-color: $instock-indigo;
+    border: none;
+    color: $white;
+    @include tablet {
+      width: 16.666vw;
+      height: 38px;
+      margin-left: 16px;
+      margin-right: 32px;
+    }
+    @include desktop {
+      width: 10.666vw;
+    }
+  }
+  &__category-top {
+    display: none;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      margin: 0 2.666vw;
+    }
+  }
+  &__category-left {
+    display: flex;
+  }
+  &__category-center {
+    display: flex;
+  }
+  &__category-inventory {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+  }
+  &__category-category {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+    margin-left: 5.598vw;
+  }
+  &__category-status {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+    margin-left: 5.598vw;
+  }
+  &__category-quantity {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+    margin-left: 5.598vw;
+  }
+  &__category-warehouse {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+    margin-left: 5.598vw;
+  }
+  &__category-actions {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: $p3-desktab-fontsize;
+    line-height: 18px;
+    color: $slate;
+    margin-left: 9.2447vw;
+  }
+  &__sort-icon {
+    width: 20px;
+    height: 15px;
+  }
+  &__parent-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__section-left {
+    width: 39.466vw;
+    margin-left: 6.4vw;
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+      width: 20vw;
+      margin-left: 2.666vw;
+      height: 50px;
+    }
+  }
+  &__section-right {
+    width: 39.466vw;
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+      width: 20vw;
+      margin-top: 10px;
+    }
+  }
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__item-heading {
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 111px;
+    height: 20px;
+    font-size: $p2-mobile-fontsize;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    color: $instock-indigo;
+    @include tablet {
+      margin-top: 10px;
+    }
+  }
+  &__category-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__category-heading {
+    width: 51px;
+    height: 16px;
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__category {
+    font-size: $p2-mobile-fontsize;
+    line-height: 20px;
+    margin: 0 0 75px 0;
+    color: $instock-black;
+    @include tablet {
+      margin-left: 5.598vw;
+    }
+  }
+  &__status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__status-heading {
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__status {
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 0;
+    color: $green;
+    // background-color: #e1e1e1;
+    background: rgba(21, 132, 99, 0.07);
+    border-radius: 20px;
+    @include tablet {
+      width: 61px;
+      margin-left: 4.817vw;
+    }
+  }
+  &__quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__quantity-heading {
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__quantity {
+    font-size: $p2-mobile-fontsize;
+    line-height: 20px;
+    margin: 0;
+    color: $instock-black;
+    @include tablet {
+      margin-left: 4.6875vw;
+      width: 37px;
+    }
+  }
+  &__warehouse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__warehouse-heading {
+    font-size: $p3-mobile-fontsize;
+    line-height: 16px;
+    margin: 16px 0 0 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__warehouse {
+    font-size: $p2-mobile-fontsize;
+    line-height: 20px;
+    margin: 0;
+    color: $instock-black;
+    @include tablet {
+      margin-left: 5.8vw;
+      width: 68px;
+    }
+  }
+  &__action-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 6.4vw;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__action-section-hide {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+  &__action-section-hide-tablet {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__action-logo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include tablet {
+      width: 54%;
+      margin-left: 9.4739vw;
+    }
+  }
+  &__action-heading {
+    display: none;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__sort-icon {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+  &__heading-color {
+    color: $slate;
+  }
+}
+button {
+  border: 0;
+  background: $white;
+}
