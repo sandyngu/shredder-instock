@@ -20,22 +20,14 @@ const Header = () => {
             <Link
               to="/warehouses"
               className="navbar__link navbar__warehouses"
-<<<<<<< HEAD
               activeClassName="navbar__warehouses--active"
-=======
-            //   activeClassName="navbar__warehouses--active"
->>>>>>> development
             >
               Warehouses
             </Link>
             <Link
               to="/inventories"
               className="navbar__link navbar__inventory"
-<<<<<<< HEAD
               activeClassName="navbar__warehouses--active"
-=======
-            //   activeClassname="navbar__warehouses--active"
->>>>>>> development
             >
               Inventory
             </Link>
