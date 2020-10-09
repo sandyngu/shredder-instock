@@ -75,14 +75,14 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} activateModal={this.activateModal} />
+                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} closeModal={this.closeModal} activateModal={this.activateModal} />
                 )}
             </div>
             <div className="empty"></div>
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
             </div>
-            <DeleteWarehouse display={this.state.display} closeModal={this.closeModal}/>
+            {/* <DeleteWarehouse display={this.state.display} closeModal={this.closeModal}/> */}
             </>
         );
     };
