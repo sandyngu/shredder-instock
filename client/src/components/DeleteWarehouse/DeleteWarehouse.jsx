@@ -14,8 +14,8 @@ function DeleteWarehouse(props) {
                 <Link to='/warehouses'>
                     <img src={Exit} alt="Exit Icon" className="delete-warehouse__icon" onClick={() => props.closeModal()}/>
                 </Link>
-                <h1 className="delete-warehouse__heading">Delete King West warehouse?</h1>
-                <p className="delete-warehouse__text">Please confirm that you’d like to delete the King West from the list of warehouses. You won’t be able to undo this action.</p>
+                <h1 className="delete-warehouse__heading">Delete {props.name} warehouse?</h1>
+                <p className="delete-warehouse__text">Please confirm that you’d like to delete the {props.name} from the list of warehouses. You won’t be able to undo this action.</p>
                 <div className="delete-warehouse__button-container">
                     <Link to='/warehouses' className="delete-warehouse__cancel">
                         <button className="delete-warehouse__button delete-warehouse__button-cancel" onClick={() => props.closeModal()}>Cancel</button>

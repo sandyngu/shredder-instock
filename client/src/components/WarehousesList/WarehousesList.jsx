@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
-import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
+// import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
 
