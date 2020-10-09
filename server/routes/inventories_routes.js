@@ -4,9 +4,11 @@ const router = express.Router();
 const inventories = require("../inventories.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const fs = require('fs');
 
 router.use(cors());
 router.use(bodyParser.json());
+router.use(express.json());
 
 // Get inventory objects
 
@@ -20,11 +22,21 @@ router.get('/:id', (req, res) => {
     res.send('inventory object');
 })
 
-// Create inventory objects 
+// Create inventory objects and write to JSON file
 
 router.post('/', (req, res) => {
-    res.json('inventory object');
+    console.log(req.body);
+    const addItem = req.body;
+    const stringAddItem = JSON.stringify(addItem);
+    console.log(stringAddItem);
+    const inventoriesData = JSON.parse(fs.readFileSync('./inventories.json'));
+    inventoriesData.push(addItem);
+    fs.writeFileSync('./inventories.json', JSON.stringify(inventoriesData), null, 2);
+        
+
+
 })
+
 
 // Edit inventory objects
 
