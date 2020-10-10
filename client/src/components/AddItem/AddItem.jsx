@@ -1,6 +1,10 @@
 import React from 'react';
 import ItemInputForm from '../ItemInputForm/ItemInputForm';
 import './AddItem.scss';
+<<<<<<< HEAD
+=======
+// import axios from 'axios';
+>>>>>>> development
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
 
 function AddItem() {

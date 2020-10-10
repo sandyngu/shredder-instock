@@ -5,9 +5,13 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 const fs = require('fs');
 const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
 router.use(cors());
 router.use(bodyParser.json());
+router.use(express.json());
 
 // Get warehouse objects
 
@@ -27,8 +31,14 @@ router.get('/:id', (req, res) => {
 // Create warehouse object 
 
 router.post('/', (req, res) => {
-    res.json('warehouse object');
+    console.log(req.body);
+    const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
+    addWarehouseData.push(req.body);
+    console.log(addWarehouseData);
+    fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
+    res.status(201).send({status: 'warehouse added'});
 })
+    // res.json('warehouse object');
 
 // Edit warehouse objects
 
