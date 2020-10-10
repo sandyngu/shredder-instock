@@ -102,5 +102,18 @@
       "phone": "+1 (646) 123-1234",
       "email": "vmendoza@instock.com"
     }
+  },
+  {
+    "id": "3c03c338-d7aa-4e74-ab8d-615a7b539f45",
+    "name": "Test",
+    "address": "100 John",
+    "city": "Btown",
+    "country": "Canada",
+    "contact": {
+      "name": "Test",
+      "position": "nothingness",
+      "phone": "234 243 2423",
+      "email": "ericdimech@hotmail.com"
+    }
   }
 ]
