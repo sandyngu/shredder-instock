@@ -1,4 +1,4 @@
-import React from "./node_modules/react";
+import React from "react";
 import "./DeleteItem.scss";
 import closeIcon from "../../assets/icons/close-24px.svg";
 

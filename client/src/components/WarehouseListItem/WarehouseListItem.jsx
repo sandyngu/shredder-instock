@@ -1,5 +1,5 @@
-import React from './node_modules/react'
-import { Link } from './node_modules/react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom';
 import Delete from '../../assets/icons/delete_outline-24px.svg';
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';

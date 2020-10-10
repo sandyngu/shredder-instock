@@ -1,7 +1,7 @@
-import React from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
-import Axios from './node_modules/axios';
-import { v4 as uuidv4 } from './node_modules/uuid';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import BackArrow from '../../assets/icons/arrow_back-24px.svg';
 import Exclamation from '../../assets/icons/error-24px.svg';
 

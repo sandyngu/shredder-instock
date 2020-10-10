@@ -1,7 +1,7 @@
-import React from "./node_modules/react";
+import React from "react";
 // import { NavLink } from 'react-router-dom';
 import Logo from "../../assets/logo/InStock-Logo_2x.png";
-import { Link } from "./node_modules/react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./Header.scss";
 

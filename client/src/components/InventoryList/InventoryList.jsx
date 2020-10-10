@@ -1,12 +1,12 @@
-import React from "./node_modules/react";
-import { Link } from './node_modules/react-router-dom';
+import React from "react";
+import { Link } from 'react-router-dom';
 import Sort from "../../assets/icons/sort-24px.svg";
 import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
 import Right from "../../assets/icons/chevron_right-24px.svg";
 import Search from "../../assets/icons/search-24px.svg";
 import "./InventoryList.scss";
-import axios from "./node_modules/axios";
+import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
 
 class InventoryList extends React.Component {
