@@ -12,7 +12,7 @@ router.use(express.json());
 // Get inventory objects
 
 router.get('/', (req, res) => {
-    const inventories = JSON.parse(fs.readFileSync("../inventories.json"));
+    const inventories = JSON.parse(fs.readFileSync("./inventories.json"));
     res.send(inventories);
 })
 
@@ -26,10 +26,10 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     console.log(req.body);
-    const inventoriesData = JSON.parse(fs.readFileSync('../inventories.json'));
+    const inventoriesData = JSON.parse(fs.readFileSync('./inventories.json'));
     inventoriesData.push(req.body);
     console.log(inventoriesData);
-    fs.writeFileSync('../inventories.json', JSON.stringify(inventoriesData), null, 2);
+    fs.writeFileSync('./inventories.json', JSON.stringify(inventoriesData), null, 2);
     res.status(201).send({status:'object created'});
 })
 
