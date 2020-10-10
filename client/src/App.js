@@ -16,7 +16,6 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-        <AddNewWarehouse />
         <Switch>
           <Route
             exact
