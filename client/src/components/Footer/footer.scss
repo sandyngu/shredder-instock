@@ -1,5 +1,6 @@
-@import '../../partials/global';
+// @import '../../partials/global';
 
+<<<<<<< HEAD
 .footer__text {
     font-size: $p3-mobile-fontsize;
     background-color: $light-grey;
@@ -13,9 +14,38 @@
     bottom: -275px; /*change this to whatever value works for you*/
 
     @include tablet {
+<<<<<<< HEAD
         bottom: -100px; /*change this to whatever value works for you*/
     }
     @include desktop {
         bottom: 5px; /*change this to whatever value works for you*/
+=======
+        bottom: -50px; /*change this to whatever value works for you*/
+    }
+    @include desktop {
+        bottom: 95px; /*change this to whatever value works for you*/
+>>>>>>> development
     }
 }
+=======
+// .footer__text {
+//     font-size: $p3-mobile-fontsize;
+//     background-color: $light-grey;
+//     margin: 0 auto;
+//     text-align: center;
+//     vertical-align: center;
+//     color: $slate;
+//     padding: 40px;
+//     width: stretch;
+//     position: absolute;
+//     bottom: -1182px; /*change this to whatever value works for you*/
+
+//     @include tablet {
+//         bottom: -325px; /*change this to whatever value works for you*/
+//         font-size: $p3-desktab-fontsize;
+//     }
+//     @include desktop {
+//         bottom: -205px; /*change this to whatever value works for you*/
+//     }
+// }
+>>>>>>> development

@@ -1,0 +1,377 @@
+@import "../../partials/_global.scss";
+
+.inventoryList {
+  position: absolute;
+  top: 140px;
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  width: stretch;
+  margin: 0 17px;
+  
+  @include tablet {
+    margin: 0 4% 100px 4%;
+    top: 95px;
+  }
+  @include desktop {
+    margin: 0 10% 150px 10%;
+  }
+
+  &__main {
+    padding: 15px 0;
+    border-bottom: 1px solid $cloud;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &:hover {
+      background-color: rgba(46, 102, 230, 0.07);
+    }
+  }
+
+  &__header {
+    
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 15px 4%;
+    }
+  }
+  &__title {
+    color: $instock-black;
+    font-weight: 600;
+    margin: 12px 0;
+
+      @include tablet {
+          margin: 10px 0 0 0;
+      }
+
+  }
+  &__form-container {
+    width: stretch;
+
+    @include tablet {
+      padding-top: 6px; 
+      width: 53%;
+    }
+    @include desktop {
+        width: 44%;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 7%;
+    margin: 0;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 15px 4%;
+      margin: 0;
+    }
+  }
+  &__form-sub {
+    padding-bottom: 5px;
+
+    @include tablet {
+      display: flex;
+      height: 38px;
+      margin-top: 10px;
+    }
+  }
+  &__search {
+    background-image: url('../../assets/icons/search-24px.svg');
+    background-repeat: no-repeat;
+    background-position: 94%;
+    width: stretch;
+    border-radius: 20px;
+    padding: 7px 16px;
+    border: 1px solid $cloud;
+    margin-bottom: 15px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $instock-indigo;
+        }
+
+    @include tablet {
+      margin: 0 15px 0 0;
+    }
+  }
+  &__button {
+      background-color: $instock-indigo;
+      color: white;
+      width: stretch;
+      border-radius: 20px;
+      border: none;
+      padding: 0 16px;
+      margin-bottom: 5px;
+      height: 36px;
+
+    @include tablet {
+      height: 38px;
+      width: 130px;
+    }
+
+      &:hover {
+        background-color: $instock-black;
+    }
+  }
+  &__list-divider {
+    border-bottom: 1px solid $cloud;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__category-box {
+    background-color: $light-grey;
+    width: 100%;
+  }
+  &__categories {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      background-color: $light-grey;
+      margin: 0 4%;
+    }
+  }
+  &__category-title {
+    @include tablet {
+      font-weight: 600;
+      color: $slate;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__sort-icon {
+    width: 17px;
+    vertical-align: center;
+  }
+  &__parent-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 170px;
+    padding: 0px 6.5% 5px 6.5%;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      height: auto;
+      width: 100%;
+      padding: 0 4%;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    color: $slate;
+    
+    @include tablet {
+      width: 90px;
+    }
+  }
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item-heading {
+    line-height: 16px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__item {
+    display: flex;
+    height: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    color: $instock-indigo;
+
+    @include tablet {
+      width: 155px;
+    }
+  }
+  &__category-heading {
+    height: 16px;
+    line-height: 16px;
+    margin: 16px 0 5px 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__category {
+    line-height: 20px;
+    margin: 0 0 40px 0;
+
+    @include tablet {
+      margin: 0;
+      width: 110px;
+      padding-left: 3px;
+    }
+  }
+  &__category-inventory {
+    
+    @include tablet {
+      padding-right: 42px;
+    }
+  }
+  &__category-status {
+    
+    @include tablet {
+      padding-left: 35px;
+    }
+  }
+  &__category-quantity {
+    
+    @include tablet {
+      padding-left: 55px;
+      width: 50px;
+    }
+  }
+  &__category-warehouse {
+    
+    @include tablet {
+      padding-right: 35px;
+    }
+  }
+  &__status-heading {
+    line-height: 16px;
+    margin: 0 0 5px 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  &__status-container {
+    @include tablet {
+      width: 120px;
+    }
+  }
+  &__status {
+    line-height: 16px;
+    text-transform: uppercase;
+    font-size: $p3-mobile-fontsize;
+    margin: 0;
+    color: $green;
+    background: rgba(21, 132, 99, 0.07);
+    padding: 3px 4px;
+    border-radius: 20px;
+
+    @include tablet {
+      width: 60%;
+    }
+  }
+  &__quantity-heading {
+    line-height: 16px;
+    margin: 16px 0 5px 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  &__quantity {
+    margin: 0;
+
+    @include tablet {
+      width: 50px;
+      padding-right: 5px;
+    }
+    
+  }
+  &__warehouse-heading {
+    margin: 16px 0 5px 0;
+    font-weight: 600;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__warehouse {
+    margin: 0;
+
+    @include tablet {
+      padding-right: 15px;
+    }
+    
+  }
+  &__action-section-hide {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+  &__action-section-hide-tablet {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__action-logo-container {
+    display: flex;
+        justify-content: space-between;
+        margin: 0 6.5%;
+        padding-bottom: 2px;
+        @include tablet {
+          margin: 0;
+          padding: 0;
+      }
+  }
+  &__action-heading {
+    display: none;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__delete-icon {
+    background: none;
+    padding-right: 5px;
+  }
+  &__sort-icon {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+  }
+}
+button {
+  border: none;
+  background: none;
+}
+
+.empty {
+  height: 4000px;
+
+  @include tablet {
+      height: 1000px;
+  }
+  @include desktop {
+      height: 1000px;
+  }
+}
+
+.footer__text {
+  font-size: $p3-mobile-fontsize;
+  background-color: $light-grey;
+  font-weight: normal;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: center;
+  color: $slate;
+  padding: 40px;
+  width: stretch;
+
+  @include tablet {
+      font-size: $p3-desktab-fontsize;
+  }
+}
