@@ -173,7 +173,7 @@ class AddNewWarehouse extends React.Component {
                                             <input type='text' name="name" required value={this.state.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
                                             {this.state.name === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -183,7 +183,7 @@ class AddNewWarehouse extends React.Component {
                                             <input type='text' name="address" value={this.state.address} placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
                                             {this.state.address === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -193,7 +193,7 @@ class AddNewWarehouse extends React.Component {
                                             <input type='text' name="city" value={this.state.city} placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
                                             {this.state.city === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -203,7 +203,7 @@ class AddNewWarehouse extends React.Component {
                                             <input type='text' name="country" value={this.state.country} placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
                                             {this.state.country === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -223,17 +223,17 @@ class AddNewWarehouse extends React.Component {
                                     <input type='text' name="contact.name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
                                     {this.state.name === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                    <input type='text' name="contact.position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
                                     {this.state.position === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -243,7 +243,7 @@ class AddNewWarehouse extends React.Component {
                                     <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
                                     {this.state.phone === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
@@ -253,7 +253,7 @@ class AddNewWarehouse extends React.Component {
                                     <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
                                     {this.state.email === "" && (
                                                 <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} />
+                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
                                                 </div>
                                             )}
