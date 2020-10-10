@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
+import AddItem from "./components/AddItem/AddItem";
 
 class App extends React.Component {
   render() {
@@ -30,6 +31,12 @@ class App extends React.Component {
               return <InventoryList />;
             }}
           />
+          <Route
+            path="/inventories/additem"
+            component={() => {
+              return <AddItem/>;
+            }}
+            />
         </Switch>
       </Router>
     );
