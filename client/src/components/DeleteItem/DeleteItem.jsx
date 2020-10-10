@@ -1,7 +1,6 @@
 import React from "react";
 import "./DeleteItem.scss";
 import closeIcon from "../../assets/icons/close-24px.svg";
-
 function DeleteItem(props) {
   if (!props.display) {
     return null;

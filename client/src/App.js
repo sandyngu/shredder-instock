@@ -59,14 +59,14 @@ class App extends React.Component {
             component={() => {
               return <ItemDetails />;
             }}
-          />
+          /> */}
           <Route
             path="/inventories/add-item"
             component={() => {
               return <AddItem />;
             }}
           />
-          <Route
+          {/* <Route
             path="/inventories/edit-item"
             component={() => {
               return <EditItem />;

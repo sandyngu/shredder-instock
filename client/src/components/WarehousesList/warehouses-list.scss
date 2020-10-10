@@ -90,6 +90,7 @@ button {
 
                     &:focus {
                         outline: none;
+                        border: 1px solid $instock-indigo;
                     }
 
                 @include tablet {
@@ -109,6 +110,10 @@ button {
                 @include tablet {
                     height: 38px;
                     width: 165px;
+                }
+
+                &:hover {
+                    background-color: $instock-black;
                 }
             }
         }

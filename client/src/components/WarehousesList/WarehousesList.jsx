@@ -65,7 +65,7 @@ class WarehousesList extends React.Component {
                     <h1 className="warehouses__header-title">Warehouses</h1>
                     <div className="warehouses__header-container">
                         <form className="warehouses__header-form">
-                            <input type="text" name="search" className="warehouses__header-form-search" placeholder="Search..." />
+                            <input type="search" name="search" className="warehouses__header-form-search" placeholder="Search..." />
                             <Link to="/warehouses/add-warehouse">
                                 <button className="warehouses__header-form-button">+ Add New Warehouse</button>
                             </Link>
