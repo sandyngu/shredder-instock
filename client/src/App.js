@@ -8,8 +8,8 @@ import WarehousesList from "./components/WarehousesList/WarehousesList";
 // import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
 // import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
 // import ItemDetails from "./components/ItemDetails/ItemDetails";
-// import AddItem from "./components/AddItem/AddItem";
-// import EditItem from "./components/AddItem/EditItem";
+import AddItem from "./components/AddItem/AddItem";
+import EditItem from "./components/EditItem/EditItem";
 
 class App extends React.Component {
   render() {
@@ -66,12 +66,12 @@ class App extends React.Component {
               return <AddItem />;
             }}
           />
-          {/* <Route
+          <Route
             path="/inventories/edit-item"
             component={() => {
               return <EditItem />;
             }}
-          /> */}
+          />
         </Switch>
       </Router>
     );
