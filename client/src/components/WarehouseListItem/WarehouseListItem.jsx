@@ -51,11 +51,7 @@ function WarehouseListItem(props) {
                     </Link>
                 </div>
             </div>
-<<<<<<< HEAD
-            {/* <DeleteWarehouse display={props.display} closeModal={props.closeModal} /> */}
-=======
             <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
->>>>>>> development
         </>
     )
 };

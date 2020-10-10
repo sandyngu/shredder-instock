@@ -9,12 +9,7 @@ import WarehousesList from "./components/WarehousesList/WarehousesList";
 // import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
 // import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
-<<<<<<< HEAD
-import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
-// import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
-=======
 import EditItem from "./components/EditItem/EditItem";
->>>>>>> development
 
 class App extends React.Component {
   render() {
@@ -47,19 +42,13 @@ class App extends React.Component {
             component={() => {
               return <WarehouseInventory />;
             }}
-<<<<<<< HEAD
           /> */}
-          {/* <Route
-            path="/warehouses/edit-warehouse"
-=======
-          />
           <Route
-            path="/warehouses/add-warehouse"
->>>>>>> development
+            path="/warehouses/edit-warehouse"
             component={() => {
               return <AddNewWarehouse />;
             }}
-          /> */}
+          />
           <Route
             path="/warehouses/edit-warehouse"
             component={() => {
