@@ -1,6 +1,6 @@
-import React from 'react'
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React from './node_modules/react'
+import axios from './node_modules/axios';
+import { Link } from './node_modules/react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 import Arrows from '../../assets/icons/sort-24px.svg';

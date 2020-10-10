@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from './node_modules/react';
+import { Link } from './node_modules/react-router-dom';
 import './ItemInputForm.scss';
-import { v4 as uuidv4 } from 'uuid';
-import axios from 'axios';
+import { v4 as uuidv4 } from './node_modules/uuid';
+import axios from './node_modules/axios';
 import Warning from '../../assets/icons/error-24px.svg';
 
 
