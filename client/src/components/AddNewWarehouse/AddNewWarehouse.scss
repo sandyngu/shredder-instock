@@ -27,6 +27,22 @@
         margin-bottom: 0;
         
     }
+    &__error-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    &__error-img {
+        height: 13.33px;
+        width: 13.33px;
+        align-self: center;
+    }
+    &__error-msg {
+        margin-left: 2%;
+        font-size: $p2-mobile-fontsize;
+        color: $red;
+    }
     &__header-container {
         display: flex;
         justify-content: left;
@@ -88,7 +104,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -110,7 +126,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -132,7 +148,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -154,7 +170,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -199,7 +215,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -221,7 +237,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -243,7 +259,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -266,7 +282,7 @@
         width: 100%;
         box-sizing: border-box; 
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 2px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -334,7 +350,6 @@ input:focus {
     border: 1px solid $instock-indigo;
     outline: none;
     // field is req: border: $red;
-
   }
 
 ::placeholder {

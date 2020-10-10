@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./Components/InventoryList/InventoryList";
 import WarehousesList from "./Components/WarehousesList/WarehousesList";
+import AddNewWarehouse from "./Components/AddNewWarehouse/AddNewWarehouse";
 
 
 class App extends React.Component {
@@ -12,7 +13,8 @@ class App extends React.Component {
 
       <Router>
         <Header />
-        <Switch>
+        <AddNewWarehouse />
+        {/* <Switch>
           <Route
             exact
             path="/"
@@ -32,7 +34,7 @@ class App extends React.Component {
               return <InventoryList />;
             }}
           />
-        </Switch>
+        </Switch> */}
       </Router>
     );
   }
