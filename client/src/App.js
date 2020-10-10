@@ -6,11 +6,9 @@ import InventoryList from "./Components/InventoryList/InventoryList";
 import WarehousesList from "./Components/WarehousesList/WarehousesList";
 import AddNewWarehouse from "./Components/AddNewWarehouse/AddNewWarehouse";
 
-
 class App extends React.Component {
   render() {
     return (
-
       <Router>
         <Header />
         <AddNewWarehouse />
@@ -23,13 +21,13 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/warehouses"
+            exact path="/warehouses"
             component={() => {
               return <WarehousesList />;
             }}
           />
           <Route
-            path="/inventories"
+            exact path="/inventories"
             component={() => {
               return <InventoryList />;
             }}

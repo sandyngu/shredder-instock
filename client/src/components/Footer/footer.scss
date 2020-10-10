@@ -28,13 +28,14 @@
 //     text-align: center;
 //     vertical-align: center;
 //     color: $slate;
-//     padding: 37px;
+//     padding: 40px;
 //     width: stretch;
 //     position: absolute;
 //     bottom: -1182px; /*change this to whatever value works for you*/
 
 //     @include tablet {
 //         bottom: -325px; /*change this to whatever value works for you*/
+//         font-size: $p3-desktab-fontsize;
 //     }
 //     @include desktop {
 //         bottom: -205px; /*change this to whatever value works for you*/
