@@ -1,0 +1,46 @@
+@import  '../../partials/global';
+
+.additem{
+    display:flex;
+    flex-direction:column;
+    width:876px;
+    width: auto;
+    background: $white;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    position: absolute;
+    left: 4.5%;
+    right: 4.5%;
+    top: 16%;
+    width: stretch;
+    top: 140px;
+    margin: 0 17px 100px 17px;
+    @include tablet{
+
+    }
+    &__top{
+        display:flex;
+        flex-direction: row;
+        padding:5%;
+        border-bottom: 1px solid $cloud;
+        @include tablet{
+            align-content: center;
+        }
+            &-arrow{
+                display:flex;
+                align-self: flex-start;
+                padding-top:4%;
+                @include tablet{
+                    padding-top:0;
+                }
+            }
+            &-title{
+                margin:0 0;
+            }
+            }
+    &__import{
+        display:flex;
+        flex-direction:column;
+
+    }
+}
