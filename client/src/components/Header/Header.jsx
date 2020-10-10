@@ -19,7 +19,7 @@ const Header = () => {
           <ul className="navbar__list">
             <Link
               to="/warehouses"
-              className="navbar__link navbar__warehouses"
+              className="navbar__link navbar__warehouses navbar__warehouses--active"
             //   activeClassName="navbar__warehouses--active"
             >
               Warehouses
