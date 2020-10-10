@@ -231,7 +231,7 @@ class AddNewWarehouse extends React.Component {
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
                                     <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
-                                    {this.state.position === "" && (
+                                    {this.state.contact.position === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
@@ -241,7 +241,7 @@ class AddNewWarehouse extends React.Component {
                                 <li className="edit-warehouse__contact-list-phone">
                                     <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
                                     <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
-                                    {this.state.phone === "" && (
+                                    {this.state.contact.phone === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
@@ -251,7 +251,7 @@ class AddNewWarehouse extends React.Component {
                                 <li className="edit-warehouse__contact-list-email">
                                     <label className="edit-warehouse__contact-list-email-label">Email</label>
                                     <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
-                                    {this.state.email === "" && (
+                                    {this.state.contact.email === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
