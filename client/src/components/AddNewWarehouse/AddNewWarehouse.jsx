@@ -35,11 +35,11 @@ class AddNewWarehouse extends React.Component {
                 address: e.target.address.value,
                 city: e.target.city.value,
                 country: e.target.country.value,          
-                country: {
-                    name: e.target.name.value,
-                    position: e.target.position.value,
-                    phone: e.target.phone.value,
-                    email: e.target.email.value
+                contact: {
+                    name: e.target.contact.name.value,
+                    position: e.target.contact.position.value,
+                    phone: e.target.contact.phone.value,
+                    email: e.target.contact.email.value
                 }
                 
             };
@@ -220,8 +220,8 @@ class AddNewWarehouse extends React.Component {
                             <ul className="edit-warehouse__contact-list">
                                 <li className="edit-warehouse__contact-list-name">
                                     <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' name="contactName" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
-                                    {this.state.name === "" && (
+                                    <input type='text' name="contact.name" value={this.state.contact.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
+                                    {this.state.contact.name === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} />
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
@@ -230,8 +230,8 @@ class AddNewWarehouse extends React.Component {
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
-                                    {this.state.position === "" && (
+                                    <input type='text' name="contact.position" value={this.state.contact.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                    {this.state.contact.position === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} />
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
@@ -240,8 +240,8 @@ class AddNewWarehouse extends React.Component {
                                 </li>
                                 <li className="edit-warehouse__contact-list-phone">
                                     <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
-                                    <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
-                                    {this.state.phone === "" && (
+                                    <input type='text' name="contact.phone" value={this.state.contact.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
+                                    {this.state.contact.phone === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} />
                                                     <div className="edit-warehouse__error-msg">This field is required</div>
@@ -250,8 +250,8 @@ class AddNewWarehouse extends React.Component {
                                 </li>
                                 <li className="edit-warehouse__contact-list-email">
                                     <label className="edit-warehouse__contact-list-email-label">Email</label>
-                                    <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
-                                    {this.state.email === "" && (
+                                    <input type='text' name="contact.email" value={this.state.contact.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
+                                    {this.state.contact.email === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} />
                                                     <div className="edit-warehouse__error-msg">This field is required</div>

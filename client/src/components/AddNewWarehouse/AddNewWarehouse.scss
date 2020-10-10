@@ -3,7 +3,8 @@
 
 .edit-warehouse {
     width: auto;
-    height: 1100px;
+    // height: 1073px;
+    height: auto;
     margin-top: 0;
     margin-bottom: 96px;
     // margin-bottom: 126px;
@@ -291,7 +292,6 @@
     }
     &__button-container {
         height: 68.32px;
-        // height: 80px;
         overflow: hidden;
         display: flex;
         justify-content: space-between;
@@ -305,7 +305,7 @@
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        margin-top: 1px;
+        margin-top: 18px;
         margin-left: 23px;
         border-radius: 20px;
         background: $white;
@@ -323,7 +323,7 @@
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        margin-top: 1px;
+        margin-top: 18px;
         margin-right: 23px;
         border-radius: 20px;
         background: $instock-indigo;
