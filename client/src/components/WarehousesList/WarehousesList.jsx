@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
-import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
 
@@ -50,13 +49,12 @@ class WarehousesList extends React.Component {
               email: email
             }
           }
-         
         await axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
             .then(res => {
-                console.log(res.data, 'received from server')
-            window.location.replace('/')})
+                console.log(res.data)
+                window.location.reload();
+            })
             .catch(err => console.log(err));
-
     }
 
     render() {
@@ -67,7 +65,7 @@ class WarehousesList extends React.Component {
                     <h1 className="warehouses__header-title">Warehouses</h1>
                     <div className="warehouses__header-container">
                         <form className="warehouses__header-form">
-                            <input type="text" name="search" className="warehouses__header-form-search" placeholder="Search..." />
+                            <input type="search" name="search" className="warehouses__header-form-search" placeholder="Search..." />
                             <Link to="/warehouses/add-warehouse">
                                 <button className="warehouses__header-form-button">+ Add New Warehouse</button>
                             </Link>
@@ -99,7 +97,7 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                    <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} />
+                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} />
                 )}
             </div>
             <div className="empty"></div>

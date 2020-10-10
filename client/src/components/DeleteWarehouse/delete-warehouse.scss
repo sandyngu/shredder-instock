@@ -107,10 +107,19 @@ button {
             font-weight: 600;
             color: $slate;
             width: 100%;
+
+            &:hover {
+                color: $instock-indigo;
+                border: 1px solid $instock-indigo;
+            }
         }
         &-delete {
             background-color: $red;
             color: white;
+
+            &:hover {
+                background-color: $instock-black;
+            }
         }
     }
 }
