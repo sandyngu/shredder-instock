@@ -5,10 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 const fs = require('fs');
 const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
-<<<<<<< HEAD
 
-=======
->>>>>>> development
 router.use(cors());
 router.use(bodyParser.json());
 router.use(express.json());
