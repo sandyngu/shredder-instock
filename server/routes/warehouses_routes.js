@@ -4,6 +4,7 @@ const router = express.Router();
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const fs = require('fs');
+const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -11,7 +12,6 @@ router.use(bodyParser.json());
 // Get warehouse objects
 
 router.get('/', (_req, res) => {
-    const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
     res.send(warehouses);
 })
 
@@ -40,10 +40,12 @@ router.delete('/', (req, res) => {
 
     let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
         
-        let newWarehousesList = warehouses;
-        const updatedWarehouses = newWarehousesList.splice(index, 1)
+    const updatedWarehouses = warehouses.splice(index, 1)
 
-    res.json(updatedWarehouses);
+    fs.writeFileSync('./warehouses.json', JSON.stringify(warehouses));
+    res.status(201).send({status:'warehouse deleted'});
+
+    res.json(warehouses);
 })
 
 module.exports = router

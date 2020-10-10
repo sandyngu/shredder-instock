@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemInputForm from '../ItemInputForm/ItemInputForm';
+import EditItemForm from '../ItemInputForm/ItemInputForm';
 import './edit-item.scss';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
 
@@ -14,7 +14,7 @@ function EditItem() {
                     <h1 className="edititem__top-title">Edit Inventory Item</h1>
                 </div>
                 <div className="edititem__import">
-                    <ItemInputForm />
+                    <EditItemForm />
                 </div>
             </section>
         </>
