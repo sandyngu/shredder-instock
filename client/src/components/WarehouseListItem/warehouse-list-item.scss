@@ -119,7 +119,18 @@ a {
              }
         }
     }
+    &__icon-delete {
+        padding-bottom: 4px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
     &__icon-edit {
         padding-left: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
