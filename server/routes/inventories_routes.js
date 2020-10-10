@@ -25,8 +25,10 @@ router.get('/:id', (req, res) => {
 // Create inventory objects and write to JSON file
 
 router.post('/', (req, res) => {
+    console.log(req.body);
     const inventoriesData = JSON.parse(fs.readFileSync('../inventories.json'));
     inventoriesData.push(req.body);
+    console.log(inventoriesData);
     fs.writeFileSync('../inventories.json', JSON.stringify(inventoriesData), null, 2);
     res.status(201).send({status:'object created'});
 })

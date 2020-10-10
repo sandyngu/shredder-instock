@@ -109,6 +109,23 @@
             }
         }
     }
+    &__error-box{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin:2% 0 0 5%;
+    }
+    &__warning{
+        height:13.33px;
+        width:13.33px;
+        align-self: center;
+    }
+    &__error{
+        margin-left:2%;
+        font-size:$p2-mobile-fontsize;
+        color:$red;
+
+    }
     &__button{
         display:flex;
         justify-content: space-between;

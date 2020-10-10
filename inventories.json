@@ -868,5 +868,125 @@
         "quantity": "1",
         "warehouseName": "Manhatten",
         "warehouseID": "make dynamic"
+    },
+    {
+        "id": "f18b0794-f2c4-45cb-9441-8156e1c1e526",
+        "itemName": "fdsfsd",
+        "description": "dfsdfs",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "444",
+        "warehouseName": "King West",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "153bac6f-d34c-4726-adbc-964a108cd6fe",
+        "itemName": "dafd",
+        "description": "fdadfads",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "44",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "628ccfa3-89f7-49ea-96ed-ab996f233cbb",
+        "itemName": "dfas",
+        "description": "Dental Floss.",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "33",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "78397044-8f7c-4ca4-843c-a0510964eecd",
+        "itemName": "dfasdf",
+        "description": "fdafd",
+        "category": "Gear",
+        "status": "In Stock",
+        "quantity": "6",
+        "warehouseName": "Granville",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "c3877275-7f6f-4e95-a2cf-ca5b716f8af8",
+        "itemName": "dfdfd",
+        "description": "dfsdfsfdfhfhgtjhg",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "6",
+        "warehouseName": "",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "29943206-cfb6-40de-bb95-b2748d8ac4c7",
+        "itemName": "Dental",
+        "description": "dfdf",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "55",
+        "warehouseName": "Seattle",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "2cf44d0d-1a8d-4959-a5af-3bdad21a13fe",
+        "itemName": "dafdfds",
+        "description": "dfdfsadf",
+        "category": "Health",
+        "status": "In Stock",
+        "quantity": "111",
+        "warehouseName": "Seattle",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "ab56f708-2509-42c1-8644-b243617a404e",
+        "itemName": "fdsaf",
+        "description": "dfasdfafd",
+        "category": "Accessories",
+        "status": "In Stock",
+        "quantity": "12",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "69737769-be5d-4ef5-8354-abf65a41d4bb",
+        "itemName": "dsadsad",
+        "description": "sdasdasd",
+        "category": "Gear",
+        "status": "In Stock",
+        "quantity": "444",
+        "warehouseName": "King West",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "7d69ccb8-d3e7-4d08-bb58-ae904a8e33d2",
+        "itemName": "fdfds",
+        "description": "dfsfdsf",
+        "category": "Electronics",
+        "status": "In Stock",
+        "quantity": "433",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "9eb2378e-e28d-423b-bed0-088aa7a5835d",
+        "itemName": "dfadfaf",
+        "description": "fdafdfdfadsfa",
+        "category": "Accessories",
+        "status": "In Stock",
+        "quantity": "44",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
+    },
+    {
+        "id": "4b981016-9df5-4694-ae0d-d8f708f9b019",
+        "itemName": "dfd",
+        "description": "dfd",
+        "category": "Gear",
+        "status": "In Stock",
+        "quantity": "4",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
     }
 ]

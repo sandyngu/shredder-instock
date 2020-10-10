@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './ItemInputForm.scss';
-import Dropdown from '../../assets/icons/arrow_drop_down-24px.svg';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
+import Warning from '../../assets/icons/error-24px.svg';
+
 
 class ItemInputForm extends Component {
 
@@ -11,63 +12,73 @@ class ItemInputForm extends Component {
         itemName: '',
         description: '',
         category: '',
-        status: 'Out of stock',
+        status: '',
         quantity: 0,
         warehouseName: '',
     };
 
-
-    clickHandler = async (event) => {
+    submitForm = async (event) => {
         event.preventDefault();
-        // validate not empty ... in stock and out of stock
-        // this.state.status ... conditionally render QUANTITY ..
 
-        const addItem = {
-            id: uuidv4(),
-            itemName: event.target.itemName.value,
-            description: event.target.description.value,
-            category: event.target.category.value,
-            status: event.target.status.value,
-            quantity: event.target.quantity.value,
-            warehouseName: event.target.warehouseName.value,
-            warehouseID: 'make dynamic'
-        }
-        console.log(addItem);
-        await axios.post("http://localhost:8080/inventories", addItem)
-            .then(response => {
-                console.log(event.target);
-                this.setState(
-                    {
-                        itemName: '',
-                        description: '',
-                        category: '',
-                        status: 'Out of stock',
-                        quantity: 0,
-                        warehouseName: '',
-                    }
-                );
-                window.location.replace('/');
-            })
-            .catch(error => console.log(error));
-    }
+            const addItem = {
+                id: uuidv4(),
+                itemName: event.target.itemName.value,
+                description: event.target.description.value,
+                category: event.target.category.value,
+                status: event.target.status.value,
+                quantity: event.target.quantity.value,
+                warehouseName: event.target.warehouseName.value,
+                warehouseID: 'make dynamic'
+            }
+            console.log(addItem);
+            await axios.post("http://localhost:8080/inventories", addItem)
+                .then(response => {
+                    console.log(event.target);
+                    this.setState(
+                        {
+                            itemName: '',
+                            description: '',
+                            category: '',
+                            status: '',
+                            quantity: 0,
+                            warehouseName: '',
+                        }
+                    );
+                    //window.location.replace('/');
+                })
+                .catch(error => console.log(error));
+  
+    };
 
     getNewInput = event => {
         this.setState({
             [event.target.name]: event.target.value,
         })
-    }
+    };
 
     render() {
         return (
             <>
-                <form className="item-form" onSubmit={this.clickHandler} onChange={this.getNewInput}>
+                <form className="item-form" onSubmit={this.submitForm} onChange={this.getNewInput}>
                     <div className="item-form__masterdiv">
                         <div className="item-form__details">
                             <h2 className="item-form__title">Item Details</h2>
                             <label className="item-form__label">Item Name</label>
                             <input className="item-form__input" type="text" placeHolder="Item Name" name="itemName" value={this.state.itemName} />
+                            {this.state.itemName === "" && (
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
+                                    <div className="item-form__error"> This field is required</div>
+                                </div>
+                            )}
                             <label className="item-form__label">Description</label>
-                            <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description">{this.state.description}</textarea>
+                            <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description" value={this.state.description} />
+                            {this.state.description === "" && (
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
+                                    <div className="item-form__error">This field is required</div>
+                                </div>
+                            )}
                             <label className="item-form__label">Category</label>
                             <select className="item-form__dropdown" type="text" placeHolder="Please Select" name="category" value={this.state.category}>
                                 <option type="text" value="Electronics">Electronics</option>
@@ -76,6 +87,12 @@ class ItemInputForm extends Component {
                                 <option type="text" value="Accessories">Accessories</option>
                                 <option type="text" value="Health">Health</option>
                             </select>
+                            {this.state.category === "" && (
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
+                                    <div className="item-form__error">This field is required</div>
+                                </div>
+                            )}
                         </div>
                         <div className="item-form__line"></div>
                         <div className="item-form__availability">
@@ -91,11 +108,18 @@ class ItemInputForm extends Component {
                                     <p className="item-form__status-subcontainer-text">Out of stock</p>
                                 </div>
                             </div>
+                            {this.state.status === "" && (
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
+                                    <div className="item-form__error">This field is required</div>
+                                </div>
+                            )}
                             {this.state.status === 'In Stock' && (
-                                <>
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
                                     <label className="item-form__label">Quantity</label>
                                     <input className="item-form__input" type="number" placeHolder="0" name="quantity" value={this.state.quantity} />
-                                </>)}
+                                </div>)}
                             <label className="item-form__label">Warehouse</label>
                             <select className="item-form__dropdown" type="text" name="warehouseName" value={this.state.warehouseName}>
                                 <option type="text" value=''>Please Select</option>
@@ -108,6 +132,12 @@ class ItemInputForm extends Component {
                                 <option type="text" value="Montrea">Montreal</option>
                                 <option type="text" value="Boston">Boston</option>
                             </select>
+                            {this.state.warehouseName === "" && (
+                                <div className="item-form__error-box">
+                                    <img className="item-form__warning" src={Warning} />
+                                    <div className="item-form__error">This field is required</div>
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className="item-form__button">
