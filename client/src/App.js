@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 import AddItem from "./components/AddItem/AddItem";
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 
 class App extends React.Component {
   render() {
@@ -49,12 +50,12 @@ class App extends React.Component {
               return <AddNewWarehouse />;
             }}
           />
-          <Route
+          */}<Route
             path="/inventories/:id"
             component={() => {
               return <ItemDetails />;
             }}
-          />
+          />{/*}
           <Route
             path="/inventories/add-item"
             component={() => {
