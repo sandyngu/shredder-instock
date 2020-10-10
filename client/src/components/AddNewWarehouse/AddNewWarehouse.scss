@@ -3,7 +3,7 @@
 
 .edit-warehouse {
     width: auto;
-    height: 935.5px;
+    height: 1100px;
     margin-top: 0;
     margin-bottom: 96px;
     // margin-bottom: 126px;
@@ -18,7 +18,7 @@
         left: 4%;
         right: 4%;
         top: 11.2%;
-        height: 586px;
+        height: 655px;
         margin-bottom: 265px;
     }
     @include desktop {
@@ -36,22 +36,39 @@
     &__back-img {
         margin-left: 20px;
         margin-top: 34px;
-        margin-right: 10px;
+        margin-right: 1px;
         @include tablet {
             margin-top: 39px;
         }
     }
     &__title {
-        margin-top: 23px;
+        margin-top: 25px;
         margin-bottom: 22px;
+        font-size: 1.6rem;
+        margin-left: 0;
     }
     &__form {
-        // height: 500px;
         @include tablet {
             display: flex;
             flex-wrap: wrap;
             width: 100%;
         }
+    }
+    &__error-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    &__error-img {
+        height: 13.3px;
+        width: 13.3px;
+        align-self: center;
+    }
+    &__error-msg {
+        font-size: $p2-mobile-fontsize;
+        color: $red;
     }
     &__warehouse-container {
         @include tablet {
@@ -88,7 +105,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -110,7 +127,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -132,7 +149,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -154,7 +171,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -199,7 +216,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -221,7 +238,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -243,7 +260,7 @@
         width: 100%;
         box-sizing: border-box;
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -266,7 +283,7 @@
         width: 100%;
         box-sizing: border-box; 
         border: 1px solid $cloud;
-        margin-bottom: 16px;
+        margin-bottom: 1px;
         border-radius: 20px;
         @include tablet {
             height: 38px;
@@ -288,7 +305,7 @@
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        margin-top: 16px;
+        margin-top: 1px;
         margin-left: 23px;
         border-radius: 20px;
         background: $white;
@@ -306,7 +323,7 @@
         height: 36px;
         width: 41%;
         box-sizing: border-box;
-        margin-top: 16px;
+        margin-top: 1px;
         margin-right: 23px;
         border-radius: 20px;
         background: $instock-indigo;
