@@ -1,8 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import ItemInputForm from '../ItemInputForm/ItemInputForm';
 import './AddItem.scss';
-import axios from 'axios';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
 
 function AddItem() {

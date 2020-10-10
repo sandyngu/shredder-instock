@@ -17,8 +17,11 @@ router.get('/', (_req, res) => {
 
 // Get single warehouse object by id
 
-router.get('/:id', (_req, res) => {
-    res.send(warehouses);
+router.get('/:id', (req, res) => {
+    console.log(req.params.id)
+    // const warehouseDetails = warehouses.find(warehouse => warehouse.id === req.params.id)
+    // res.json(warehouseDetails)
+    res.send('hello')
 })
 
 // Create warehouse object 
@@ -40,7 +43,7 @@ router.delete('/', (req, res) => {
 
     let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
         
-    const updatedWarehouses = warehouses.splice(index, 1)
+    warehouses.splice(index, 1)
 
     fs.writeFileSync('./warehouses.json', JSON.stringify(warehouses));
     res.status(201).send({status:'warehouse deleted'});

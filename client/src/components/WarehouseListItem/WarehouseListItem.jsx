@@ -17,7 +17,7 @@ function WarehouseListItem(props) {
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
                             <Link to={`/warehouses/${id}`}>
-                                <p className="warehouse-list__city">{name}</p>
+                                <p className="warehouse-list__city" onClick={() => props.viewWarehouse(id)}>{name}</p>
                             </Link>
                             <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />
                         </div>

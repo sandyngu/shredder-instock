@@ -1,9 +1,10 @@
 import React from 'react';
-import EditItemForm from '../ItemInputForm/ItemInputForm';
+import EditItemForm from '../EditItemForm/EditItemForm';
 import './edit-item.scss';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
 
-function EditItem() {
+function EditItem(props) {
+    console.log(props)
 
     return (
 

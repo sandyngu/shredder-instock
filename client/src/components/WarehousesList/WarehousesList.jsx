@@ -57,6 +57,13 @@ class WarehousesList extends React.Component {
             .catch(err => console.log(err));
     }
 
+    viewWarehouse = (id) => {
+        axios.get(`/warehouses/${id}`)
+            .then(res => {
+                console.log(res)
+            })
+    }
+
     render() {
         return (
             <>
@@ -97,7 +104,7 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} />
+                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} viewWarehouse={this.viewWarehouse} />
                 )}
             </div>
             <div className="empty"></div>
