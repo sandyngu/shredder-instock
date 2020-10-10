@@ -230,7 +230,7 @@ class AddNewWarehouse extends React.Component {
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' name="contact.position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                    <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
                                     {this.state.position === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
