@@ -1,9 +1,9 @@
 const express = require('express');
 const { route } = require('./warehouses_routes');
 const router = express.Router();
-const warehouses = require("../warehouses.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const fs = require('fs');
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -11,7 +11,7 @@ router.use(bodyParser.json());
 // Get warehouse objects
 
 router.get('/', (_req, res) => {
-    const warehouses = JSON.parse(fs.readFileSync("../warehouses.json"));
+    const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
     res.send(warehouses);
 })
 
