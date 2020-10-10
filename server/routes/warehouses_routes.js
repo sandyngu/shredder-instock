@@ -11,6 +11,7 @@ router.use(bodyParser.json());
 // Get warehouse objects
 
 router.get('/', (_req, res) => {
+    const warehouses = JSON.parse(fs.readFileSync("../warehouses.json"));
     res.send(warehouses);
 })
 
