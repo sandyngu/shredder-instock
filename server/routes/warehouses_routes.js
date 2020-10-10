@@ -58,10 +58,8 @@ router.put('/', (req, res) => {
 
 router.delete('/', (req, res) => {
     const { deletedWarehouse } = req.body
-    console.log(req.body)
 
     let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
-        console.log(index)
         
         let newWarehousesList = warehouses;
         const updatedWarehouses = newWarehousesList.splice(index, 1)
