@@ -30,6 +30,7 @@ class ItemInputForm extends Component {
                 warehouseName: event.target.warehouseName.value,
                 warehouseID: 'make dynamic'
             }
+
             console.log(addItem);
             await axios.post("http://localhost:8080/inventories", addItem)
                 .then(response => {
@@ -64,7 +65,7 @@ class ItemInputForm extends Component {
                         <div className="item-form__details">
                             <h2 className="item-form__title">Item Details</h2>
                             <label className="item-form__label">Item Name</label>
-                            <input className="item-form__input" type="text" placeHolder="Item Name" name="itemName" value={this.state.itemName} />
+                            <input className="item-form__input" type="text" placeHolder="Item Name" name="itemName" required value={this.state.itemName} />
                             {this.state.itemName === "" && (
                                 <div className="item-form__error-box">
                                     <img className="item-form__warning" src={Warning} />
@@ -72,7 +73,7 @@ class ItemInputForm extends Component {
                                 </div>
                             )}
                             <label className="item-form__label">Description</label>
-                            <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description" value={this.state.description} />
+                            <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description" required value={this.state.description} />
                             {this.state.description === "" && (
                                 <div className="item-form__error-box">
                                     <img className="item-form__warning" src={Warning} />
@@ -80,7 +81,7 @@ class ItemInputForm extends Component {
                                 </div>
                             )}
                             <label className="item-form__label">Category</label>
-                            <select className="item-form__dropdown" type="text" placeHolder="Please Select" name="category" value={this.state.category}>
+                            <select className="item-form__dropdown" type="text" placeHolder="Please Select" name="category" required value={this.state.category}>
                                 <option type="text" value="Electronics">Electronics</option>
                                 <option type="text" value="Gear">Gear</option>
                                 <option type="text" value="Apparel">Apparel</option>
@@ -100,11 +101,11 @@ class ItemInputForm extends Component {
                             <label className="item-form__label">Status</label>
                             <div className="item-form__status">
                                 <div className="item-form__status-subcontainer">
-                                    <input className="item-form__status-subcontainer-option" type="radio" value="In Stock" name="status" />
+                                    <input className="item-form__status-subcontainer-option" type="radio" required value="In Stock" name="status" />
                                     <p className="item-form__status-subcontainer-text">In stock</p>
                                 </div>
                                 <div className="item-form__status-subcontainer">
-                                    <input className="item-form__status-subcontainer-option" type="radio" value="Out of Stock" name="status" />
+                                    <input className="item-form__status-subcontainer-option" type="radio" required value="Out of Stock" name="status" />
                                     <p className="item-form__status-subcontainer-text">Out of stock</p>
                                 </div>
                             </div>
@@ -118,10 +119,10 @@ class ItemInputForm extends Component {
                                 <div className="item-form__error-box">
                                     <img className="item-form__warning" src={Warning} />
                                     <label className="item-form__label">Quantity</label>
-                                    <input className="item-form__input" type="number" placeHolder="0" name="quantity" value={this.state.quantity} />
+                                    <input className="item-form__input" type="number" placeHolder="0" name="quantity" required value={this.state.quantity} />
                                 </div>)}
                             <label className="item-form__label">Warehouse</label>
-                            <select className="item-form__dropdown" type="text" name="warehouseName" value={this.state.warehouseName}>
+                            <select className="item-form__dropdown" type="text" name="warehouseName" required value={this.state.warehouseName}>
                                 <option type="text" value=''>Please Select</option>
                                 <option type="text" value="Manhatten">Manhatten</option>
                                 <option type="text" value="King West">King West</option>
