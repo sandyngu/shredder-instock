@@ -6,7 +6,7 @@ import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 // import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
-// import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
+import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
 // import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
 import EditItem from "./components/EditItem/EditItem";
@@ -49,12 +49,12 @@ class App extends React.Component {
               return <AddNewWarehouse />;
             }}
           />
-          {/* <Route
+          <Route
             path="/warehouses/edit-warehouse"
             component={() => {
               return <EditWarehouse />;
             }}
-          /> */}
+          />
           {/* <Route
             path="/inventories/:id"
             component={() => {
