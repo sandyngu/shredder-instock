@@ -31,12 +31,42 @@ class App extends React.Component {
               return <InventoryList />;
             }}
           />
-          <Route
-            path="/inventories/additem"
+          {/* <Route
+            path="/warehouses/:id"
             component={() => {
-              return <AddItem/>;
+              return <WarehouseInventory />;
             }}
-            />
+          />
+          <Route
+            path="/warehouses/edit-warehouse"
+            component={() => {
+              return <EditWarehouse />;
+            }}
+          />
+          <Route
+            path="/warehouses/add-warehouse"
+            component={() => {
+              return <AddNewWarehouse />;
+            }}
+          />
+          <Route
+            path="/inventories/:id"
+            component={() => {
+              return <ItemDetails />;
+            }}
+          />
+          <Route
+            path="/inventories/add-item"
+            component={() => {
+              return <AddItem />;
+            }}
+          />
+          <Route
+            path="/inventories/edit-item"
+            component={() => {
+              return <EditItem />;
+            }}
+          /> */}
         </Switch>
       </Router>
     );
