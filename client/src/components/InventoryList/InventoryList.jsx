@@ -203,13 +203,14 @@ class InventoryList extends React.Component {
                         <div className="inventoryList__action-logo-container">
                           <Link to='/inventories'>
                           <button 
-                            onClick={(e) => {
-                              this.showModal();
-                            }}>
+                          >
                             <img
                               className="inventoryList__delete-icon"
                               src={Delete}
                               alt="Delete Icon"
+                              onClick={(e) => {
+                                this.showModal();
+                              }}
                             />
                           </button>
                           </Link>
@@ -230,18 +231,13 @@ class InventoryList extends React.Component {
                         ACTIONS
                       </h4>
                       <div className="inventoryList__action-logo-container">
-                      <Link to='/inventories'>
-                          <button 
-                            onClick={(e) => {
-                              this.showModal();
-                            }}>
-                            <img
-                              className="inventoryList__delete-icon"
-                              src={Delete}
-                              alt="Delete Icon"
-                            />
-                          </button>
-                          </Link>
+                      <Link to='/inventories/delete-item'>
+                        <img
+                          className="inventoryList__delete-icon"
+                          src={Delete}
+                          alt="Delete Icon"
+                        />
+                        </Link>
                         <Link to='/inventories/edit-item'>
                         <img
                           className="inventoryList__edit-icon"
@@ -252,13 +248,6 @@ class InventoryList extends React.Component {
                       </div>
                     </div>
                   </section>
-                  <DeleteItem 
-                    display={this.state.display}  
-                    cancelModal={this.cancelModal} 
-                    deleteModal={this.deleteModal}
-                    itemName={item.itemName}
-                    id={item.id}
-                  />
                 </div>
               </>
             );
@@ -268,6 +257,7 @@ class InventoryList extends React.Component {
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
             </div>
+        <DeleteItem display={this.state.display} />
       </>
     );
   }

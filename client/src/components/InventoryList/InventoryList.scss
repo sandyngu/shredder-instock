@@ -353,10 +353,10 @@ button {
   height: 4000px;
 
   @include tablet {
-      min-height: 4300px;
+      height: 1000px;
   }
   @include desktop {
-      height: 653px;
+      height: 1000px;
   }
 }
 

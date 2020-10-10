@@ -7,7 +7,6 @@ import './warehouse-list-item.scss';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
-    console.log(props)
     const { name, address, city, country, contact, id } = props
 
     return (
@@ -52,7 +51,7 @@ function WarehouseListItem(props) {
                     </Link>
                 </div>
             </div>
-            <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse={props.deleteWarehouse} closeModal={props.closeModal} />
+            <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
         </>
     )
 };
