@@ -269,8 +269,3 @@ class AddNewWarehouse extends React.Component {
 };
 
     export default AddNewWarehouse;
-
-
-    // <Route path="/warehouses/add-warehouse"  component={() => {
-    //     return <AddNewWarehouse />
-    // }}/> 
