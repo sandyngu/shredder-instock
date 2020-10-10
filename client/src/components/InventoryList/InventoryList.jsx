@@ -5,7 +5,7 @@ import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
 import Right from "../../assets/icons/chevron_right-24px.svg";
 import Search from "../../assets/icons/search-24px.svg";
-import "./inventoryList.scss";
+import "./InventoryList.scss";
 import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
 

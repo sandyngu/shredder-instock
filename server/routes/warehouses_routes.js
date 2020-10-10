@@ -36,16 +36,15 @@ router.put('/', (req, res) => {
 
 router.delete('/', (req, res) => {
     const { deletedWarehouse } = req.body
+    console.log(req.body)
 
-    let index = warehouses.findIndex((warehouse) => warehouse === deletedWarehouse);
+    let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
         console.log(index)
-        console.log(res)
         
         let newWarehousesList = warehouses;
-        const warehouses = newWarehousesList.splice(index, 1)
+        const updatedWarehouses = newWarehousesList.splice(index, 1)
 
-    res.json(warehouses);
-    res.send(warehouses)
+    res.json(updatedWarehouses);
 })
 
 module.exports = router
