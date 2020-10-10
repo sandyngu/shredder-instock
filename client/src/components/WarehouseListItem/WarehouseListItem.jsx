@@ -51,12 +51,7 @@ function WarehouseListItem(props) {
                     </Link>
                 </div>
             </div>
-<<<<<<< HEAD
-            </>
-            )}
-=======
             {/* <DeleteWarehouse display={props.display} closeModal={props.closeModal} /> */}
->>>>>>> development
         </>
     )
 };

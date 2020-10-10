@@ -12,7 +12,7 @@ class App extends React.Component {
       <Router>
         <Header />
         <AddNewWarehouse />
-        {/* <Switch>
+        <Switch>
           <Route
             exact
             path="/"
@@ -32,7 +32,7 @@ class App extends React.Component {
               return <InventoryList />;
             }}
           />
-        </Switch> */}
+        </Switch>
       </Router>
     );
   }
