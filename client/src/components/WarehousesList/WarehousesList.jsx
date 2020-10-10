@@ -36,6 +36,7 @@ class WarehousesList extends React.Component {
     };
     
     deleteWarehouse = (id, name, address, city, country, contactname, position, phone, email) => {
+        console.log(id, name, address, city, country, contactname, position, phone, email)
         let deletedWarehouse = {
             id: id,
             name: name,
