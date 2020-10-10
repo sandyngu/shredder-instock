@@ -14,13 +14,13 @@ router.use(express.json());
 // Get warehouse objects
 
 router.get('/', (_req, res) => {
-    res.send(warehouses);
+    res.send('./warehouses.json');
 })
 
 // Get single warehouse object by id
 
 router.get('/:id', (_req, res) => {
-    res.send(warehouses);
+    res.send('./warehouses.json');
 })
 
 // Create warehouse object 
