@@ -83,6 +83,7 @@ class AddNewWarehouse extends React.Component {
                 [e.target.name] : e.target.value,
             })
         };
+        // lgjdfklgdjkgl
 
         formCancel = (e) => {
             e.preventDefault();
