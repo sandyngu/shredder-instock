@@ -4,6 +4,7 @@ const router = express.Router();
 const warehouses = require("../warehouses.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const fs = required('fs');
 
 router.use(cors());
 router.use(bodyParser.json());
@@ -23,6 +24,27 @@ router.get('/:id', (_req, res) => {
 // Create warehouse object 
 
 router.post('/', (req, res) => {
+    const addNewWarehouse = {
+        id: req.body.id,
+        name: req.body.name,
+        address: req.body.address,
+        city: req.body.city,
+        country: req.body.country,
+        contact: {
+            name: req.body.name,
+            position: req.body.name,
+            phone: req.body.phone,
+            email: req.body.email
+        }
+    }
+    if ()
+    const readData = fs.readFileSync("../warehouses.json");
+    const parseData = JSON.parse(readData);
+    parseData['../warehouses.json'].push(req.body);
+    const stringData = JSON.stringify(parseData);
+    fs.writeFileSync('../warehouses.json', stringData, (err) => {
+
+    })
     res.json('warehouse object');
 })
 
