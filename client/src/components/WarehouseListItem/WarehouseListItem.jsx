@@ -4,9 +4,10 @@ import Delete from '../../assets/icons/delete_outline-24px.svg';
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
-// import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
+import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
+    console.log(props)
     const { name, address, city, country, contact, id } = props
 
     return (
@@ -51,7 +52,7 @@ function WarehouseListItem(props) {
                     </Link>
                 </div>
             </div>
-            {/* <DeleteWarehouse display={props.display} closeModal={props.closeModal} /> */}
+            <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse={props.deleteWarehouse} closeModal={props.closeModal} />
         </>
     )
 };

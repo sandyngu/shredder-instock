@@ -35,7 +35,7 @@ class WarehousesList extends React.Component {
         });
     };
     
-    deleteWarehouse = (id, name, address, city, country, contactname, position, phone, email) => {
+    deleteWarehouse = async (id, name, address, city, country, contactname, position, phone, email) => {
         console.log(id, name, address, city, country, contactname, position, phone, email)
         let deletedWarehouse = {
             id: id,
@@ -50,11 +50,13 @@ class WarehousesList extends React.Component {
               email: email
             }
           }
-        axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
+         
+        await axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
             .then(res => {
-                console.log(res.data)
-            })
+                console.log(res.data, 'received from server')
+            window.location.replace('/')})
             .catch(err => console.log(err));
+
     }
 
     render() {
@@ -99,7 +101,6 @@ class WarehousesList extends React.Component {
                 {this.state.warehousesList.map(warehouse =>
                 <>
                     <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} />
-                    <DeleteWarehouse display={this.state.display} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} deleteWarehouse= {this.deleteWarehouse} closeModal={this.closeModal} />
                 </>
                 )}
             </div>
