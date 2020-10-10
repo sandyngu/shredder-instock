@@ -4,6 +4,12 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
+// import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
+// import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
+// import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
+// import ItemDetails from "./components/ItemDetails/ItemDetails";
+// import AddItem from "./components/AddItem/AddItem";
+// import EditItem from "./components/AddItem/EditItem";
 
 class App extends React.Component {
   render() {
