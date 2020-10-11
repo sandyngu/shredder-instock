@@ -1,5 +1,4 @@
 import React from 'react'
-import "../InventoryList/InventoryList.scss";
 import Sort from "../../assets/icons/sort-24px.svg";
 import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
@@ -49,9 +48,6 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
       .catch(err => console.log(err));
 }
 
-
-
-
   render(){
     return (
       <>
@@ -83,47 +79,47 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
           <div className="inventoryList__list-divider"/>
           <div className="inventoryList__category-box">
             <div className="inventoryList__categories">
-              <div className="inventoryList_category-title inventoryList_category-inventory">
-                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-inventory">INVENTORY ITEM</h4>
+              <div className="inventoryList__category-title inventoryList__category-inventory">
+                <h4 className="inventoryList__category-top-heading inventoryList__category-top-inventory">INVENTORY ITEM</h4>
                 <img
                   className="inventoryList__sort-icon"
                   src={Sort}
                   alt="Sort Icon"
                 ></img>
               </div>
-              <div className="inventoryList_category-title inventoryList_category-category">
-              <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-category">CATEGORY</h4>
+              <div className="inventoryList__category-title inventoryList__category-category">
+              <h4 className="inventoryList__category-top-heading inventoryList__category-top-category">CATEGORY</h4>
                 <img
                   className="inventoryList__sort-icon"
                   src={Sort}
                   alt="Sort Icon"
                 ></img>
               </div>
-                <div className="inventoryList_category-title inventoryList_category-status">
-                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-status">STATUS</h4>
+                <div className="inventoryList__category-title inventoryList__category-status">
+                <h4 className="inventoryList__category-top-heading inventoryList__category-top-status">STATUS</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
                     alt="Sort Icon"
                   ></img>
                 </div>
-                <div className="inventoryList_category-title inventoryList_category-quantity">
-                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-quantity">QTY</h4>
+                <div className="inventoryList__category-title inventoryList__category-quantity">
+                <h4 className="inventoryList__category-top-heading inventoryList__category-top-quantity">QTY</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
                     alt="Sort Icon"
                   ></img>
                 </div>
-                <div className="inventoryList_category-title inventoryList_category-warehouse">
-                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-warehouse">WAREHOUSE</h4>
+                <div className="inventoryList__category-title inventoryList__category-warehouse">
+                <h4 className="inventoryList__category-top-heading inventoryList__category-top-warehouse">WAREHOUSE</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
                     alt="Sort Icon"
                   ></img>
                 </div>
-              <h4 className="inventoryList_category-title inventoryList_category-actions">ACTIONS</h4>
+              <h4 className="inventoryList__category-title inventoryList__category-actions">ACTIONS</h4>
             </div>
           </div>
           {this.props.inventoryList.map((item) => {
@@ -132,7 +128,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                 <div className="inventoryList__main">
                   <section className="inventoryList__parent-section">
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_item-heading inventoryList_heading">
+                        <h4 className="inventoryList__item-heading inventoryList__heading">
                           INVENTORY ITEM
                           <img
                             className="inventoryList__sort-icon"
@@ -141,7 +137,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                           ></img>
                         </h4>
                         <Link to='/inventories/:id'>
-                          <p className="inventoryList_text inventoryList_item">
+                          <p className="inventoryList__text inventoryList__item">
                             {item.itemName}
                             <img
                               className="inventoryList__chevron-right-icon"
@@ -152,7 +148,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                         </Link>
                       </div>
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_category-heading inventoryList_heading">
+                        <h4 className="inventoryList__category-heading inventoryList__heading">
                           CATEGORY
                           <img
                             className="inventoryList__sort-icon"
@@ -160,12 +156,12 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <p className="inventoryList_text inventoryList_category">
+                        <p className="inventoryList__text inventoryList__category">
                           {item.category}
                         </p>
                       </div>
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_status-heading inventoryList_heading">
+                        <h4 className="inventoryList__status-heading inventoryList__heading">
                           STATUS
                           <img
                             className="inventoryList__sort-icon"
@@ -173,12 +169,12 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <div className="inventoryList_text inventoryList_status-container">
+                        <div className="inventoryList__text inventoryList__status-container">
                         <p className="inventoryList__status">{item.status}</p>
                         </div>
                       </div>
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_quantity-heading inventoryList_heading">
+                        <h4 className="inventoryList__quantity-heading inventoryList__heading">
                           QTY
                           <img
                             className="inventoryList__sort-icon"
@@ -186,12 +182,12 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <p className="inventoryList_text inventoryList_quantity">
+                        <p className="inventoryList__text inventoryList__quantity">
                           {item.quantity}
                         </p>
                       </div>
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_warehouse-heading inventoryList_heading">
+                        <h4 className="inventoryList__warehouse-heading inventoryList__heading">
                           WAREHOUSE
                           <img
                             className="inventoryList__sort-icon"
@@ -206,9 +202,9 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                         </Link>
                        
                       </div>
-                    <section className="inventoryList_action-section inventoryList_action-section-hide">
+                    <section className="inventoryList__action-section inventoryList__action-section-hide">
                       <div className="inventoryList__container">
-                        <h4 className="inventoryList_action-heading inventoryList_heading-color">
+                        <h4 className="inventoryList__action-heading inventoryList__heading-color">
                           ACTIONS
                         </h4>
                         <div className="inventoryList__action-logo-container">
@@ -235,9 +231,9 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                       </div>
                   </section>
                     </section>
-                  <section className="inventoryList_action-section inventoryList_action-section-hide-tablet">
+                  <section className="inventoryList__action-section inventoryList__action-section-hide-tablet">
                     <div className="inventoryList__action-container">
-                      <h4 className="inventoryList_action-heading inventoryList_heading-color">
+                      <h4 className="inventoryList__action-heading inventoryList__heading-color">
                         ACTIONS
                       </h4>
                       <div className="inventoryList__action-logo-container">

@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import InventoryListForm from "../InventoryListForm/InventoryListForm";
 import InventoryList from "../InventoryList/InventoryList";
 // import WarehouseInventoryLocation from "../WarehouseInventoryLocation/WarehouseInventoryLocation";
 
@@ -85,8 +84,6 @@ class Inventories extends React.Component {
     return (
       <>
         {console.log(this.state)}
-
-       <InventoryListForm/>
        <InventoryList display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} inventoryList={this.state.inventoryList}/>
 
        {/* <WarehouseInventoryLocation warehousesList={this.state.singleItem}/> */}
