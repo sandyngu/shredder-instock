@@ -10,6 +10,7 @@ import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
 
 class InventoryList extends React.Component {
+  
   state = {
     inventoryList: [],
     singleItem: [],
