@@ -48,9 +48,6 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
       .catch(err => console.log(err));
 }
 
-
-
-
   render(){
     return (
       <>
