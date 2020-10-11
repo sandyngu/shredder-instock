@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-// import { NavLink } from 'react-router-dom';
->>>>>>> development
 import ItemInputForm from '../ItemInputForm/ItemInputForm';
 import './AddItem.scss';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';

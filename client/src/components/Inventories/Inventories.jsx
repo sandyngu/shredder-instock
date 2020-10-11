@@ -1,18 +1,49 @@
 import React from "react";
 import axios from "axios";
-import InventoryList from "../InventoryList/InventoryList";
+// import InventoryList from "../InventoryList/InventoryList";
 // import WarehouseInventoryLocation from "../WarehouseInventoryLocation/WarehouseInventoryLocation";
-
+import WarehouseDetails from '../WarehouseDetails/WarehouseDetails';
 
 
 class Inventories extends React.Component {
   state = {
     inventoryList: [],
+    warehousesList: [],
     singleItem: [],
 
     search: ""
   };
 
+  showModal = (e) => {
+
+    this.setState({
+        display: true,
+    });
+  };
+  cancelModal = (e) => {
+      this.setState({
+          display: false,
+      });
+  };
+
+  deleteInventory = (id, warehouseID, warehouseName, itemName, description, category, status, quantity) => {
+      let deletedInventory = {
+          id: id,
+          warehouseID: warehouseID,
+          warehouseName: warehouseName,
+          itemName: itemName,
+          description: description,
+          category: category,
+          status: status,
+          quantity: quantity
+  }
+
+    axios.delete('http://localhost:8080/inventories', deletedInventory)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(err => console.log(err));
+}
 
   // handleInput = (e) =>{
   //   console.log(e.target.value);
@@ -30,7 +61,18 @@ class Inventories extends React.Component {
         this.setState({
           inventoryList: response.data,
         });
-        console.log(this.state);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      axios
+      .get("http://localhost:8080/warehouses")
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          warehousesList: response.data,
+        }); 
       })
       .catch((error) => {
         console.log(error);
@@ -84,8 +126,8 @@ class Inventories extends React.Component {
     return (
       <>
         {console.log(this.state)}
-       <InventoryList display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} inventoryList={this.state.inventoryList}/>
-
+       {/* <InventoryList display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} inventoryList={this.state.inventoryList}/> */}
+        <WarehouseDetails display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} warehousesList={this.state.warehousesList} inventoryList={this.state.inventoryList}/>
        {/* <WarehouseInventoryLocation warehousesList={this.state.singleItem}/> */}
             {/* <WarehouseInventory inventoryList={stateData}/> */}
       </>
