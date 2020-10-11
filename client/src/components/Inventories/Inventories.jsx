@@ -83,7 +83,7 @@ class Inventories extends React.Component {
     // const stateData = this.state.inventoryList;
     return (
       <>
-        {console.log(this.state)}
+        {console.log(this.deleteInventory)}
        <InventoryList display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} inventoryList={this.state.inventoryList}/>
 
        {/* <WarehouseInventoryLocation warehousesList={this.state.singleItem}/> */}

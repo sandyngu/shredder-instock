@@ -7,7 +7,7 @@ import './warehouse-list-item.scss';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
-    const { name, address, city, country, contact, id } = props
+    const { name, address, city, country, contact, } = props
 
     return (
         <>
@@ -50,31 +50,10 @@ function WarehouseListItem(props) {
                         <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                     </Link>
                 </div>
-               {/* <div>
-                   <h1>
-                        {name}
-                   </h1>
-                   <button>Edit</button>
-               </div>
-               <hr/>
-               <div>
-                   <h3>WAREHOUSE ADDRESS:</h3>
-                    <p>{address}</p>
-                    <p>{city}</p>
-                    <p>{country}</p>
-                    
-               </div>
-               <div>
-                   <h3>CONTACT NAME:</h3>
-                    <p>{contact.name}</p> 
-               </div>
-               <div>
-                    <h3>CONTACT INFORMATION</h3>
-                    <p>{contact.phone}</p>
-                    <p>{contact.email}</p>
-               </div> */}
+           
             </div>
-            <DeleteWarehouse display={props.display}  city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
+            <DeleteWarehouse display={props.display}  city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} 
+             />
         </>
     )
 };

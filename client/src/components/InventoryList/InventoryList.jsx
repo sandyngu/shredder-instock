@@ -6,14 +6,14 @@ import Right from "../../assets/icons/chevron_right-24px.svg";
 import {Link} from "react-router-dom";
 import Search from "../../assets/icons/search-24px.svg";
 import "./InventoryList.scss";
-// import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
-// import Search from "../../assets/icons/search-24px.svg";
 import axios from "axios"
 
 class InventoryList extends React.Component{
 state={
   display: false,
+
+  search: ""
 
 }
 
@@ -41,7 +41,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
     quantity: quantity
       }
     
-   axios.delete('http://localhost:8080/inventories', deletedInventory)
+    axios.delete('http://localhost:8080/inventories', deletedInventory)
       .then(res => {
           console.log(res.data)
           window.location.reload()
@@ -50,9 +50,12 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
 }
 
   render(){
+
+    const {inventoryList, filterText} = this.props
+
     return (
       <>
-        {console.log(this.state)}
+        
         <div className="inventoryList">
           <div className="inventoryList__form">
               <h1 className="inventoryList__title">Inventory</h1>
@@ -274,6 +277,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                     cancelModal={this.cancelModal} 
                   />
                 </div>
+                {console.log(this.deleteInventory)}
               </>
             );
           })}
