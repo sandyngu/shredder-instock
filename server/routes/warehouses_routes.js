@@ -1,7 +1,7 @@
 const express = require('express');
 const { route } = require('./warehouses_routes');
 const router = express.Router();
-const warehouses = require("./warehouses.json");
+const warehouses = require("../warehouses.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 
