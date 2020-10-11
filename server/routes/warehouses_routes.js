@@ -24,7 +24,7 @@ router.get('/:id', (_req, res) => {
 // Create warehouse object 
 
 router.post('/', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
     addWarehouseData.push(req.body);
     console.log(addWarehouseData);
@@ -36,8 +36,18 @@ router.post('/', (req, res) => {
 // Edit warehouse objects
 
 router.put('/', (req, res) => {
+    console.log(req.body);
     res.json('warehouses object');
 })
+
+// console.log(req.body);
+    // data.forEach(element.id === req.params.id) 
+    // const { editWarehouse } = req.body;
+
+    // let index = warehouses.findIndex((warehouse) => warehouse == editWarehouse);
+    //     let modifiedWarehouse = warehouses;
+    //     const updateWarehouses = modifiedWarehouse.splice(index, 1)
+    // res.json(updateWarehouses);
 
 // Delete inventory objects
 

@@ -1,35 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
-import uuid from 'uuid'
+// import axios from 'axios';
+// import uuid from 'uuid'
 import BackArrow from '../../assets/icons/arrow_back-24px.svg';
 
 import './EditWarehouse.scss'
 
-// function EditWarehouse(props) 
-//    const { name, address, city, country, contact, id } = props
-const id = "bb1491eb-30e6-4728-a5fa-72f89feaf622";
-class EditWarehouse extends React.Component {
-    state = {
-        warehouseData: []
-    }
-    getWarehouseId  = id => {
-        axios
-            .get(`http://localhost:8080/warehouses/${id}`)
-                .then(result => {
-                    this.setState({
-                        warehouseData: result.data
-                    })
-                })
-                .catch(error => {
-                    console.log(error)
-                })
-    }
-    // componentDidMount() {
-    //     this.getWarehouseId(this.props.match.params.id);
-    // }
-
-    render () {
+function EditWarehouse(props) {
+console.log(props)
 
         return (
   
@@ -48,19 +26,19 @@ class EditWarehouse extends React.Component {
                             <ul className="edit-warehouse__warehouse-list">
                                 <li className="edit-warehouse__warehouse-list-name">
                                     <label className="edit-warehouse__warehouse-list-name-label">Warehouse Name</label>
-                                    <input type='text' value={this.state.warehouseData.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
+                                    <input type='text' value={props.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-street">
                                     <label className="edit-warehouse__warehouse-list-street-label">Street Address</label>
-                                    <input type='text' value={this.state.warehouseData.address} placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
+                                    <input type='text' value={props.address} placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-city">
                                     <label className="edit-warehouse__warehouse-list-city-label">City</label>
-                                    <input type='text' value={this.state.warehouseData.city} placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
+                                    <input type='text' value={props.city} placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
                                 </li>
                                 <li className="edit-warehouse__warehouse-list-country">
                                     <label className="edit-warehouse__warehouse-list-country-label">Country</label>
-                                    <input type='text' value={this.state.warehouseData.country} placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
+                                    <input type='text' value={props.country} placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
                                 </li>
                             </ul>
                         </div>
@@ -74,19 +52,19 @@ class EditWarehouse extends React.Component {
                             <ul className="edit-warehouse__contact-list">
                                 <li className="edit-warehouse__contact-list-name">
                                     <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' value={this.state.warehouseData.name} placeholder='Contact Name' required className="edit-warehouse__contact-list-name-input"/>
+                                    <input type='text' value={props.name} placeholder='Contact Name' required className="edit-warehouse__contact-list-name-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-position">
                                     <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' value={this.state.warehouseData.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                    <input type='text' value={props.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-phone">
                                     <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
-                                    <input type='text' value={this.state.warehouseData.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
+                                    <input type='text' value={props.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
                                 </li>
                                 <li className="edit-warehouse__contact-list-email">
                                     <label className="edit-warehouse__contact-list-email-label">Email</label>
-                                    <input type='text' value={this.state.warehouseData.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
+                                    <input type='text' value={props.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
                                 </li>
                             </ul>
                         </div>
@@ -98,7 +76,6 @@ class EditWarehouse extends React.Component {
               </div>  
         )
         
-    }
-};
+    };
         
 export default EditWarehouse;
