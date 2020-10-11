@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inventories from "./components/Inventories/Inventories";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
+import AddItem from "./components/AddItem/AddItem";
+import EditItem from "./components/EditItem/EditItem";
+import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 
 class App extends React.Component {
   render() {
@@ -43,6 +46,42 @@ class App extends React.Component {
             path="/warehouses/:id"
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
+            }}
+          />
+          {/* <Route
+            path="/warehouses/:id"
+            component={() => {
+              return <WarehouseInventory />;
+            }}
+          /> */}
+          <Route
+            path="/warehouses/add-warehouse"
+            component={() => {
+              return <AddNewWarehouse />;
+            }}
+          />
+          {/* <Route
+            path="/warehouses/edit-warehouse"
+            component={() => {
+              return <EditWarehouse />;
+            }}
+          /> */}
+          {/* <Route
+            path="/inventories/:id"
+            component={() => {
+              return <ItemDetails />;
+            }}
+          /> */}
+          <Route
+            path="/inventories/add-item"
+            component={() => {
+              return <AddItem />;
+            }}
+          />
+          <Route
+            path="/inventories/edit-item"
+            component={() => {
+              return <EditItem />;
             }}
           />
         </Switch>

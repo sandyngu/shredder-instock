@@ -1,12 +1,14 @@
 const express = require('express');
 const { route } = require('./warehouses_routes');
 const router = express.Router();
-const warehouses = require("../warehouses.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
+const fs = require('fs');
+const warehouses = JSON.parse(fs.readFileSync("./warehouses.json"));
 
 router.use(cors());
 router.use(bodyParser.json());
+router.use(express.json());
 
 // Get warehouse objects
 
@@ -23,8 +25,14 @@ router.get('/:id', (_req, res) => {
 // Create warehouse object 
 
 router.post('/', (req, res) => {
-    res.json('warehouse object');
+    console.log(req.body);
+    const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
+    addWarehouseData.push(req.body);
+    console.log(addWarehouseData);
+    fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
+    res.status(201).send({status: 'warehouse added'});
 })
+    // res.json('warehouse object');
 
 // Edit warehouse objects
 
@@ -37,15 +45,12 @@ router.put('/', (req, res) => {
 router.delete('/', (req, res) => {
     const { deletedWarehouse } = req.body
 
-    let index = warehouses.findIndex((warehouse) => warehouse === deletedWarehouse);
-        console.log(index)
-        console.log(res)
+    let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
         
         let newWarehousesList = warehouses;
-        const warehouses = newWarehousesList.splice(index, 1)
+        const updatedWarehouses = newWarehousesList.splice(index, 1)
 
-    res.json(warehouses);
-    res.send(warehouses)
+    res.json(updatedWarehouses);
 })
 
 module.exports = router

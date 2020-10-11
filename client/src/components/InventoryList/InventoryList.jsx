@@ -5,8 +5,11 @@ import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
 import Right from "../../assets/icons/chevron_right-24px.svg";
 import {Link} from "react-router-dom";
-import DeleteItem from "../DeleteItem/DeleteItem";
 import Search from "../../assets/icons/search-24px.svg";
+import "./InventoryList.scss";
+// import axios from "axios";
+import DeleteItem from "../DeleteItem/DeleteItem";
+// import Search from "../../assets/icons/search-24px.svg";
 import axios from "axios"
 
 class InventoryList extends React.Component{

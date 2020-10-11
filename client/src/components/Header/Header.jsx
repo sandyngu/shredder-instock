@@ -27,7 +27,7 @@ const Header = () => {
             <Link
               to="/inventories"
               className="navbar__link navbar__inventory"
-            //   activeClassname="navbar__warehouses--active"
+              activeClassName="navbar__warehouses--active"
             >
               Inventory
             </Link>

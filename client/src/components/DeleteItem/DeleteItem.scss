@@ -1,5 +1,4 @@
 @import "../../partials/global";
-
 .delete {
   position: absolute;
   z-index: 0;
@@ -8,13 +7,6 @@
   flex-wrap: wrap;
   text-align: left;
   padding: 4%;
-  background: $white;
-
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-
   @include tablet {
     border: 2px solid red;
     margin: auto;

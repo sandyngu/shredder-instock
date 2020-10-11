@@ -80,9 +80,12 @@
     padding: 7px 16px;
     border: 1px solid $cloud;
     margin-bottom: 15px;
+
     &:focus {
       outline: none;
+      border: 1px solid $instock-indigo;
     }
+
     @include tablet {
       margin: 0 15px 0 0;
     }
@@ -99,6 +102,10 @@
     @include tablet {
       height: 38px;
       width: 130px;
+    }
+
+    &:hover {
+      background-color: $instock-black;
     }
   }
   &__list-divider {
@@ -314,10 +321,10 @@ button {
 .empty {
   height: 4000px;
   @include tablet {
-    min-height: 4300px;
+    height: 1000px;
   }
   @include desktop {
-    height: 653px;
+    height: 1000px;
   }
 }
 .footer__text {
