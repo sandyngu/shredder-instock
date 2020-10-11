@@ -27,7 +27,7 @@ class AddNewWarehouse extends React.Component {
 
         handleSubmit = (e) => {
             e.preventDefault();
-            console.log(e.target.name.value)
+            // console.log(e.target.name.value)
 
             const addWarehouseData = {
                 id: uuidv4(),
@@ -45,7 +45,7 @@ class AddNewWarehouse extends React.Component {
             };
                 
             // if (e.target.name.value === '') {
-            //     this.setState({ warehouseName: true });
+            //     this.setState({ name: true });
             // }
             // if (e.target.address.value === '') {
             //     this.setState({ address: true });
