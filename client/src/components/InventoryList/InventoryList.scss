@@ -37,18 +37,18 @@
     color: $instock-black;
     font-weight: 600;
     margin: 12px 0;
-    @include tablet {
-      margin: 10px 0 0 0;
-    }
+      @include tablet {
+          margin: 10px 0 0 0;
+      }
   }
   &__form-container {
     width: stretch;
     @include tablet {
-      padding-top: 6px;
+      padding-top: 6px; 
       width: 53%;
     }
     @include desktop {
-      width: 44%;
+        width: 44%;
     }
   }
   &__form {
@@ -72,7 +72,7 @@
     }
   }
   &__search {
-    background-image: url("../../assets/icons/search-24px.svg");
+    background-image: url('../../assets/icons/search-24px.svg');
     background-repeat: no-repeat;
     background-position: 94%;
     width: stretch;
@@ -80,32 +80,29 @@
     padding: 7px 16px;
     border: 1px solid $cloud;
     margin-bottom: 15px;
-
-    &:focus {
-      outline: none;
-      border: 1px solid $instock-indigo;
-    }
-
+        &:focus {
+          outline: none;
+          border: 1px solid $instock-indigo;
+        }
     @include tablet {
       margin: 0 15px 0 0;
     }
   }
   &__button {
-    background-color: $instock-indigo;
-    color: white;
-    width: stretch;
-    border-radius: 20px;
-    border: none;
-    padding: 0 16px;
-    margin-bottom: 5px;
-    height: 36px;
+      background-color: $instock-indigo;
+      color: white;
+      width: stretch;
+      border-radius: 20px;
+      border: none;
+      padding: 0 16px;
+      margin-bottom: 5px;
+      height: 36px;
     @include tablet {
       height: 38px;
       width: 130px;
     }
-
-    &:hover {
-      background-color: $instock-black;
+      &:hover {
+        background-color: $instock-black;
     }
   }
   &__list-divider {
@@ -182,7 +179,7 @@
     margin: 0;
     color: $instock-indigo;
     @include tablet {
-      width: 155px;
+      width: 148px;
     }
   }
   &__category-heading {
@@ -200,7 +197,7 @@
     @include tablet {
       margin: 0;
       width: 110px;
-      padding-left: 3px;
+      padding-left: 5px;
     }
   }
   &__category-inventory {
@@ -260,7 +257,7 @@
     margin: 0;
     @include tablet {
       width: 50px;
-      padding-right: 5px;
+      padding-right: 3px;
     }
   }
   &__warehouse-heading {
@@ -273,7 +270,7 @@
   &__warehouse {
     margin: 0;
     @include tablet {
-      padding-right: 15px;
+      padding-right: 39px;
     }
   }
   &__action-section-hide {
@@ -289,13 +286,13 @@
   }
   &__action-logo-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0 6.5%;
-    padding-bottom: 2px;
-    @include tablet {
-      margin: 0;
-      padding: 0;
-    }
+        justify-content: space-between;
+        margin: 0 6.5%;
+        padding-bottom: 2px;
+        @include tablet {
+          margin: 0;
+          padding: 0;
+      }
   }
   &__action-heading {
     display: none;
@@ -321,10 +318,10 @@ button {
 .empty {
   height: 4000px;
   @include tablet {
-    height: 1000px;
+      height: 1000px;
   }
   @include desktop {
-    height: 1000px;
+      height: 1000px;
   }
 }
 .footer__text {
@@ -338,6 +335,6 @@ button {
   padding: 40px;
   width: stretch;
   @include tablet {
-    font-size: $p3-desktab-fontsize;
+      font-size: $p3-desktab-fontsize;
   }
 }
