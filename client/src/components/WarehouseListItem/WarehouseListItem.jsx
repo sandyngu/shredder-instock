@@ -7,7 +7,7 @@ import './warehouse-list-item.scss';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
-    const { name, address, city, country, contact, } = props
+    const { name, address, city, country, contact, id } = props
 
     return (
         <>
@@ -16,7 +16,7 @@ function WarehouseListItem(props) {
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
-                            <Link to={`/inventories/${name}`}>
+                            <Link to={`/warehouses/${name}`}>
                                 <p className="warehouse-list__city">{name}</p>
                             </Link>
                             <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />

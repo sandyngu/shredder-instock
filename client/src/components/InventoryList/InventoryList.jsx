@@ -42,9 +42,10 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
     quantity: quantity
       }
     
-  axios.delete('http://localhost:8080/inventories', deletedInventory)
+   axios.delete('http://localhost:8080/inventories', deletedInventory)
       .then(res => {
           console.log(res.data)
+          window.location.reload()
       })
       .catch(err => console.log(err));
 }
@@ -140,7 +141,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <Link to='/inventories/:id'>
+                        <Link to={`/warehouses/${item.id}`}>
                           <p className="inventoryList_text inventoryList_item">
                             {item.itemName}
                             <img

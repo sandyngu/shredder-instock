@@ -27,11 +27,11 @@ class Inventories extends React.Component {
     axios
       .get("http://localhost:8080/inventories")
       .then((response) => {
-        console.log(response.data);
+     
         this.setState({
           inventoryList: response.data,
         });
-        console.log(this.state);
+       
       })
       .catch((error) => {
         console.log(error);
@@ -75,7 +75,7 @@ class Inventories extends React.Component {
     // let filterItem = this.state.inventoryList.filter((item)=>{
     //      return item.warehouseName.toLowercase().includes(this.state.search.toLowercase())
     //     })
-    console.log(this.state);
+   
 
 
     // if(this.state.singleItem.hasOwnProperty("itemName")){
@@ -84,7 +84,7 @@ class Inventories extends React.Component {
     // const stateData = this.state.inventoryList;
     return (
       <>
-        {console.log(this.state)}
+        
 
        <InventoryListForm/>
        <InventoryList display={this.state.display} cancelModal={this.cancelModal}  deleteModal={this.deleteModal} deleteInventory={this.deleteInventory} inventoryList={this.state.inventoryList}/>

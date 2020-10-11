@@ -8,7 +8,8 @@ import WarehouseInventoryLocation from "../WarehouseInventoryLocation/WarehouseI
 class WarehouseInventory extends React.Component {
   state={
     inventoryList:[],
-    warehousesList:[],
+    
+    warehouse: {}
     
   }
 
@@ -33,13 +34,16 @@ class WarehouseInventory extends React.Component {
       axios
       .get("http://localhost:8080/warehouses")
       .then((res) => {
-        console.log(res)
-        
+        console.log(this.props.match.params.id)
+        console.log(res.data)
+        const warehouseLocation = res.data.filter((warehouse)=>{
+          return warehouse.name === this.props.match.params.id
+         })
           this.setState({
-            warehousesList: res.data,
+            warehouse: warehouseLocation[0],
             
         })
-   
+        console.log(this.state.warehouse)
       })
       .catch((error) => {
         console.log(error);
@@ -49,22 +53,31 @@ class WarehouseInventory extends React.Component {
   
 
   render(){
-    
-    return (
-      <div>
-        {console.log(this.state)}
-        <InventoryList inventoryList={this.state.inventoryList}/>
-        {/* <WarehouseListItem name={this.state.name} address={this.state.address} city={this.state.city} country={this.state.country} /> */}
-        <WarehouseInventoryLocation warehousesList={this.state.warehousesList} name={this.state.name} address={this.state.address} city={this.state.city} country={this.state.country} />
-      </div>
+    console.log(this.state.warehouse)
+     if (Object.keys(this.state.warehouse).length > 0){
+       
+       return (
+          
+      
+        <div>
+          
+          <WarehouseInventoryLocation warehouse={this.state.warehouse} />
+          <InventoryList inventoryList={this.state.inventoryList}/>
+          {/* <WarehouseListItem name={this.state.name} address={this.state.address} city={this.state.city} country={this.state.country} /> */}
+        </div>
+        )}
+        else{
+          return <div>LOADING...</div>
+        }
+    } 
        
        
                   
       
-    )
+    
   }
 
-}
+
     
 
 export default WarehouseInventory;

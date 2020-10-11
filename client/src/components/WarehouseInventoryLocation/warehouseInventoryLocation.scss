@@ -1,8 +1,8 @@
 @import "../../partials/global";
 
 .warehouseInventoryLocation {
-  // position: absolute;
-  z-index: 0;
+  position: absolute;
+  z-index: 2;
   top: 0;
   margin: 24px;
   &__img-name-container {
