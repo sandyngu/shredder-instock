@@ -1,0 +1,59 @@
+@import './variables';
+@import './colors';
+
+body {
+    font-family: 'Titillium Web';
+    color: $slate;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: $h1-mobile-fontsize;
+
+    @include tablet {
+        font-size: $h1-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h1-desktab-fontsize;
+    }
+}
+h2 {
+    font-size: $h2-mobile-fontsize;
+    
+    @include tablet {
+        font-size: $h2-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
+}
+h3 {
+    font-size: $h3-mobile-fontsize;
+    
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h3-desktab-fontsize;
+    }
+}
+h4 {
+    font-size: $h4-mobile-fontsize;
+    
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
+p { 
+    font-size: $p2-mobile-fontsize;
+    
+    @include tablet {
+        font-size: $p2-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $p2-desktab-fontsize;
+    }
+}    
