@@ -55,7 +55,7 @@ class WarehousesList extends React.Component {
         axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
             .then(res => {
                 console.log(res.data)
-                // window.location.reload();
+                window.location.reload();
             })
             .catch(err => console.log(err));
     }
