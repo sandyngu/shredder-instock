@@ -29,12 +29,18 @@ class App extends React.Component {
           <Route
             exact
             path="/inventories"
-            component={() => {
-              return <Inventories />;
+            render={(routerProps) => {
+              return <Inventories {...routerProps} />;
             }}
           />
           <Route
             path="/inventories/:id"
+            render={(routeProps) => {
+              return <WarehouseInventory {...routeProps} />;
+            }}
+          />
+          <Route
+            path="/warehouses/:id"
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
             }}

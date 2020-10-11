@@ -28,7 +28,7 @@ function DeleteItem(props) {
             Cancel
           </button>
           <button 
-          onClick={(e)=> props.deleteModal()}
+          onClick={(e)=> props.deleteInventory()}
           className="delete__button-container-delete">Delete</button>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./inventoryList.scss";
+import "../InventoryList/InventoryList.scss";
 import Sort from "../../assets/icons/sort-24px.svg";
 import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
@@ -7,6 +7,7 @@ import Right from "../../assets/icons/chevron_right-24px.svg";
 import {Link} from "react-router-dom";
 import DeleteItem from "../DeleteItem/DeleteItem";
 import Search from "../../assets/icons/search-24px.svg";
+import axios from "axios"
 
 class InventoryList extends React.Component{
 state={
@@ -25,11 +26,25 @@ cancelModal = (e) => {
     display: false,
   });
 };
-deleteModal = (e) => {
-  this.setState({
-    display: false,
-  });
-};
+
+deleteInventory = (id, warehouseID, warehouseName, itemName, description, category, status, quantity ) => {
+  let deletedInventory = {
+    id: id,
+    warehouseID: warehouseID,
+    warehouseName: warehouseName,
+    itemName: itemName,
+    description: description,
+    category: category,
+    status: status,
+    quantity: quantity
+      }
+    
+  axios.delete('http://localhost:8080/inventories', deletedInventory)
+      .then(res => {
+          console.log(res.data)
+      })
+      .catch(err => console.log(err));
+}
 
 
 
@@ -108,7 +123,7 @@ deleteModal = (e) => {
               <h4 className="inventoryList_category-title inventoryList_category-actions">ACTIONS</h4>
             </div>
           </div>
-          {this.state.inventoryList.map((item) => {
+          {this.props.inventoryList.map((item) => {
             return (
               <>
                 <div className="inventoryList__main">
@@ -247,10 +262,16 @@ deleteModal = (e) => {
                   </section>
                   <DeleteItem 
                     display={this.state.display}  
-                    cancelModal={this.cancelModal} 
-                    deleteModal={this.deleteModal}
-                    itemName={item.itemName}
                     id={item.id}
+                    warehouseID={item.warehouseID}
+                    warehouseName={item.warehouseName}
+                    itemName={item.itemName}
+                    description={item.description}
+                    category={item.category}
+                    status={item.status}
+                    quantity={item.quantity}
+                    deleteInventory={this.deleteInventory}
+                    cancelModal={this.cancelModal} 
                   />
                 </div>
               </>

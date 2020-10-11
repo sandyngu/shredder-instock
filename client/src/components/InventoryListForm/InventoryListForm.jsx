@@ -1,5 +1,6 @@
 import React from 'react'
 import Search from "../../assets/icons/search-24px.svg";
+import "../InventoryList/InventoryList.scss"
 
 export default function InventoryListForm() {
   return (
