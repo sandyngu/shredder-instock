@@ -7,12 +7,12 @@ import './warehouse-list-item.scss';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
-    const { name, address, city, country, contact, id } = props
+    const { name, address, city, country, contact, } = props
 
     return (
         <>
             <div className="warehouse-list">
-                <div className="warehouse-list__container">
+                <div className="warehouse-list__container warehouse__hide">
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
@@ -38,20 +38,20 @@ function WarehouseListItem(props) {
                         </div>
                     </div>
                     <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
-                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
+                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => { props.activateModal() }} />
                         <Link to='/warehouses/edit-warehouse'>
                             <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                         </Link>
                     </div>
                 </div>
-                <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile">
-                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
+                <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile warehouse__hide">
+                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => { props.activateModal() }} />
                     <Link to='/warehouses/edit-warehouse'>
                         <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                     </Link>
                 </div>
             </div>
-            <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
+            <DeleteWarehouse display={props.display} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse={props.deleteWarehouse} closeModal={props.closeModal} />
         </>
     )
 };
