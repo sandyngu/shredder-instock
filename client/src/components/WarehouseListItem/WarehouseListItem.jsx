@@ -74,7 +74,7 @@ function WarehouseListItem(props) {
                     <p>{contact.email}</p>
                </div> */}
             </div>
-            <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
+            <DeleteWarehouse display={props.display}  city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
         </>
     )
 };
