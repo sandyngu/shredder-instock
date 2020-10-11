@@ -10,6 +10,7 @@ import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 // import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
 import EditItem from "./components/EditItem/EditItem";
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 
 class App extends React.Component {
   render() {
@@ -54,12 +55,12 @@ class App extends React.Component {
               return <EditWarehouse />;
             }}
           /> */}
-          {/* <Route
-            path="/inventories/:id"
-            component={() => {
-              return <ItemDetails />;
+           <Route
+            path={`/inventories/:id/:warehouseName`}
+            render={(routeProps) => {
+              return <ItemDetails {...routeProps}/>;
             }}
-          /> */}
+          /> 
           <Route
             path="/inventories/add-item"
             component={() => {

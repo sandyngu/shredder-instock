@@ -10,10 +10,10 @@ import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
 
 class InventoryList extends React.Component {
-  
+
   state = {
     inventoryList: [],
-    singleItem: [],
+    singleItem: {},
 
     display: false,
   };
@@ -38,7 +38,9 @@ class InventoryList extends React.Component {
       });
   }
 
-  // componentDidUpdate() {}
+  findItem = (id, warehouseName) => {
+    window.location = `/inventories/${id}/${warehouseName}`
+  }
 
   render() {
     console.log(this.state);
@@ -49,29 +51,29 @@ class InventoryList extends React.Component {
 
         <div className="inventoryList">
           <div className="inventoryList__form">
-              <h1 className="inventoryList__title">Inventory</h1>
-              <div className="inventoryList__form-container">
-                <form
-                  className="inventoryList__form-sub"
-                  action=""
-                  name="inventoryForm"
-                  >
-                  <input
-                    className="inventoryList__search"
-                    name="inventorySearch"
-                    type="search"
-                    src={Search}
-                    placeholder="Search..."
-                    />
-                    <Link to='/inventories/add-item'>
-                      <button className="inventoryList__button" name="inventoryButton">
-                        + Add New Item
+            <h1 className="inventoryList__title">Inventory</h1>
+            <div className="inventoryList__form-container">
+              <form
+                className="inventoryList__form-sub"
+                action=""
+                name="inventoryForm"
+              >
+                <input
+                  className="inventoryList__search"
+                  name="inventorySearch"
+                  type="search"
+                  src={Search}
+                  placeholder="Search..."
+                />
+                <Link to='/inventories/add-item'>
+                  <button className="inventoryList__button" name="inventoryButton">
+                    + Add New Item
                       </button>
-                    </Link>
-                </form>
+                </Link>
+              </form>
             </div>
           </div>
-          <div className="inventoryList__list-divider"/>
+          <div className="inventoryList__list-divider" />
           <div className="inventoryList__category-box">
             <div className="inventoryList__categories">
               <div className="inventoryList__category-title inventoryList__category-inventory">
@@ -83,37 +85,37 @@ class InventoryList extends React.Component {
                 ></img>
               </div>
               <div className="inventoryList__category-title inventoryList__category-category">
-              <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-category">CATEGORY</h4>
+                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-category">CATEGORY</h4>
                 <img
                   className="inventoryList__sort-icon"
                   src={Sort}
                   alt="Sort Icon"
                 ></img>
               </div>
-                <div className="inventoryList__category-title inventoryList__category-status">
+              <div className="inventoryList__category-title inventoryList__category-status">
                 <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-status">STATUS</h4>
-                  <img
-                    className="inventoryList__sort-icon"
-                    src={Sort}
-                    alt="Sort Icon"
-                  ></img>
-                </div>
-                <div className="inventoryList__category-title inventoryList__category-quantity">
+                <img
+                  className="inventoryList__sort-icon"
+                  src={Sort}
+                  alt="Sort Icon"
+                ></img>
+              </div>
+              <div className="inventoryList__category-title inventoryList__category-quantity">
                 <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-quantity">QTY</h4>
-                  <img
-                    className="inventoryList__sort-icon"
-                    src={Sort}
-                    alt="Sort Icon"
-                  ></img>
-                </div>
-                <div className="inventoryList__category-title inventoryList__category-warehouse">
+                <img
+                  className="inventoryList__sort-icon"
+                  src={Sort}
+                  alt="Sort Icon"
+                ></img>
+              </div>
+              <div className="inventoryList__category-title inventoryList__category-warehouse">
                 <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-warehouse">WAREHOUSE</h4>
-                  <img
-                    className="inventoryList__sort-icon"
-                    src={Sort}
-                    alt="Sort Icon"
-                  ></img>
-                </div>
+                <img
+                  className="inventoryList__sort-icon"
+                  src={Sort}
+                  alt="Sort Icon"
+                ></img>
+              </div>
               <h4 className="inventoryList__category-title inventoryList__category-actions">ACTIONS</h4>
             </div>
           </div>
@@ -123,79 +125,79 @@ class InventoryList extends React.Component {
               <>
                 <div className="inventoryList__main">
                   <section className="inventoryList__parent-section">
-                      <div className="inventoryList__container">
-                        <h4 className="inventoryList__item-heading inventoryList__heading">
-                          INVENTORY ITEM
+                    <div className="inventoryList__container">
+                      <h4 className="inventoryList__item-heading inventoryList__heading">
+                        INVENTORY ITEM
                           <img
-                            className="inventoryList__sort-icon"
-                            src={Sort}
-                            alt="Sort Icon"
-                          ></img>
-                        </h4>
-                        <Link to='/inventories/:id'>
-                          <p className="inventoryList__text inventoryList__item">
-                            {item.itemName}
+                          className="inventoryList__sort-icon"
+                          src={Sort}
+                          alt="Sort Icon"
+                        ></img>
+                      </h4>
+                      <Link>
+                        <p className="inventoryList__text inventoryList__item" onClick={() => { this.findItem(item.id, item.warehouseName)}}>
+                          {item.itemName}
 
-                            <img
-                              className="inventoryList__chevron-right-icon"
-                              src={Right}
-                              alt="Chevron Right Icon"
-                            ></img>
-                          </p>
-                        </Link>
-                      </div>
-                      <div className="inventoryList__container">
-                        <h4 className="inventoryList__category-heading inventoryList__heading">
-                          CATEGORY
                           <img
-                            className="inventoryList__sort-icon"
-                            src={Sort}
-                            alt="Sort Icon"
+                            className="inventoryList__chevron-right-icon"
+                            src={Right}
+                            alt="Chevron Right Icon"
                           ></img>
-                        </h4>
-                        <p className="inventoryList__text inventoryList__category">
-                          {item.category}
                         </p>
-                      </div>
-                      <div className="inventoryList__container">
-                        <h4 className="inventoryList__status-heading inventoryList__heading">
-                          STATUS
+                      </Link>
+                    </div>
+                    <div className="inventoryList__container">
+                      <h4 className="inventoryList__category-heading inventoryList__heading">
+                        CATEGORY
                           <img
-                            className="inventoryList__sort-icon"
-                            src={Sort}
-                            alt="Sort Icon"
-                          ></img>
-                        </h4>
-                        <div className="inventoryList__text inventoryList__status-container">
+                          className="inventoryList__sort-icon"
+                          src={Sort}
+                          alt="Sort Icon"
+                        ></img>
+                      </h4>
+                      <p className="inventoryList__text inventoryList__category">
+                        {item.category}
+                      </p>
+                    </div>
+                    <div className="inventoryList__container">
+                      <h4 className="inventoryList__status-heading inventoryList__heading">
+                        STATUS
+                          <img
+                          className="inventoryList__sort-icon"
+                          src={Sort}
+                          alt="Sort Icon"
+                        ></img>
+                      </h4>
+                      <div className="inventoryList__text inventoryList__status-container">
                         <p className="inventoryList__status">{item.status}</p>
-                        </div>
                       </div>
-                      <div className="inventoryList__container">
-                        <h4 className="inventoryList__quantity-heading inventoryList__heading">
-                          QTY
+                    </div>
+                    <div className="inventoryList__container">
+                      <h4 className="inventoryList__quantity-heading inventoryList__heading">
+                        QTY
                           <img
-                            className="inventoryList__sort-icon"
-                            src={Sort}
-                            alt="Sort Icon"
-                          ></img>
-                        </h4>
-                        <p className="inventoryList__text inventoryList__quantity">
-                          {item.quantity}
-                        </p>
-                      </div>
-                      <div className="inventoryList__container">
-                        <h4 className="inventoryList__warehouse-heading inventoryList__heading">
-                          WAREHOUSE
+                          className="inventoryList__sort-icon"
+                          src={Sort}
+                          alt="Sort Icon"
+                        ></img>
+                      </h4>
+                      <p className="inventoryList__text inventoryList__quantity">
+                        {item.quantity}
+                      </p>
+                    </div>
+                    <div className="inventoryList__container">
+                      <h4 className="inventoryList__warehouse-heading inventoryList__heading">
+                        WAREHOUSE
                           <img
-                            className="inventoryList__sort-icon"
-                            src={Sort}
-                            alt="Sort Icon"
-                          ></img>
-                        </h4>
-                          <p className="inventoryList__text inventoryList__warehouse" key={item.id}>
-                            {item.warehouseName}
-                          </p>
-                      </div>
+                          className="inventoryList__sort-icon"
+                          src={Sort}
+                          alt="Sort Icon"
+                        ></img>
+                      </h4>
+                      <p className="inventoryList__text inventoryList__warehouse" key={item.id}>
+                        {item.warehouseName}
+                      </p>
+                    </div>
                     <section className="inventoryList__action-section inventoryList__action-section-hide">
                       <div className="inventoryList__container">
                         <h4 className="inventoryList__action-heading inventoryList__heading-color">
@@ -203,48 +205,48 @@ class InventoryList extends React.Component {
                         </h4>
                         <div className="inventoryList__action-logo-container">
                           <Link to='/inventories'>
-                          <button 
-                          >
-                            <img
-                              className="inventoryList__delete-icon"
-                              src={Delete}
-                              alt="Delete Icon"
-                              onClick={(e) => {
-                                this.showModal();
-                              }}
-                            />
-                          </button>
+                            <button
+                            >
+                              <img
+                                className="inventoryList__delete-icon"
+                                src={Delete}
+                                alt="Delete Icon"
+                                onClick={(e) => {
+                                  this.showModal();
+                                }}
+                              />
+                            </button>
                           </Link>
                           <Link to='/inventories/edit-item'>
-                          <img
-                            className="inventoryList__edit-icon"
-                            src={Edit}
-                            alt="Edit Icon"
-                          />
+                            <img
+                              className="inventoryList__edit-icon"
+                              src={Edit}
+                              alt="Edit Icon"
+                            />
                           </Link>
                         </div>
                       </div>
-                  </section>
                     </section>
+                  </section>
                   <section className="inventoryList__action-section inventoryList__action-section-hide-tablet">
                     <div className="inventoryList__action-container">
                       <h4 className="inventoryList__action-heading inventoryList__heading-color">
                         ACTIONS
                       </h4>
                       <div className="inventoryList__action-logo-container">
-                      <Link to='/inventories/delete-item'>
-                        <img
-                          className="inventoryList__delete-icon"
-                          src={Delete}
-                          alt="Delete Icon"
-                        />
+                        <Link to='/inventories/delete-item'>
+                          <img
+                            className="inventoryList__delete-icon"
+                            src={Delete}
+                            alt="Delete Icon"
+                          />
                         </Link>
                         <Link to='/inventories/edit-item'>
-                        <img
-                          className="inventoryList__edit-icon"
-                          src={Edit}
-                          alt="Edit Icon"
-                        />
+                          <img
+                            className="inventoryList__edit-icon"
+                            src={Edit}
+                            alt="Edit Icon"
+                          />
                         </Link>
                       </div>
                     </div>
@@ -255,9 +257,9 @@ class InventoryList extends React.Component {
           })}
         </div>
         <div className="empty"></div>
-            <div className="footer">
-                <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
-            </div>
+        <div className="footer">
+          <p className="footer__text">© InStock Inc. All Rights Reserved.</p>
+        </div>
         <DeleteItem display={this.state.display} />
       </>
     );

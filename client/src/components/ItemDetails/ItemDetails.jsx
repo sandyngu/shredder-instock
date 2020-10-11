@@ -5,14 +5,48 @@ import axios from "axios";
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
 
-function ItemDetails(props) {
+class ItemDetails extends React.Component {
 
-    return (
+    state = {
+        singleItem: {
+            id: "",
+            warehouseName: ""
+        }
+    }
+
+    componentDidMount() {
+
+        const { match } = this.props;
+
+        console.log(match);
+        console.log(match.params.id);
+        console.log(match.params.warehouseName);
+
+
+        if (match.params.id !== this.state.singleItem.id && match.params.warehouseName !== this.state.singleItem.warehouseName) {
+
+            axios.get(`http://localhost:8080/inventories/${match.params.id}/${match.params.warehouseName}`)
+                .then(response => {
+                    console.log(response.data);
+                    this.setState({
+                        singleItem: response.data
+                    })
+
+                        .catch(error => console.log(error));
+                })
+        }
+    }
+
+    render() {
+
+        console.log(this.state.singleItem)
+
+        return (
 
             <section className="item-details">
                 <div className="item-details__header">
                     <img className="item-details__header-arrow" src={Arrow} alt="Back arrow" />
-                    <h1 className="item-details__header-title">{props.itemName}</h1>
+                    <h1 className="item-details__header-title">{this.state.singleItem.itemName}</h1>
                     <button className="item-details__header-button">
                         <img className="item-details__header-button-icon" src={Edit} alt="edit" />
                         <p className="item-details__header-button-text">Edit</p>
@@ -21,33 +55,36 @@ function ItemDetails(props) {
                 <div className="item-details__container">
                     <div className="item-details__description">
                         <h3 className="item-details__description-header">ITEM DESCRIPTION:</h3>
-                        <p className="item-details__description-description">This 50", 4K LED TV provides a crystal-clear picture and vivid colors.</p>
+                        <p className="item-details__description-description">{this.state.singleItem.description}</p>
                         <h3 className="item-details__description-header">CATEGORY:</h3>
-                        <p className="item-details__description-description">Electronics</p>
+                        <p className="item-details__description-description">{this.state.singleItem.category}</p>
                     </div>
                     <div className="item-details__line"></div>
                     <div className="item-details__logistics">
                         <div className="item-details__logistics-amount">
                             <div className="item-details__logistics-amount-status">
                                 <h3 className="item-details__logistics-header">STATUS:</h3>
+                                {this.state.singleItem.status === 'In Stock' && (
                                 <p className="item-details__logistics-instock">IN STOCK</p>
+                                )}
+                                 {this.state.singleItem.status === 'Out of Stock' && (
                                 <p className="item-details__logistics-outstock">OUT OF STOCK</p>
+                                 )}
                             </div>
                             <div className="item-details__logistics-amount-quantity">
                                 <h3 className="item-details__logistics-header">QUANTITY:</h3>
-                                <p className="item-details__logistics-description">500</p>
+                                <p className="item-details__logistics-description">{this.state.singleItem.quantity}</p>
                             </div>
                         </div>
                         <div className="item-details__logistics-warehouse">
                             <h3 className="item-details__logistics-header">WAREHOUSE:</h3>
-                            <p className="item-details__logistics-description">Manhattan</p>
+                            <p className="item-details__logistics-description">{this.state.singleItem.warehouseName}</p>
                         </div>
                     </div>
                 </div>
             </section>
-
-    )
-
+        )
+    }
 }
 
 export default ItemDetails;
