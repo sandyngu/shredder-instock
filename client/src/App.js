@@ -16,7 +16,8 @@ class App extends React.Component {
     return (
       <Router>
         <Header />
-        <AddNewWarehouse />
+        {/* <AddNewWarehouse /> */}
+        <EditWarehouse />
         <Switch>
           <Route
             exact
@@ -61,7 +62,7 @@ class App extends React.Component {
               return <ItemDetails />;
             }}
           /> */}
-          <Route
+          {/* <Route
             path="/inventories/add-item"
             component={() => {
               return <AddItem />;
@@ -72,7 +73,7 @@ class App extends React.Component {
             component={() => {
               return <EditItem />;
             }}
-          />
+          /> */}
         </Switch>
       </Router>
     );
