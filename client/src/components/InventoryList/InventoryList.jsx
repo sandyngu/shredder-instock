@@ -1,57 +1,52 @@
-import React from 'react'
+import React from "react";
+import { Link } from 'react-router-dom';
 import Sort from "../../assets/icons/sort-24px.svg";
 import Delete from "../../assets/icons/delete_outline-24px.svg";
 import Edit from "../../assets/icons/edit-24px.svg";
 import Right from "../../assets/icons/chevron_right-24px.svg";
-import {Link} from "react-router-dom";
 import Search from "../../assets/icons/search-24px.svg";
 import "./InventoryList.scss";
-// import axios from "axios";
+import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
-// import Search from "../../assets/icons/search-24px.svg";
-import axios from "axios"
 
-class InventoryList extends React.Component{
-state={
-  display: false,
+class InventoryList extends React.Component {
+  
+  state = {
+    inventoryList: [],
+    singleItem: [],
 
-}
-
-showModal = (e) => {
-   
-  this.setState({
-    display: true,
-  });
-};
-cancelModal = (e) => {
-  this.setState({
     display: false,
-  });
-};
+  };
+  showModal = (e) => {
+    this.setState({
+      display: true,
+    });
+  };
 
-deleteInventory = (id, warehouseID, warehouseName, itemName, description, category, status, quantity ) => {
-  let deletedInventory = {
-    id: id,
-    warehouseID: warehouseID,
-    warehouseName: warehouseName,
-    itemName: itemName,
-    description: description,
-    category: category,
-    status: status,
-    quantity: quantity
-      }
-    
-  axios.delete('http://localhost:8080/inventories', deletedInventory)
-      .then(res => {
-          console.log(res.data)
+  componentDidMount() {
+    axios
+      .get("http://localhost:8080/inventories")
+      .then((response) => {
+        console.log(response.data);
+        this.setState({
+          inventoryList: response.data,
+        });
+        console.log(this.state);
       })
-      .catch(err => console.log(err));
-}
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
-  render(){
+  // componentDidUpdate() {}
+
+  render() {
+    console.log(this.state);
+
     return (
       <>
         {console.log(this.state)}
+
         <div className="inventoryList">
           <div className="inventoryList__form">
               <h1 className="inventoryList__title">Inventory</h1>
@@ -80,7 +75,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
           <div className="inventoryList__category-box">
             <div className="inventoryList__categories">
               <div className="inventoryList__category-title inventoryList__category-inventory">
-                <h4 className="inventoryList__category-top-heading inventoryList__category-top-inventory">INVENTORY ITEM</h4>
+                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-inventory">INVENTORY ITEM</h4>
                 <img
                   className="inventoryList__sort-icon"
                   src={Sort}
@@ -88,7 +83,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                 ></img>
               </div>
               <div className="inventoryList__category-title inventoryList__category-category">
-              <h4 className="inventoryList__category-top-heading inventoryList__category-top-category">CATEGORY</h4>
+              <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-category">CATEGORY</h4>
                 <img
                   className="inventoryList__sort-icon"
                   src={Sort}
@@ -96,7 +91,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                 ></img>
               </div>
                 <div className="inventoryList__category-title inventoryList__category-status">
-                <h4 className="inventoryList__category-top-heading inventoryList__category-top-status">STATUS</h4>
+                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-status">STATUS</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
@@ -104,7 +99,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                   ></img>
                 </div>
                 <div className="inventoryList__category-title inventoryList__category-quantity">
-                <h4 className="inventoryList__category-top-heading inventoryList__category-top-quantity">QTY</h4>
+                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-quantity">QTY</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
@@ -112,7 +107,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                   ></img>
                 </div>
                 <div className="inventoryList__category-title inventoryList__category-warehouse">
-                <h4 className="inventoryList__category-top-heading inventoryList__category-top-warehouse">WAREHOUSE</h4>
+                <h4 className="inventoryList__ category-top-heading inventoryList__ category-top-warehouse">WAREHOUSE</h4>
                   <img
                     className="inventoryList__sort-icon"
                     src={Sort}
@@ -122,7 +117,8 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
               <h4 className="inventoryList__category-title inventoryList__category-actions">ACTIONS</h4>
             </div>
           </div>
-          {this.props.inventoryList.map((item) => {
+
+          {this.state.inventoryList.map((item) => {
             return (
               <>
                 <div className="inventoryList__main">
@@ -139,6 +135,7 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                         <Link to='/inventories/:id'>
                           <p className="inventoryList__text inventoryList__item">
                             {item.itemName}
+
                             <img
                               className="inventoryList__chevron-right-icon"
                               src={Right}
@@ -195,12 +192,9 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <Link to={`/inventories/${item.warehouseName}`}>
-                        <p className="inventoryList__warehouse">
-                        {item.warehouseName}
-                        </p>
-                        </Link>
-                       
+                          <p className="inventoryList__text inventoryList__warehouse" key={item.id}>
+                            {item.warehouseName}
+                          </p>
                       </div>
                     <section className="inventoryList__action-section inventoryList__action-section-hide">
                       <div className="inventoryList__container">
@@ -210,13 +204,14 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                         <div className="inventoryList__action-logo-container">
                           <Link to='/inventories'>
                           <button 
-                            onClick={(e) => {
-                              this.showModal();
-                            }}>
+                          >
                             <img
                               className="inventoryList__delete-icon"
                               src={Delete}
                               alt="Delete Icon"
+                              onClick={(e) => {
+                                this.showModal();
+                              }}
                             />
                           </button>
                           </Link>
@@ -237,18 +232,13 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                         ACTIONS
                       </h4>
                       <div className="inventoryList__action-logo-container">
-                      <Link to='/inventories'>
-                          <button 
-                            onClick={(e) => {
-                              this.showModal();
-                            }}>
-                            <img
-                              className="inventoryList__delete-icon"
-                              src={Delete}
-                              alt="Delete Icon"
-                            />
-                          </button>
-                          </Link>
+                      <Link to='/inventories/delete-item'>
+                        <img
+                          className="inventoryList__delete-icon"
+                          src={Delete}
+                          alt="Delete Icon"
+                        />
+                        </Link>
                         <Link to='/inventories/edit-item'>
                         <img
                           className="inventoryList__edit-icon"
@@ -259,19 +249,6 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                       </div>
                     </div>
                   </section>
-                  <DeleteItem 
-                    display={this.state.display}  
-                    id={item.id}
-                    warehouseID={item.warehouseID}
-                    warehouseName={item.warehouseName}
-                    itemName={item.itemName}
-                    description={item.description}
-                    category={item.category}
-                    status={item.status}
-                    quantity={item.quantity}
-                    deleteInventory={this.deleteInventory}
-                    cancelModal={this.cancelModal} 
-                  />
                 </div>
               </>
             );
@@ -281,9 +258,9 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
             </div>
+        <DeleteItem display={this.state.display} />
       </>
     );
   }
 }
 export default InventoryList;
-

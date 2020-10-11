@@ -1,4 +1,5 @@
 @import "../../partials/_global.scss";
+
 .inventoryList {
   position: absolute;
   top: 140px;
@@ -7,6 +8,7 @@
   box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
   width: stretch;
   margin: 0 17px;
+  
   @include tablet {
     margin: 0 4% 100px 4%;
     top: 95px;
@@ -14,18 +16,23 @@
   @include desktop {
     margin: 0 10% 150px 10%;
   }
+
   &__main {
     padding: 15px 0;
     border-bottom: 1px solid $cloud;
+
     @include tablet {
       display: flex;
       justify-content: space-between;
     }
+
     &:hover {
       background-color: rgba(46, 102, 230, 0.07);
     }
   }
+
   &__header {
+    
     @include tablet {
       display: flex;
       justify-content: space-between;
@@ -37,12 +44,15 @@
     color: $instock-black;
     font-weight: 600;
     margin: 12px 0;
+
       @include tablet {
           margin: 10px 0 0 0;
       }
+
   }
   &__form-container {
     width: stretch;
+
     @include tablet {
       padding-top: 6px; 
       width: 53%;
@@ -56,6 +66,7 @@
     flex-direction: column;
     padding: 15px 7%;
     margin: 0;
+
     @include tablet {
       flex-direction: row;
       justify-content: space-between;
@@ -65,6 +76,7 @@
   }
   &__form-sub {
     padding-bottom: 5px;
+
     @include tablet {
       display: flex;
       height: 38px;
@@ -80,10 +92,12 @@
     padding: 7px 16px;
     border: 1px solid $cloud;
     margin-bottom: 15px;
+
         &:focus {
           outline: none;
           border: 1px solid $instock-indigo;
         }
+
     @include tablet {
       margin: 0 15px 0 0;
     }
@@ -97,10 +111,12 @@
       padding: 0 16px;
       margin-bottom: 5px;
       height: 36px;
+
     @include tablet {
       height: 38px;
       width: 130px;
     }
+
       &:hover {
         background-color: $instock-black;
     }
@@ -117,6 +133,7 @@
   }
   &__categories {
     display: none;
+
     @include tablet {
       display: flex;
       justify-content: space-between;
@@ -144,6 +161,7 @@
     flex-direction: column;
     height: 170px;
     padding: 0px 6.5% 5px 6.5%;
+
     @include tablet {
       flex-direction: row;
       align-items: center;
@@ -153,8 +171,10 @@
       justify-content: space-between;
     }
   }
+
   &__text {
     color: $slate;
+    
     @include tablet {
       width: 90px;
     }
@@ -178,8 +198,9 @@
     line-height: 20px;
     margin: 0;
     color: $instock-indigo;
+
     @include tablet {
-      width: 148px;
+      width: 155px;
     }
   }
   &__category-heading {
@@ -194,29 +215,34 @@
   &__category {
     line-height: 20px;
     margin: 0 0 40px 0;
+
     @include tablet {
       margin: 0;
       width: 110px;
-      padding-left: 5px;
+      padding-left: 3px;
     }
   }
   &__category-inventory {
+    
     @include tablet {
       padding-right: 42px;
     }
   }
   &__category-status {
+    
     @include tablet {
       padding-left: 35px;
     }
   }
   &__category-quantity {
+    
     @include tablet {
       padding-left: 55px;
       width: 50px;
     }
   }
   &__category-warehouse {
+    
     @include tablet {
       padding-right: 35px;
     }
@@ -224,6 +250,7 @@
   &__status-heading {
     line-height: 16px;
     margin: 0 0 5px 0;
+
     @include tablet {
       display: none;
     }
@@ -242,6 +269,7 @@
     background: rgba(21, 132, 99, 0.07);
     padding: 3px 4px;
     border-radius: 20px;
+
     @include tablet {
       width: 60%;
     }
@@ -249,16 +277,19 @@
   &__quantity-heading {
     line-height: 16px;
     margin: 16px 0 5px 0;
+
     @include tablet {
       display: none;
     }
   }
   &__quantity {
     margin: 0;
+
     @include tablet {
       width: 50px;
-      padding-right: 3px;
+      padding-right: 5px;
     }
+    
   }
   &__warehouse-heading {
     margin: 16px 0 5px 0;
@@ -269,9 +300,11 @@
   }
   &__warehouse {
     margin: 0;
+
     @include tablet {
-      padding-right: 39px;
+      padding-right: 15px;
     }
+    
   }
   &__action-section-hide {
     display: none;
@@ -315,8 +348,10 @@ button {
   border: none;
   background: none;
 }
+
 .empty {
   height: 4000px;
+
   @include tablet {
       height: 1000px;
   }
@@ -324,6 +359,7 @@ button {
       height: 1000px;
   }
 }
+
 .footer__text {
   font-size: $p3-mobile-fontsize;
   background-color: $light-grey;
@@ -334,6 +370,7 @@ button {
   color: $slate;
   padding: 40px;
   width: stretch;
+
   @include tablet {
       font-size: $p3-desktab-fontsize;
   }
