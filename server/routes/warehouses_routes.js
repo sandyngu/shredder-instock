@@ -18,22 +18,34 @@ router.get('/', (_req, res) => {
 
 // Get single warehouse object by id
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (_req, res) => {
     console.log(req.params.id)
-    // const warehouseDetails = warehouses.find(warehouse => warehouse.id === req.params.id)
-    // res.json(warehouseDetails)
-    res.send('hello')
+    const singleWarehouse = warehouses.find(warehouse => warehouse.id === req.params.id)
+    const { id, name, address, city, country } = singleWarehouse
+    res.json({
+        id: id,
+        name: name,
+        address: address,
+        city: city,
+        country: country,
+        contact: {
+            name: singleWarehouse.contact.name,
+            position: singleWarehouse.contact.position,
+            phone: singleWarehouse.contact.phone,
+            email: singleWarehouse.contact.email
+        }
+    })
 })
 
 // Create warehouse object 
 
 router.post('/', (req, res) => {
-    console.log(req.body);
-    const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
-    addWarehouseData.push(req.body);
-    console.log(addWarehouseData);
-    fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
-    res.status(201).send({status: 'warehouse added'});
+    // console.log(req.body);
+    // const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
+    // addWarehouseData.push(req.body);
+    // console.log(addWarehouseData);
+    // fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
+    // res.status(201).send({status: 'warehouse added'});
 })
     // res.json('warehouse object');
 
@@ -47,15 +59,15 @@ router.put('/', (req, res) => {
 
 router.delete('/', (req, res) => {
     const { deletedWarehouse } = req.body
+    console.log(deletedWarehouse)
 
-    let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
+    let index = warehouses.findIndex((warehouse) => warehouse === deletedWarehouse);
         
-    warehouses.splice(index, 1)
+    warehouses = warehouses.splice(index, 1)
 
-    fs.writeFileSync('./warehouses.json', JSON.stringify(warehouses));
-    res.status(201).send({status:'warehouse deleted'});
+    // fs.writeFileSync('./warehouses.json', JSON.stringify(warehouses));
 
-    res.json(warehouses);
+    res.send(deletedWarehouse);
 })
 
 module.exports = router
