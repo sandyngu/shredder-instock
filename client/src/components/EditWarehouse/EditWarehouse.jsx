@@ -8,7 +8,7 @@ import './EditWarehouse.scss'
 
 // function EditWarehouse(props) 
 //    const { name, address, city, country, contact, id } = props
-
+const id = "bb1491eb-30e6-4728-a5fa-72f89feaf622";
 class EditWarehouse extends React.Component {
     state = {
         warehouseData: []
