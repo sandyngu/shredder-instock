@@ -4,8 +4,12 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
+import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
+// import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
+// import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
+// import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
-import ItemDetails from "./components/ItemDetails/ItemDetails";
+import EditItem from "./components/EditItem/EditItem";
 
 class App extends React.Component {
   render() {
@@ -37,25 +41,25 @@ class App extends React.Component {
             component={() => {
               return <WarehouseInventory />;
             }}
-          />
-          <Route
-            path="/warehouses/edit-warehouse"
-            component={() => {
-              return <EditWarehouse />;
-            }}
-          />
+          /> */}
           <Route
             path="/warehouses/add-warehouse"
             component={() => {
               return <AddNewWarehouse />;
             }}
           />
-          */}<Route
+          {/* <Route
+            path="/warehouses/edit-warehouse"
+            component={() => {
+              return <EditWarehouse />;
+            }}
+          /> */}
+          {/* <Route
             path="/inventories/:id"
             component={() => {
               return <ItemDetails />;
             }}
-          />{/*}
+          /> */}
           <Route
             path="/inventories/add-item"
             component={() => {
@@ -67,7 +71,7 @@ class App extends React.Component {
             component={() => {
               return <EditItem />;
             }}
-          /> */}
+          />
         </Switch>
       </Router>
     );

@@ -95,6 +95,7 @@
 
         &:focus {
           outline: none;
+          border: 1px solid $instock-indigo;
         }
 
     @include tablet {
@@ -114,6 +115,10 @@
     @include tablet {
       height: 38px;
       width: 130px;
+    }
+
+      &:hover {
+        background-color: $instock-black;
     }
   }
   &__list-divider {
@@ -348,10 +353,10 @@ button {
   height: 4000px;
 
   @include tablet {
-      min-height: 4300px;
+      height: 1000px;
   }
   @include desktop {
-      height: 653px;
+      height: 1000px;
   }
 }
 
