@@ -27,8 +27,7 @@ class AddNewWarehouse extends React.Component {
 
         handleSubmit = (e) => {
             e.preventDefault();
-            // console.log(e.target.name.value)
-
+            
             const addWarehouseData = {
                 id: uuidv4(),
                 name: e.target.name.value,
@@ -97,62 +96,8 @@ class AddNewWarehouse extends React.Component {
                 email: '',
             });
         };
-            // NEED TO SEND BACK TO MAIN PAGE AFTER SUBMIT
-
-            // Cancel button must send user back
-
-            // onChange={this.handleChange}
 
             render() {
-                // let errorsName;
-                // if (this.state.warehouseName) {
-                //     errorsName = <div>This field is required</div>
-                // } else {
-                //     errorsName = <div></div>
-                // };
-                // let errorsAddress;
-                // if (this.state.address) {
-                //     errorsAddress = <div>This field is required</div>
-                // } else {
-                //     errorsAddress = <div></div>
-                // };
-                // let errorsCity;
-                // if (this.state.city) {
-                //     errorsCity = <div>This field is required</div>
-                // } else {
-                //     errorsCity = <div></div>
-                // };
-                // let errorsCountry;
-                // if (this.state.country) {
-                //     errorsCountry = <div>This field is required</div>
-                // } else {
-                //     errorsCountry = <div></div>
-                // };
-                // let errorsContactName;
-                // if (this.state.contactName) {
-                //     errorsContactName = <div>This field is required</div>
-                // } else {
-                //     errorsContactName = <div></div>
-                // };
-                // let errorsPosition
-                // if (this.state.position) {
-                //     errorsPosition = <div>This field is required</div>
-                // } else {
-                //     errorsPosition = <div></div>
-                // };
-                // let errorsPhone;
-                // if (this.state.phone) {
-                //     errorsPhone = <div>This field is required</div>
-                // } else {
-                //     errorsPhone = <div></div>
-                // };
-                // let errorsEmail;
-                // if (this.state.email) {
-                //     errorsEmail = <div>This field is required</div>
-                // } else {
-                //     errorsEmail = <div></div>
-                // }
-
 
                 return (
                     <div className="edit-warehouse">
@@ -162,7 +107,7 @@ class AddNewWarehouse extends React.Component {
                             </Link>
                             <h1 className="edit-warehouse__title">Add New Warehouse</h1>
                         </div>
-                            <form className="edit-warehouse__form" method="post" name="addNew" onSubmit={this.handleSubmit} onChange={this.AddNewInput} >
+                            <form className="edit-warehouse__form" method="post" required name="addNew" onSubmit={this.handleSubmit} onChange={this.AddNewInput} >
                                 <div className="edit-warehouse__warehouse-container">
                                     <div className="edit-warehouse__warehouse-title">
                                         <h2>Warehouse Details</h2>
@@ -170,7 +115,7 @@ class AddNewWarehouse extends React.Component {
                                     <ul className="edit-warehouse__warehouse-list">
                                         <li className="edit-warehouse__warehouse-list-name">
                                             <label className="edit-warehouse__warehouse-list-name-label">Warehouse Name</label>
-                                            <input type='text' name="name" required value={this.state.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
+                                            <input type='text' name="name"  value={this.state.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
                                             {this.state.name === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
@@ -220,7 +165,7 @@ class AddNewWarehouse extends React.Component {
                             <ul className="edit-warehouse__contact-list">
                                 <li className="edit-warehouse__contact-list-name">
                                     <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' name="contact.name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
+                                    <input type='text' name="name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
                                     {this.state.name === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
