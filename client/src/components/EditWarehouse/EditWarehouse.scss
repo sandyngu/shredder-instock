@@ -2,7 +2,7 @@
 
 .edit-warehouse {
     width: auto;
-    height: 935.5px;
+    height: 930.5px;
     margin-top: 0;
     margin-bottom: 96px;
     background: $white;
@@ -16,7 +16,7 @@
         left: 4%;
         right: 4%;
         top: 11.2%;
-        height: 486px;
+        height: 570px;
         margin-bottom: 310px;
     }
     @include desktop {
@@ -53,6 +53,7 @@
         @include tablet {
             width: 50%;
             flex: 1;
+            
         }
     }
     &__warehouse-title {
@@ -160,7 +161,7 @@
         @include tablet {
         border-right: 1px solid $cloud;
         position: absolute;
-        top: 21.5%;
+        top: 19.5%;
         left: 50%;
         bottom: 17%;
         }
@@ -168,6 +169,7 @@
     &__contact-container {
         @include tablet {
             width: 50%;
+            height: auto;
             flex: 1;
         }
     }
@@ -276,6 +278,7 @@
         background-color: $light-grey;
         @include tablet {
             width: 100%;
+            // height: 100px;
             justify-content: flex-end;
         }
     }
@@ -315,6 +318,14 @@
     }
 }
 
+.footer {
+    @include tablet {
+        margin-top: 200px;
+    }
+    &__text{
+        background-color: $light-grey;
+    }
+}
 
 input {
     font-family: 'Titillium Web';
@@ -325,7 +336,6 @@ input:focus {
     border-radius: 20px;
     border: 1px solid $instock-indigo;
     outline: none;
-    // field is req: border: $red;
 
   }
 

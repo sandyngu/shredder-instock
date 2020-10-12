@@ -5,7 +5,7 @@ import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
 import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
-import EditWarehouse from '../EditWarehouse/EditWarehouse';
+
 
 function WarehouseListItem(props) {
     const { name, address, city, country, contact, id } = props
@@ -53,7 +53,6 @@ function WarehouseListItem(props) {
                 </div>
             </div>
             <DeleteWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
-            <EditWarehouse display={props.display} id={id} city={city} address={address} country={country} name={name} contact={contact} editWarehouse={props.editWarehouse} />
         </>
     )
 };

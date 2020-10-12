@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
-// import uuid from 'uuid'
 import BackArrow from '../../assets/icons/arrow_back-24px.svg';
 
 import './EditWarehouse.scss'
@@ -73,6 +71,9 @@ console.log(props)
                             <button className="edit-warehouse__button-save">Save</button>
                         </div>
                     </form>
+                    <div className="footer">
+                        <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
+                    </div>
               </div>  
         )
         

@@ -17,7 +17,7 @@ class App extends React.Component {
       <Router>
         <Header />
         {/* <AddNewWarehouse /> */}
-        <EditWarehouse />
+        {/* <EditWarehouse /> */}
         <Switch>
           <Route
             exact
