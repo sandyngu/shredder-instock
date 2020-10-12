@@ -698,5 +698,14 @@
         "category": "Health",
         "status": "Out of Stock",
         "quantity": 0
+    },
+    {
+        "id": "d2cc9757-83b4-44b1-8f90-d6dba75a1364",
+        "itemName": "Television",
+        "description": "This 55\", 4K LED TV provides a crystal-clear picture and vivid colors.",
+        "category": "Electronics",
+        "status": "In Stock",
+        "warehouseName": "Manhatten",
+        "warehouseID": "make dynamic"
     }
 ]

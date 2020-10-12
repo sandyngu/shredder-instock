@@ -4,6 +4,7 @@ import "./ItemDetails.scss";
 import axios from "axios";
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/arrow_back-24px.svg';
+import EditItem from "../EditItem/EditItem";
 
 class ItemDetails extends React.Component {
 
@@ -36,6 +37,11 @@ class ItemDetails extends React.Component {
         }
     }
 
+    editItem = (id, warehouseName) => {
+       console.log(this.props.history);
+        this.props.history.push(`/inventories/edititem/${id}/${warehouseName}`);
+    }    
+
     render() {
 
         console.log(this.state.singleItem)
@@ -46,8 +52,8 @@ class ItemDetails extends React.Component {
                 <div className="item-details__header">
                     <img className="item-details__header-arrow" src={Arrow} alt="Back arrow" />
                     <h1 className="item-details__header-title">{this.state.singleItem.itemName}</h1>
-                    <Link to='/inventories/edit-item'>
-                        <button className="item-details__header-button">
+                    <Link className="item-details__link">
+                        <button className="item-details__header-button" onClick={()=> {this.editItem(this.state.singleItem.id, this.state.singleItem.warehouseName)}}>
                             <img className="item-details__header-button-icon" src={Edit} alt="edit" />
                             <p className="item-details__header-button-text">Edit</p>
                         </button>

@@ -15,11 +15,10 @@ function EditItem(props) {
                     <h1 className="edititem__top-title">Edit Inventory Item</h1>
                 </div>
                 <div className="edititem__import">
-                    <EditItemForm />
+                    <EditItemForm {...props}/>
                 </div>
             </section>
         </>
     )
 }
-
 export default EditItem;
