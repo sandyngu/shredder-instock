@@ -14,7 +14,6 @@ router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
     const inventories = JSON.parse(fs.readFileSync("./inventories.json"));
-
     res.send(inventories);
 })
 
@@ -39,7 +38,14 @@ router.post('/', (req, res) => {
 // Edit inventory objects
 
  router.put('/', (req, res) => {
-     res.json('inventory object');
+    res.send(req.body);
+    const singleItem = inventories.map(object => object.id === req.params.id && object.warehouseName === req.params.warehouseName);
+    const inventoriesData = JSON.parse(fs.readFileSync('./inventories.json'));
+    inventoriesData.slice(singleItem);
+    inventoriesData.push(req.body);
+    fs.writeFileSync('./inventories.json', JSON.stringify(inventoriesData), null, 2);
+    res.status(201).send({status:'object created'});
+    res.json('inventory object');
  })
 
 // Delete inventory objects

@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import WarehouseListItem from '../WarehouseListItem/WarehouseListItem';
 import Arrows from '../../assets/icons/sort-24px.svg';
 import './warehouses-list.scss';
+import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 class WarehousesList extends React.Component {
 
     state = {
         warehousesList: [],
+        singleWarehouse: [],
         display: false
     }
 
@@ -34,29 +36,36 @@ class WarehousesList extends React.Component {
         });
     };
     
-    deleteWarehouse = async (id, name, address, city, country, contactname, position, phone, email) => {
+    deleteWarehouse = (id, name, address, city, country, contactname, position, phone, email) => {
         console.log(id, name, address, city, country, contactname, position, phone, email)
-        let deletedWarehouse = {
+        const deletedWarehouse = {
             id: id,
             name: name,
             address: address,
             city: city,
             country: country,
             contact: {
-              name: contactname,
-              position: position,
-              phone: phone,
-              email: email
+                name: contactname,
+                position: position,
+                phone: phone,
+                email: email
             }
-          }
+        }
         
-        await axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
+        axios.delete('http://localhost:8080/warehouses/')
             .then(res => {
-                console.log(res.data)
                 window.location.reload();
             })
             .catch(err => console.log(err));
     }
+
+    findWarehouse = (id) => {
+        let foundIt = this.state.warehousesList.find(warehouse => warehouse.id === id)
+    
+        this.setState({
+          singleWarehouse: foundIt
+        })
+      }
 
     render() {
         return (
@@ -98,9 +107,8 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse = {this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} /> 
-                )}
-            </div>
+                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} />)}
+                <DeleteWarehouse display={this.state.display} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} /></div>
             <div className="empty"></div>
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
