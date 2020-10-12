@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './ItemInputForm.scss';
+import './edit-item-form.scss';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import Warning from '../../assets/icons/error-24px.svg';
 
 
-class ItemInputForm extends Component {
+class EditItemForm extends Component {
 
     state = {
         itemName: '',
@@ -64,23 +64,23 @@ class ItemInputForm extends Component {
                         <div className="item-form__details">
                             <h2 className="item-form__title">Item Details</h2>
                             <label className="item-form__label">Item Name</label>
-                            <input className="item-form__input" type="text" placeHolder="Item Name" name="itemName" required value={this.state.itemName} />
+                            <input className="item-form__input" type="text" placeholder="Item Name" name="itemName" required value={this.state.itemName} />
                             {this.state.itemName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error"> This field is required</div>
                                 </div>
                             )}
                             <label className="item-form__label">Description</label>
-                            <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description" required value={this.state.description} />
+                            <textarea className="item-form__description-input" type="text" placeholder="Please enter a brief item description..." name="description" required value={this.state.description} />
                             {this.state.description === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
                             <label className="item-form__label">Category</label>
-                            <select className="item-form__dropdown" type="text" placeHolder="Please Select" name="category" required value={this.state.category}>
+                            <select className="item-form__dropdown" type="text" placeholder="Please Select" name="category" required value={this.state.category}>
                                 <option type="text" value="Electronics">Electronics</option>
                                 <option type="text" value="Gear">Gear</option>
                                 <option type="text" value="Apparel">Apparel</option>
@@ -89,7 +89,7 @@ class ItemInputForm extends Component {
                             </select>
                             {this.state.category === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -110,15 +110,15 @@ class ItemInputForm extends Component {
                             </div>
                             {this.state.status === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
                             {this.state.status === 'In Stock' && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <label className="item-form__label">Quantity</label>
-                                    <input className="item-form__input" type="number" placeHolder="0" name="quantity" required value={this.state.quantity} />
+                                    <input className="item-form__input" type="number" placeholder="0" name="quantity" required value={this.state.quantity} />
                                 </div>)}
                             <label className="item-form__label">Warehouse</label>
                             <select className="item-form__dropdown" type="text" name="warehouseName" required value={this.state.warehouseName}>
@@ -134,7 +134,7 @@ class ItemInputForm extends Component {
                             </select>
                             {this.state.warehouseName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -143,7 +143,7 @@ class ItemInputForm extends Component {
                     <div className="item-form__button">
                         <div className="item-form__button-box">
                             <button className="item-form__button-cancel">Cancel</button>
-                            <button className="item-form__button-add"> + Add Item</button>
+                            <button className="item-form__button-add">Save</button>
                         </div>
                     </div>
                 </form>
@@ -152,4 +152,4 @@ class ItemInputForm extends Component {
     }
 }
 
-export default ItemInputForm;
+export default EditItemForm;
