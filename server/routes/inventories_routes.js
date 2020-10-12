@@ -19,8 +19,19 @@ router.get('/', (req, res) => {
 
 // Get single inventory object by id
 
-router.get('/:id', (req, res) => {
-    res.send('inventory object');
+router.get(`/:id/:warehouseName`, (req, res) => {
+    console.log(req.body)
+    const singleItem = inventories.find(object => object.id === req.params.id && object.warehouseName === req.params.warehouseName);
+    res.send({
+        id: singleItem.id,
+        warehouseID: singleItem.warehouseID,
+        warehouseName: singleItem.warehouseName,
+        itemName:  singleItem.itemName,
+        description:  singleItem.description,
+        category: singleItem.category,
+        status: singleItem.status,
+        quantity: singleItem.quantity 
+    })
 })
 
 // Create inventory objects 

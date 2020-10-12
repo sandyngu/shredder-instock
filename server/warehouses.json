@@ -1,1 +1,106 @@
-[{"id":"2922c286-16cd-4d43-ab98-c79f698aeab0","name":"Manhattan","address":"503 Broadway","city":"New York","country":"USA","contact":{"name":"Parmin Aujla","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"paujla@instock.com"}},{"id":"5bf7bd6c-2b16-4129-bddc-9d37ff8539e9","name":"King West","address":"469 King Street West","city":"Toronto","country":"CAN","contact":{"name":"Greame Lyon","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"glyon@instock.com"}},{"id":"90ac3319-70d1-4a51-b91d-ba6c2464408c","name":"Granville","address":"455 Granville Street","city":"Vancouver","country":"CAN","contact":{"name":"Brad MacDonald","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"bmcdonald@instock.com"}},{"id":"bfc9bea7-66f1-44e9-879b-4d363a888eb4","name":"San Fran","address":"890 Brannnan Street","city":"San Francisco","country":"USA","contact":{"name":"Gary Wong","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"gwong@instock.com"}},{"id":"89898957-04ba-4bd0-9f5c-a7aea7447963","name":"Santa Monica","address":"520 Broadway","city":"Santa Monica","country":"USA","contact":{"name":"Sharon Ng","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"sng@instock.com"}},{"id":"ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7","name":"Seattle","address":"1201 Third Avenue","city":"Seattle","country":"USA","contact":{"name":"Daniel Bachu","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"dbachu@instock.com"}},{"id":"bb1491eb-30e6-4728-a5fa-72f89feaf622","name":"Montreal","address":"1125 Stanley Street","city":"Montreal","country":"CAN","contact":{"name":"Alana Thomas","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"athomas@instock.com"}},{"id":"150a36cf-f38e-4f59-8e31-39974207372d","name":"Boston","address":"215 Essex Street","city":"Boston","country":"USA","contact":{"name":"Vanessa Mendoza","position":"Warehouse Manager","phone":"+1 (646) 123-1234","email":"vmendoza@instock.com"}},{"id":"2f931d92-aa19-40df-8d72-b33903f63cef","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"804bf270-9034-40c3-a5fb-4098b29414be","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"be168d31-3a8f-48ca-83a2-03e4c7bb11c0","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"f1b871c6-5da8-40d5-b261-29535fcd270d","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"2ac51314-8d9e-45cb-a839-b1689eec7643","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"a6c6a4a4-2190-4932-84c8-1f5e744f1379","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}},{"id":"e85b3416-c30c-4a96-9aaf-25a03d602fc1","name":"afdf","address":"fdafsdf","city":"sdfadf","country":"afdfasd","contact":{"name":"afdf","position":"fdafd","phone":"afdfd","email":"fdafdsf"}}]
+[
+  {
+    "id": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+    "name": "Manhattan",
+    "address": "503 Broadway",
+    "city": "New York",
+    "country": "USA",
+    "contact": {
+      "name": "Parmin Aujla",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "paujla@instock.com"
+    }
+  },
+  {
+    "id": "5bf7bd6c-2b16-4129-bddc-9d37ff8539e9",
+    "name": "King West",
+    "address": "469 King Street West",
+    "city": "Toronto",
+    "country": "CAN",
+    "contact": {
+      "name": "Greame Lyon",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "glyon@instock.com"
+    }
+  },
+  {
+    "id": "90ac3319-70d1-4a51-b91d-ba6c2464408c",
+    "name": "Granville",
+    "address": "455 Granville Street",
+    "city": "Vancouver",
+    "country": "CAN",
+    "contact": {
+      "name": "Brad MacDonald",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "bmcdonald@instock.com"
+    }
+  },
+  {
+    "id": "bfc9bea7-66f1-44e9-879b-4d363a888eb4",
+    "name": "San Fran",
+    "address": "890 Brannnan Street",
+    "city": "San Francisco",
+    "country": "USA",
+    "contact": {
+      "name": "Gary Wong",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "gwong@instock.com"
+    }
+  },
+  {
+    "id": "89898957-04ba-4bd0-9f5c-a7aea7447963",
+    "name": "Santa Monica",
+    "address": "520 Broadway",
+    "city": "Santa Monica",
+    "country": "USA",
+    "contact": {
+      "name": "Sharon Ng",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "sng@instock.com"
+    }
+  },
+  {
+    "id": "ade0a47b-cee6-4693-b4cd-a7e6cb25f4b7",
+    "name": "Seattle",
+    "address": "1201 Third Avenue",
+    "city": "Seattle",
+    "country": "USA",
+    "contact": {
+      "name": "Daniel Bachu",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "dbachu@instock.com"
+    }
+  },
+  {
+    "id": "bb1491eb-30e6-4728-a5fa-72f89feaf622",
+    "name": "Montreal",
+    "address": "1125 Stanley Street",
+    "city": "Montreal",
+    "country": "CAN",
+    "contact": {
+      "name": "Alana Thomas",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "athomas@instock.com"
+    }
+  },
+  {
+    "id": "150a36cf-f38e-4f59-8e31-39974207372d",
+    "name": "Boston",
+    "address": "215 Essex Street",
+    "city": "Boston",
+    "country": "USA",
+    "contact": {
+      "name": "Vanessa Mendoza",
+      "position": "Warehouse Manager",
+      "phone": "+1 (646) 123-1234",
+      "email": "vmendoza@instock.com"
+    }
+  }
+]
