@@ -5,6 +5,8 @@ const inventories = require("../inventories.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const fs = require('fs');
+
+
 router.use(cors());
 router.use(bodyParser.json());
 
@@ -12,25 +14,13 @@ router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
     const inventories = JSON.parse(fs.readFileSync("./inventories.json"));
-    console.log(inventories);
     res.send(inventories);
 })
 
 // Get single inventory object by id
 
-router.get(`/:id/:warehouseName`, (req, res) => {
-    console.log(req.body)
-    const singleItem = inventories.find(object => object.id === req.params.id && object.warehouseName === req.params.warehouseName);
-    res.send({
-        id: singleItem.id,
-        warehouseID: singleItem.warehouseID,
-        warehouseName: singleItem.warehouseName,
-        itemName:  singleItem.itemName,
-        description:  singleItem.description,
-        category: singleItem.category,
-        status: singleItem.status,
-        quantity: singleItem.quantity 
-    })
+router.get('/:id', (req, res) => {
+    res.send('inventory object');
 })
 
 // Create inventory objects 

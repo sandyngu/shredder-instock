@@ -1,17 +1,20 @@
 import axios from 'axios';
 import React from 'react'
-import InventoryList from '../InventoryList/InventoryList'
-import WarehouseInventoryLocation from '../WarehouseInventoryLocation/WarehouseInventoryLocation'
+import InventoryList from "../InventoryList/InventoryList"
+// import WarehouseListItem from "../WarehousesList/WarehousesList"
+import "./warehouseInventory.scss"
+import WarehouseInventoryLocation from "../WarehouseInventoryLocation/WarehouseInventoryLocation"
 
 class WarehouseInventory extends React.Component {
   state={
     inventoryList:[],
-    warehouse: {}
+    warehousesList:[],
+    
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8080/inventories')
+      .get("http://localhost:8080/inventories")
       .then((response) => {
         console.log(this.props)
         const warehouseInventoryList = response.data.filter((inventoryItem)=>{
@@ -28,35 +31,40 @@ class WarehouseInventory extends React.Component {
       });
 
       axios
-      .get('http://localhost:8080/warehouses')
+      .get("http://localhost:8080/warehouses")
       .then((res) => {
-        console.log(this.props.match.params.id)
-        console.log(res.data)
-        const warehouseLocation = res.data.filter((warehouse)=>{
-          return warehouse.name === this.props.match.params.id
-         })
+        console.log(res)
+        
           this.setState({
-            warehouse: warehouseLocation[0],
+            warehousesList: res.data,
+            
         })
-        console.log(this.state.warehouse)
+   
       })
       .catch((error) => {
         console.log(error);
       });
+      
   }
+  
 
   render(){
-    console.log(this.state.warehouse)
-     if (Object.keys(this.state.warehouse).length > 0){
-       return (
-        <div>
-          <WarehouseInventoryLocation warehouse={this.state.warehouse} />
-          <InventoryList inventoryList={this.state.inventoryList}/>
-        </div>
-        )}
-        else{
-          return <div>LOADING...</div>
-        }
-    }
+    
+    return (
+      <div>
+        {console.log(this.state)}
+        <InventoryList inventoryList={this.state.inventoryList}/>
+        {/* <WarehouseListItem name={this.state.name} address={this.state.address} city={this.state.city} country={this.state.country} /> */}
+        <WarehouseInventoryLocation warehousesList={this.state.warehousesList} name={this.state.name} address={this.state.address} city={this.state.city} country={this.state.country} />
+      </div>
+       
+       
+                  
+      
+    )
   }
+
+}
+    
+
 export default WarehouseInventory;
