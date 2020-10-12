@@ -2,15 +2,13 @@ import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import InventoryList from "./components/InventoryList/InventoryList";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
-// import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
 import AddItem from "./components/AddItem/AddItem";
 import EditItem from "./components/EditItem/EditItem";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
-import Inventories from './components/Inventories/Inventories';
+import Inventories from "./components/Inventories/Inventories";
 
 class App extends React.Component {
   render() {
@@ -26,7 +24,8 @@ class App extends React.Component {
             }}
           />
           <Route
-            exact path="/warehouses"
+            exact
+            path="/warehouses"
             component={() => {
               return <WarehousesList />;
             }}
@@ -38,7 +37,8 @@ class App extends React.Component {
             }}
           /> */}
           <Route
-            exact path="/inventories"
+            exact
+            path="/inventories"
             component={() => {
               return <Inventories />;
             }}
@@ -46,7 +46,7 @@ class App extends React.Component {
           <Route
             path={`/inventories/:id/:warehouseName`}
             render={(routeProps) => {
-              return <ItemDetails {...routeProps}/>;
+              return <ItemDetails {...routeProps} />;
             }}
           />
           <Route
@@ -74,16 +74,18 @@ class App extends React.Component {
             }}
           /> */}
           <Route
-            exact path='/warehouses/:id'
+            exact
+            path="/warehouses/:id"
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
-            }} 
+            }}
           />
           <Route
-            exact path='/inventories/:id'
+            exact
+            path="/inventories/:id"
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
-            }} 
+            }}
           />
         </Switch>
       </Router>
