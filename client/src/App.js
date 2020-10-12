@@ -4,7 +4,10 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inventories from "./components/Inventories/Inventories";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
+import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
+import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
 import EditItem from "./components/EditItem/EditItem";
 import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
@@ -64,18 +67,18 @@ class App extends React.Component {
               return <AddNewWarehouse />;
             }}
           />
-          {/* <Route
+          <Route
             path="/warehouses/edit-warehouse"
             component={() => {
               return <EditWarehouse />;
             }}
-          /> */}
-          {/* <Route
+          />
+          <Route
             path="/inventories/:id"
             component={() => {
               return <ItemDetails />;
             }}
-          /> */}
+          />
           <Route
             path="/inventories/add-item"
             component={() => {

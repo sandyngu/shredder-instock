@@ -41,17 +41,19 @@ router.get('/:id', (_req, res) => {
 
 router.post('/', (req, res) => {
     // console.log(req.body);
-    // const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
-    // addWarehouseData.push(req.body);
-    // console.log(addWarehouseData);
-    // fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
-    // res.status(201).send({status: 'warehouse added'});
+    const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
+    addWarehouseData.push(req.body);
+    console.log(addWarehouseData);
+    fs.writeFileSync('./warehouses.json', JSON.stringify(addWarehouseData), null, 2);
+    res.status(201).send({status: 'warehouse added'});
 })
     // res.json('warehouse object');
 
 // Edit warehouse objects
 
 router.put('/', (req, res) => {
+    data.forEach(element.id === req.params.id) 
+    const { editWarehouse } = req.body;
     res.json('warehouses object');
 })
 

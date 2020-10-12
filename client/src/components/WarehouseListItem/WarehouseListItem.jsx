@@ -5,6 +5,7 @@ import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
 
+
 function WarehouseListItem(props) {
     const { name, address, city, country, contact, id } = props
 
