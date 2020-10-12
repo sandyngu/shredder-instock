@@ -44,7 +44,7 @@ class App extends React.Component {
             }}
           />
           <Route
-            path={`/inventories/:id/:warehouseName`}
+            exact path="/inventories/:id/:warehouseName"
             render={(routeProps) => {
               return <ItemDetails {...routeProps}/>;
             }}
@@ -56,9 +56,9 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/inventories/edit-item"
-            component={() => {
-              return <EditItem />;
+            exact path="/inventories/edititem/:id/:warehouseName"
+            render={(routeProps) => {
+               return <EditItem {...routeProps}/>;
             }}
           />
           <Route

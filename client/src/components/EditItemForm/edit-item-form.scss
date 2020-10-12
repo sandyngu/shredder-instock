@@ -1,0 +1,208 @@
+@import  '../../partials/global';
+
+.edit-item-form{
+    display:flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction:column;
+    }
+    &__masterdiv{
+        @include tablet{
+        display:flex;
+        flex-direction:row;
+    }
+    }
+    &__details{
+        display:flex;
+        flex-direction:column;
+        @include tablet{
+            width:50%;
+        }
+
+    }
+    &__availability{
+        display:flex;
+        flex-direction:column;
+        @include tablet{
+            width:50%;
+        }
+    }
+    &__title{
+        margin: 5% 0 5% 5%;
+
+    }
+    &__label{
+        font-size: $p2-mobile-fontsize;
+        font-weight:600;
+        margin:2% 0 2% 5%;
+        @include tablet{
+            margin-top:7%;
+        }
+    }
+    &__input{
+        border-radius:20px;
+        height:36px;
+        max-height:36px;
+        margin-bottom:5%;
+        width:85%;
+        max-width:85%;
+        margin:auto;
+        border: 1px solid $cloud;
+        @include tablet{
+            margin-top:0;
+            margin-bottom:0;
+        }
+    }
+    &__description-input{
+        border-radius:20px;
+        height:120px;
+        max-height:120px;
+        margin-bottom:5%;
+        width:85%;
+        max-width:85%;
+        margin:auto;
+        border: 0.5px solid $cloud;
+        resize:none;
+    }
+    &__dropdown{
+        border-radius:20px;
+        height:36px;
+        max-height:36px;
+        width:90%;
+        max-width:90%;
+        margin:auto;
+        border: 0.5px solid $cloud;
+        @include tablet{
+            margin-top:0;
+            margin-bottom:0;
+        }
+    }
+    &__line{
+        border:.5px solid $cloud;
+        margin: 7% 0 0 0;
+        @include tablet{
+            border-right: 1px solid $cloud;
+            position: absolute;
+            top: 14.5%;
+            left: 50%;
+            bottom: 17%;
+        }
+    }
+    &__status{
+        display:flex;
+        flex-direction:row;
+        justify-content: left;
+        margin:0% 0 2% 5%;
+        &-subcontainer{
+            display:flex;
+            flex-direction:row;
+            justify-content: left;
+            width:50%;
+            @include tablet{
+                width:40%;
+                @include desktop{
+                    width:20%;
+                }
+            }
+            &-text{
+                margin:0 5%;
+            }
+        }
+    }
+    &__error-box{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin:2% 0 0 5%;
+    }
+    &__warning{
+        height:13.33px;
+        width:13.33px;
+        align-self: center;
+    }
+    &__error{
+        margin-left:2%;
+        font-size:$p2-mobile-fontsize;
+        color:$red;
+    }
+    &__button{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        height:68px;
+        padding-left:5%;
+        padding-right:5%;
+        margin: 7% 0 0 0;
+        @include tablet{
+            display: flex;
+            justify-content:flex-end;
+        }
+            &-cancel{
+                background-color:$white;
+                color:$slate;
+                height:36px;
+                max-height:36px;
+                border-radius:20px;
+                width:48%;
+                border: 1px solid $cloud;
+                @include tablet {
+                    width:45%;
+                }
+            }
+            &-save{
+                background-color:$instock-indigo;
+                color:$white;
+                height:36px;
+                max-height:36px;
+                border-radius:20px;
+                width:48%;
+                border:none;
+            }
+            &-box{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width:100%;
+                @include tablet{
+
+                    width:35%;
+                }
+            }
+        }
+
+}
+
+::placeholder{
+    font-family:'Titillium Web';
+    color:$slate;    
+}
+
+textarea{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+    padding-top:2%;
+    
+}
+
+select{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+    appearance: none;
+    background-image:url('../../assets/icons/arrow_drop_down-24px.svg');
+    background-repeat:no-repeat;
+    background-position: 96% 50%;
+}
+
+option{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+}
+
+input{
+    font-family:'Titillium Web';
+    color:$slate;
+    padding-left:5%;
+}
