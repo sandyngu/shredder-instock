@@ -30,10 +30,9 @@ class ItemDetails extends React.Component {
                     console.log(response.data);
                     this.setState({
                         singleItem: response.data
-                    })
-
-                        .catch(error => console.log(error));
+                    })  
                 })
+                .catch(error => console.log(error));
         }
     }
 
@@ -47,10 +46,12 @@ class ItemDetails extends React.Component {
                 <div className="item-details__header">
                     <img className="item-details__header-arrow" src={Arrow} alt="Back arrow" />
                     <h1 className="item-details__header-title">{this.state.singleItem.itemName}</h1>
-                    <button className="item-details__header-button">
-                        <img className="item-details__header-button-icon" src={Edit} alt="edit" />
-                        <p className="item-details__header-button-text">Edit</p>
-                    </button>
+                    <Link to='/inventories/edit-item'>
+                        <button className="item-details__header-button">
+                            <img className="item-details__header-button-icon" src={Edit} alt="edit" />
+                            <p className="item-details__header-button-text">Edit</p>
+                        </button>
+                    </Link>
                 </div>
                 <div className="item-details__container">
                     <div className="item-details__description">

@@ -1,20 +1,18 @@
 const express = require('express');
 const { route } = require('./inventories_routes');
 const router = express.Router();
-const inventories = require("../inventories.json");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const fs = require('fs');
 
-
 router.use(cors());
 router.use(bodyParser.json());
+router.use(express.json());
 
 // Get inventory objects
 
 router.get('/', (req, res) => {
     const inventories = JSON.parse(fs.readFileSync("./inventories.json"));
-    console.log(inventories);
     res.send(inventories);
 })
 
@@ -34,7 +32,7 @@ router.get(`/:id/:warehouseName`, (req, res) => {
     })
 })
 
-// Create inventory objects 
+// Create inventory objects and write to JSON file
 
 router.post('/', (req, res) => {
     console.log(req.body);
@@ -43,7 +41,6 @@ router.post('/', (req, res) => {
     console.log(inventoriesData);
     fs.writeFileSync('./inventories.json', JSON.stringify(inventoriesData), null, 2);
     res.status(201).send({status:'object created'});
-    res.json('inventory object');
 })
 
 // Edit inventory objects
