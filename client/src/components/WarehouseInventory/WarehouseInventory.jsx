@@ -1,7 +1,7 @@
-import axios from 'axios';
-import React from 'react'
-import InventoryList from '../InventoryList/InventoryList'
-import WarehouseInventoryLocation from '../WarehouseInventoryLocation/WarehouseInventoryLocation'
+import axios from "axios";
+import React from "react";
+import InventoryList from "../InventoryList/InventoryList"
+import WarehouseInventoryLocation from "../WarehouseInventoryLocation/WarehouseInventoryLocation"
 
 class WarehouseInventory extends React.Component {
   state={
@@ -11,7 +11,7 @@ class WarehouseInventory extends React.Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8080/inventories')
+      .get("http://localhost:8080/inventories")
       .then((response) => {
         console.log(this.props)
         const warehouseInventoryList = response.data.filter((inventoryItem)=>{
@@ -28,7 +28,7 @@ class WarehouseInventory extends React.Component {
       });
 
       axios
-      .get('http://localhost:8080/warehouses')
+      .get("http://localhost:8080/warehouses")
       .then((res) => {
         console.log(this.props.match.params.id)
         console.log(res.data)
@@ -44,7 +44,7 @@ class WarehouseInventory extends React.Component {
         console.log(error);
       });
   }
-
+  
   render(){
     console.log(this.state.warehouse)
      if (Object.keys(this.state.warehouse).length > 0){

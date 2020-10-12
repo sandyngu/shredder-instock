@@ -19,13 +19,28 @@ router.get('/', (_req, res) => {
 // Get single warehouse object by id
 
 router.get('/:id', (_req, res) => {
-    res.send(warehouses);
+    console.log(req.params.id)
+    const singleWarehouse = warehouses.find(warehouse => warehouse.id === req.params.id)
+    const { id, name, address, city, country } = singleWarehouse
+    res.json({
+        id: id,
+        name: name,
+        address: address,
+        city: city,
+        country: country,
+        contact: {
+            name: singleWarehouse.contact.name,
+            position: singleWarehouse.contact.position,
+            phone: singleWarehouse.contact.phone,
+            email: singleWarehouse.contact.email
+        }
+    })
 })
 
 // Create warehouse object 
 
 router.post('/', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const addWarehouseData = JSON.parse(fs.readFileSync('./warehouses.json'));
     addWarehouseData.push(req.body);
     console.log(addWarehouseData);
@@ -37,20 +52,24 @@ router.post('/', (req, res) => {
 // Edit warehouse objects
 
 router.put('/', (req, res) => {
+    data.forEach(element.id === req.params.id) 
+    const { editWarehouse } = req.body;
     res.json('warehouses object');
 })
 
-// Delete inventory objects
+// Delete warehouses objects
 
 router.delete('/', (req, res) => {
     const { deletedWarehouse } = req.body
+    console.log(req.body)
 
-    let index = warehouses.findIndex((warehouse) => warehouse == deletedWarehouse);
+    let index = warehouses.findIndex((warehouse) => warehouse === deletedWarehouse);
         
-        let newWarehousesList = warehouses;
-        const updatedWarehouses = newWarehousesList.splice(index, 1)
+    warehouses = warehouses.splice(index, 1)
 
-    res.json(updatedWarehouses);
+    fs.writeFileSync('./warehouses.json', JSON.stringify(warehouses));
+
+    // res.send(deletedWarehouse);
 })
 
 module.exports = router

@@ -8,7 +8,6 @@ import Search from "../../assets/icons/search-24px.svg";
 import "./InventoryList.scss";
 import DeleteItem from "../DeleteItem/DeleteItem";
 import axios from "axios";
-
 class InventoryList extends React.Component {
   state = {
     inventoryList: [],
@@ -16,7 +15,6 @@ class InventoryList extends React.Component {
     search: "",
     display: false,
   };
-
   componentDidMount() {
     axios
       .get("http://localhost:8080/inventories")
@@ -29,19 +27,16 @@ class InventoryList extends React.Component {
         console.log(error);
       });
   }
-
   showModal = (e) => {
     this.setState({
       display: true,
     });
   };
-
   cancelModal = (e) => {
     this.setState({
       display: false,
     });
   };
-
   deleteInventory = (
     id,
     warehouseID,
@@ -62,7 +57,6 @@ class InventoryList extends React.Component {
       status: status,
       quantity: quantity,
     };
-
     axios
       .delete("http://localhost:8080/inventories", deletedInventory)
       .then((res) => {
@@ -71,7 +65,6 @@ class InventoryList extends React.Component {
       })
       .catch((err) => console.log(err));
   };
-
   findItem = (id, warehouseName) => {
     window.location = `/inventories/${id}/${warehouseName}`;
   };
@@ -308,7 +301,6 @@ class InventoryList extends React.Component {
                     </div>
                   </section>
                 </div>
-
                 <DeleteItem
                   display={this.state.display}
                   id={item.id}
@@ -335,3 +327,4 @@ class InventoryList extends React.Component {
   }
 }
 export default InventoryList;
+

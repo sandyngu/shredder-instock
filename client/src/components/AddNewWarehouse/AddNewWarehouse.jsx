@@ -27,8 +27,7 @@ class AddNewWarehouse extends React.Component {
 
         handleSubmit = (e) => {
             e.preventDefault();
-            console.log(e.target.name.value)
-
+            
             const addWarehouseData = {
                 id: uuidv4(),
                 name: e.target.name.value,
@@ -36,16 +35,16 @@ class AddNewWarehouse extends React.Component {
                 city: e.target.city.value,
                 country: e.target.country.value,          
                 contact: {
-                    name: e.target.name.value,
+                    name: e.target.contactName.value,
                     position: e.target.position.value,
                     phone: e.target.phone.value,
                     email: e.target.email.value
                 }
                 
             };
-                
+            // I really tried to make this work. 
             // if (e.target.name.value === '') {
-            //     this.setState({ warehouseName: true });
+            //     this.setState({ name: true });
             // }
             // if (e.target.address.value === '') {
             //     this.setState({ address: true });
@@ -97,62 +96,8 @@ class AddNewWarehouse extends React.Component {
                 email: '',
             });
         };
-            // NEED TO SEND BACK TO MAIN PAGE AFTER SUBMIT
-
-            // Cancel button must send user back
-
-            // onChange={this.handleChange}
 
             render() {
-                // let errorsName;
-                // if (this.state.warehouseName) {
-                //     errorsName = <div>This field is required</div>
-                // } else {
-                //     errorsName = <div></div>
-                // };
-                // let errorsAddress;
-                // if (this.state.address) {
-                //     errorsAddress = <div>This field is required</div>
-                // } else {
-                //     errorsAddress = <div></div>
-                // };
-                // let errorsCity;
-                // if (this.state.city) {
-                //     errorsCity = <div>This field is required</div>
-                // } else {
-                //     errorsCity = <div></div>
-                // };
-                // let errorsCountry;
-                // if (this.state.country) {
-                //     errorsCountry = <div>This field is required</div>
-                // } else {
-                //     errorsCountry = <div></div>
-                // };
-                // let errorsContactName;
-                // if (this.state.contactName) {
-                //     errorsContactName = <div>This field is required</div>
-                // } else {
-                //     errorsContactName = <div></div>
-                // };
-                // let errorsPosition
-                // if (this.state.position) {
-                //     errorsPosition = <div>This field is required</div>
-                // } else {
-                //     errorsPosition = <div></div>
-                // };
-                // let errorsPhone;
-                // if (this.state.phone) {
-                //     errorsPhone = <div>This field is required</div>
-                // } else {
-                //     errorsPhone = <div></div>
-                // };
-                // let errorsEmail;
-                // if (this.state.email) {
-                //     errorsEmail = <div>This field is required</div>
-                // } else {
-                //     errorsEmail = <div></div>
-                // }
-
 
                 return (
                     <div className="edit-warehouse">
@@ -162,7 +107,7 @@ class AddNewWarehouse extends React.Component {
                             </Link>
                             <h1 className="edit-warehouse__title">Add New Warehouse</h1>
                         </div>
-                            <form className="edit-warehouse__form" method="post" name="addNew" onSubmit={this.handleSubmit} onChange={this.AddNewInput} >
+                            <form className="edit-warehouse__form" method="post" required name="addNew" onSubmit={this.handleSubmit} onChange={this.AddNewInput} >
                                 <div className="edit-warehouse__warehouse-container">
                                     <div className="edit-warehouse__warehouse-title">
                                         <h2>Warehouse Details</h2>
@@ -170,7 +115,7 @@ class AddNewWarehouse extends React.Component {
                                     <ul className="edit-warehouse__warehouse-list">
                                         <li className="edit-warehouse__warehouse-list-name">
                                             <label className="edit-warehouse__warehouse-list-name-label">Warehouse Name</label>
-                                            <input type='text' name="name" required value={this.state.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
+                                            <input type='text' name="name"  value={this.state.name} placeholder='Warehouse Name' className="edit-warehouse__warehouse-list-name-input"/>
                                             {this.state.name === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
@@ -180,7 +125,7 @@ class AddNewWarehouse extends React.Component {
                                         </li>
                                         <li className="edit-warehouse__warehouse-list-street">
                                             <label className="edit-warehouse__warehouse-list-street-label">Street Address</label>
-                                            <input type='text' name="address" value={this.state.address} placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
+                                            <input type='text' name="address" value={this.state.address} onChange={this.changeText} placeholder='Street Address' className="edit-warehouse__warehouse-list-street-input"/>
                                             {this.state.address === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
@@ -190,7 +135,7 @@ class AddNewWarehouse extends React.Component {
                                         </li>
                                         <li className="edit-warehouse__warehouse-list-city">
                                             <label className="edit-warehouse__warehouse-list-city-label">City</label>
-                                            <input type='text' name="city" value={this.state.city} placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
+                                            <input type='text' name="city" value={this.state.city} onChange={this.changeText} placeholder='City' className="edit-warehouse__warehouse-list-city-input"/>
                                             {this.state.city === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
@@ -200,7 +145,7 @@ class AddNewWarehouse extends React.Component {
                                         </li>
                                         <li className="edit-warehouse__warehouse-list-country">
                                             <label className="edit-warehouse__warehouse-list-country-label">Country</label>
-                                            <input type='text' name="country" value={this.state.country} placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
+                                            <input type='text' name="country" value={this.state.country} onChange={this.changeText} placeholder='Country' className="edit-warehouse__warehouse-list-country-input"/>
                                             {this.state.country === "" && (
                                                 <div className="edit-warehouse__error-container">
                                                     <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
@@ -211,62 +156,64 @@ class AddNewWarehouse extends React.Component {
                                     </ul>
                                 </div>
                                 <div>
-                            <div className="edit-warehouse__border-styling"></div>
-                        </div>
-                        <div className="edit-warehouse__contact-container">
-                            <div className="edit-warehouse__contact-title">
-                                <h2>Contact Details</h2>
-                            </div> 
-                            <ul className="edit-warehouse__contact-list">
-                                <li className="edit-warehouse__contact-list-name">
-                                    <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' name="contact.name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
-                                    {this.state.name === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-position">
-                                    <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
-                                    {this.state.contact.position === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-phone">
-                                    <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
-                                    <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
-                                    {this.state.contact.phone === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-email">
-                                    <label className="edit-warehouse__contact-list-email-label">Email</label>
-                                    <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
-                                    {this.state.contact.email === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="edit-warehouse__button-container">
-                            <button onClick={this.formCancel} className="edit-warehouse__button-cancel">Cancel</button>
-                            <button type="submit" value="add" className="edit-warehouse__button-add">+ Add Warehouse</button>
-                        </div>
-                    </form>
-              </div>
-
+                                    <div className="edit-warehouse__border-styling"></div>
+                                </div>
+                                <div className="edit-warehouse__contact-container">
+                                    <div className="edit-warehouse__contact-title">
+                                        <h2>Contact Details</h2>
+                                    </div> 
+                                    <ul className="edit-warehouse__contact-list">
+                                        <li className="edit-warehouse__contact-list-name">
+                                            <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
+                                            <input type='text' name="name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
+                                            {this.state.name === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-position">
+                                            <label className="edit-warehouse__contact-list-position-label">Position</label>
+                                            <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                            {this.state.contact.position === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-phone">
+                                            <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
+                                            <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
+                                            {this.state.contact.phone === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-email">
+                                            <label className="edit-warehouse__contact-list-email-label">Email</label>
+                                            <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
+                                            {this.state.contact.email === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="edit-warehouse__button-container">
+                                    <button onClick={this.formCancel} className="edit-warehouse__button-cancel">Cancel</button>
+                                    <button type="submit" value="add" className="edit-warehouse__button-add">+ Add Warehouse</button>
+                                </div>
+                            </form>
+                            <div className="footer">
+                                <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
+                            </div>
+                    </div>
         );
     };
 };

@@ -1,26 +1,5 @@
 // @import '../../partials/global';
 
-<<<<<<< HEAD
-.footer__text {
-    font-size: $p3-mobile-fontsize;
-    background-color: $light-grey;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: center;
-    color: $instock-black;
-    padding: 37px;
-    width: stretch;
-    position: absolute;
-    bottom: -275px; /*change this to whatever value works for you*/
-
-    @include tablet {
-        bottom: -50px; /*change this to whatever value works for you*/
-    }
-    @include desktop {
-        bottom: 95px; /*change this to whatever value works for you*/
-    }
-}
-=======
 // .footer__text {
 //     font-size: $p3-mobile-fontsize;
 //     background-color: $light-grey;
@@ -41,4 +20,3 @@
 //         bottom: -205px; /*change this to whatever value works for you*/
 //     }
 // }
->>>>>>> development

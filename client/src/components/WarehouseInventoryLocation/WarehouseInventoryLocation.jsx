@@ -2,12 +2,9 @@ import React from 'react'
 import "./warehouseInventoryLocation.scss"
 import Arrow from "../../assets/icons/arrow_back-24px.svg"
 // import Edit from "../../assets/icons/edit-24px.svg"
-
 function WarehouseInventoryLocation ({warehouse}) {
-  
   console.log(warehouse)
     return (
-    
       // this.props.warehousesList.map((item) => {
         // return (
           <>
@@ -27,7 +24,6 @@ function WarehouseInventoryLocation ({warehouse}) {
             <h3 className="warehouseInventoryLocation__address-heading">WAREHOUSE ADDRESS:</h3>
                 <p className="warehouseInventoryLocation__address">{warehouse.address}</p>
                 <p className="warehouseInventoryLocation__city">{warehouse.city}, {warehouse.country}</p>
-                        
             </div>
             <div className="warehouseInventoryLocation__left-container">
               <div className="warehouseInventoryLocation__contact-name-container">
@@ -54,10 +50,6 @@ function WarehouseInventoryLocation ({warehouse}) {
           </>
         // );
       // })
-
-
   )
-  
 }
-
 export default WarehouseInventoryLocation;

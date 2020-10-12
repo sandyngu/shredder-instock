@@ -2,13 +2,14 @@ import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Inventories from "./components/Inventories/Inventories";
 import WarehousesList from "./components/WarehousesList/WarehousesList";
 import AddNewWarehouse from "./components/AddNewWarehouse/AddNewWarehouse";
 import WarehouseInventory from "./components/WarehouseInventory/WarehouseInventory";
+import EditWarehouse from "./components/EditWarehouse/EditWarehouse";
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 import AddItem from "./components/AddItem/AddItem";
 import EditItem from "./components/EditItem/EditItem";
-import ItemDetails from "./components/ItemDetails/ItemDetails";
-import Inventories from "./components/Inventories/Inventories";
 
 class App extends React.Component {
   render() {
@@ -30,23 +31,35 @@ class App extends React.Component {
               return <WarehousesList />;
             }}
           />
-          {/* <Route
-            exact path="/inventories"
-            component={() => {
-              return <InventoryList />;
-            }}
-          /> */}
           <Route
             exact
             path="/inventories"
-            component={() => {
-              return <Inventories />;
+            render={(routerProps) => {
+              return <Inventories {...routerProps} />;
             }}
           />
           <Route
-            path={`/inventories/:id/:warehouseName`}
+            exact path="/inventories/edititem/:id/:warehouseName"
             render={(routeProps) => {
-              return <ItemDetails {...routeProps} />;
+              return <EditItem {...routeProps}/>;
+            }}
+          />
+          <Route
+            path="/warehouses/add-warehouse"
+            component={() => {
+              return <AddNewWarehouse />;
+            }}
+          />
+          <Route
+            path="/warehouses/edit-warehouse"
+            component={() => {
+              return <EditWarehouse />;
+            }}
+          />
+          <Route
+            path="/inventories/:id/:warehouseName"
+            render={(routeProps) => {
+              return <ItemDetails {...routeProps}/>;
             }}
           />
           <Route
@@ -62,27 +75,17 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/warehouses/add-warehouse"
-            component={() => {
-              return <AddNewWarehouse />;
-            }}
-          />
-          {/* <Route
-            path="/warehouses/edit-warehouse"
-            component={() => {
-              return <EditWarehouse />;
-            }}
-          /> */}
-          <Route
-            exact
-            path="/warehouses/:id"
+
+            path="/inventories/:id"
+
+            // exact path="/inventories/:id/:warehouseName"
+
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
             }}
           />
           <Route
-            exact
-            path="/inventories/:id"
+            path="/warehouses/:id"
             render={(routeProps) => {
               return <WarehouseInventory {...routeProps} />;
             }}
