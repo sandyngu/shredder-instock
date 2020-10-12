@@ -1,12 +1,26 @@
 @import "../../partials/global";
 
 .warehouseInventoryLocation {
-  // position: absolute;
-  z-index: 0;
-  top: 0;
-  margin: 24px;
+  position: absolute;
+  z-index: 2;
+  padding: 10px;
+  width: 1020px;
+  // margin: 24px;
+  background: #ffffff;
+  top: 140px;
+  margin: 0 17px;
+  @include tablet {
+    margin: 0 4% 100px 4%;
+    top: 95px;
+  }
+  @include desktop {
+    margin: 0 10% 150px 10%;
+  }
   &__img-name-container {
     display: flex;
+    @include tablet {
+      height: 30px;
+    }
   }
   &__name-container {
     display: flex;

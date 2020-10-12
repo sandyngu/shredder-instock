@@ -1,15 +1,25 @@
 @import "../../partials/global";
 .delete {
+  background-color: white;
   position: absolute;
-  z-index: 0;
+  z-index: 2;
+
+  border: 1px solid $cloud;
+  width: stretch;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
   padding: 4%;
+
   @include tablet {
-    border: 2px solid red;
-    margin: auto;
+    top: 190px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 672px;
+    // margin: auto;
     width: 77%;
     padding: 2% 2% 4% 8%;
     border-radius: 4px;
@@ -18,7 +28,6 @@
       padding: 1% 1% 2% 4%;
     }
   }
-
   &__close-icon {
     height: 25px;
     margin-left: auto;
