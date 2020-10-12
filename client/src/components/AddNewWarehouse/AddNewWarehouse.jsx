@@ -156,62 +156,64 @@ class AddNewWarehouse extends React.Component {
                                     </ul>
                                 </div>
                                 <div>
-                            <div className="edit-warehouse__border-styling"></div>
-                        </div>
-                        <div className="edit-warehouse__contact-container">
-                            <div className="edit-warehouse__contact-title">
-                                <h2>Contact Details</h2>
-                            </div> 
-                            <ul className="edit-warehouse__contact-list">
-                                <li className="edit-warehouse__contact-list-name">
-                                    <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
-                                    <input type='text' name="name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
-                                    {this.state.name === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-position">
-                                    <label className="edit-warehouse__contact-list-position-label">Position</label>
-                                    <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
-                                    {this.state.contact.position === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-phone">
-                                    <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
-                                    <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
-                                    {this.state.contact.phone === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                                <li className="edit-warehouse__contact-list-email">
-                                    <label className="edit-warehouse__contact-list-email-label">Email</label>
-                                    <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
-                                    {this.state.contact.email === "" && (
-                                                <div className="edit-warehouse__error-container">
-                                                    <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
-                                                    <div className="edit-warehouse__error-msg">This field is required</div>
-                                                </div>
-                                            )}
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="edit-warehouse__button-container">
-                            <button onClick={this.formCancel} className="edit-warehouse__button-cancel">Cancel</button>
-                            <button type="submit" value="add" className="edit-warehouse__button-add">+ Add Warehouse</button>
-                        </div>
-                    </form>
-              </div>
-
+                                    <div className="edit-warehouse__border-styling"></div>
+                                </div>
+                                <div className="edit-warehouse__contact-container">
+                                    <div className="edit-warehouse__contact-title">
+                                        <h2>Contact Details</h2>
+                                    </div> 
+                                    <ul className="edit-warehouse__contact-list">
+                                        <li className="edit-warehouse__contact-list-name">
+                                            <label className="edit-warehouse__contact-list-name-label">Contact Name</label>
+                                            <input type='text' name="name" value={this.state.name} placeholder='Contact Name' className="edit-warehouse__contact-list-name-input"/>
+                                            {this.state.name === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-position">
+                                            <label className="edit-warehouse__contact-list-position-label">Position</label>
+                                            <input type='text' name="position" value={this.state.position} placeholder='Position' className="edit-warehouse__contact-list-position-input"/>
+                                            {this.state.contact.position === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-phone">
+                                            <label className="edit-warehouse__contact-list-phone-label">Phone Number</label>
+                                            <input type='text' name="phone" value={this.state.phone} placeholder='Phone Number' className="edit-warehouse__contact-list-phone-input"/>
+                                            {this.state.contact.phone === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                        <li className="edit-warehouse__contact-list-email">
+                                            <label className="edit-warehouse__contact-list-email-label">Email</label>
+                                            <input type='text' name="email" value={this.state.email} placeholder='Email' className="edit-warehouse__contact-list-email-input"/>
+                                            {this.state.contact.email === "" && (
+                                                        <div className="edit-warehouse__error-container">
+                                                            <img className="edit-warehouse__error-img" src={Exclamation} alt="exclamation"/>
+                                                            <div className="edit-warehouse__error-msg">This field is required</div>
+                                                        </div>
+                                                    )}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="edit-warehouse__button-container">
+                                    <button onClick={this.formCancel} className="edit-warehouse__button-cancel">Cancel</button>
+                                    <button type="submit" value="add" className="edit-warehouse__button-add">+ Add Warehouse</button>
+                                </div>
+                            </form>
+                            <div className="footer">
+                                <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
+                            </div>
+                    </div>
         );
     };
 };
