@@ -6,7 +6,7 @@ import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
 
 function WarehouseListItem(props) {
-    const { name, address, city, country, contact, } = props
+    const { name, address, city, country, contact, id } = props
 
     return (
         <>
@@ -23,7 +23,7 @@ function WarehouseListItem(props) {
                     </div>
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">ADDRESS</h4>
-    <p className="warehouse-list__address">{address}, {city}, {country}</p>
+                        <p className="warehouse-list__address">{address}, {city}, {country}</p>
                     </div>
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">CONTACT NAME</h4>

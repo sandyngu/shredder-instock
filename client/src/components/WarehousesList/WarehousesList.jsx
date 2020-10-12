@@ -54,7 +54,6 @@ class WarehousesList extends React.Component {
         console.log(deletedWarehouse)
         axios.delete('http://localhost:8080/warehouses/')
             .then(res => {
-                console.log(res.data)
                 window.location.reload();
             })
             .catch(err => console.log(err));
@@ -108,13 +107,8 @@ class WarehousesList extends React.Component {
                 </div>
                 <div className="warehouses__divider"></div>
                 {this.state.warehousesList.map(warehouse =>
-                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} />
-                )}
-<<<<<<< HEAD
-=======
-                <DeleteWarehouse display={this.state.display} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} />
->>>>>>> 2535f57e20474707fecb60ba02a8b16154b7bfb6
-            </div>
+                <WarehouseListItem key={warehouse.id} id={warehouse.id} city={warehouse.city} address={warehouse.address} country={warehouse.country} name={warehouse.name} contact={warehouse.contact} display={this.state.display} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} activateModal={this.activateModal} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} />)}
+                <DeleteWarehouse display={this.state.display} singleWarehouse={this.state.singleWarehouse} findWarehouse={this.findWarehouse} deleteWarehouse={this.deleteWarehouse} closeModal={this.closeModal} /></div>
             <div className="empty"></div>
             <div className="footer">
                 <p className="footer__text">© InStock Inc. All Rights Reserved.</p>   
