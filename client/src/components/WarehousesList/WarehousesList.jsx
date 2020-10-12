@@ -52,30 +52,16 @@ class WarehousesList extends React.Component {
             }
         }
         console.log(deletedWarehouse)
-        axios.delete('http://localhost:8080/warehouses', deletedWarehouse)
+        axios.delete('http://localhost:8080/warehouses/')
             .then(res => {
                 console.log(res.data)
                 window.location.reload();
             })
             .catch(err => console.log(err));
     }
-    
-    // updateSingleWarehouse = (id) => {
-    //     axios.get(`/warehouses/${id}`)
-    //     .then(res => {  
-        
-    //       this.setState({
-    //         singleWarehouse: res.data
-    //       });
-    //     })
-    //     .catch(err => console.log(err));
-    //   };
 
     findWarehouse = (id) => {
-        // console.log(id, warehouseID);
-        // console.log(this.props)
         let foundIt = this.state.warehousesList.find(warehouse => warehouse.id === id)
-        console.log(foundIt);
     
         this.setState({
           singleWarehouse: foundIt

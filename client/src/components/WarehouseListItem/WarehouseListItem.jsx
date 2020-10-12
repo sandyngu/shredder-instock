@@ -6,17 +6,17 @@ import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
 
 function WarehouseListItem(props) {
-    const { id, name, address, city, country, contact, } = props
+    const { name, address, city, country, contact, id } = props
 
     return (
         <>
             <div className="warehouse-list">
-                <div className="warehouse-list__container warehouse__hide">
+                <div className="warehouse-list__container">
                     <div className="warehouse-list-info">
                         <h4 className="warehouse-list-info-heading">WAREHOUSE</h4>
                         <div className="warehouse-list__city-container">
-                            <Link to={`/warehouses/${id}`}>
-                                <p className="warehouse-list__city" onClick={() => props.findWarehouse(props.singleWarehouse.id)}>{name}</p>
+                            <Link to={`/warehouses/${name}`}>
+                                <p className="warehouse-list__city">{name}</p>
                             </Link>
                             <img src={Arrow} alt="Arrow Icon" className="warehouse-list__icon warehouse-list__icon-arrow" />
                         </div>
@@ -46,7 +46,7 @@ function WarehouseListItem(props) {
                 <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile warehouse__hide">
                     <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={() => { props.activateModal(); props.findWarehouse(id) }} />
                     <Link to='/warehouses/edit-warehouse'>
-                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" onClick={() => {props.findWarehouse(id)}}/>
+                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" onClick={() => { props.findWarehouse(id) }}/>
                     </Link>
                 </div>
             </div>

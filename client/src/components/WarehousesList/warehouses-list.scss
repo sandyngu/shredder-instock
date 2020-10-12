@@ -170,13 +170,15 @@ button {
 }
 
 .empty {
-    height: 1670px;
+    @include mobile {
+        height: 1640px;
+    }
 
     @include tablet {
-        height: 785px;
+        height: 800px;
     }
     @include desktop {
-        height: 653px;
+        height: 670px;
     }
 }
 

@@ -6,30 +6,28 @@ import Right from "../../assets/icons/chevron_right-24px.svg";
 import {Link} from "react-router-dom";
 import Search from "../../assets/icons/search-24px.svg";
 import "./InventoryList.scss";
-// import axios from "axios";
 import DeleteItem from "../DeleteItem/DeleteItem";
-// import Search from "../../assets/icons/search-24px.svg";
 import axios from "axios"
 
 class InventoryList extends React.Component{
-state={
-  display: false,
-  inventoryList: []
+  state = {
+    inventoryList: [],
+    singleItem: [],
+    search: ''
+  };
 
-}
-componentDidMount() {
-  axios
-    .get("http://localhost:8080/inventories")
-    .then((response) => {
-      console.log(response.data);
-      this.setState({
-        inventoryList: response.data,
+  componentDidMount() {
+    axios
+      .get('http://localhost:8080/inventories')
+      .then((response) => {
+        this.setState({
+          inventoryList: response.data,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-      console.log(this.state);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+
   }
 
 showModal = (e) => {
@@ -38,6 +36,7 @@ showModal = (e) => {
     display: true,
   });
 };
+
 cancelModal = (e) => {
   this.setState({
     display: false,
@@ -56,29 +55,24 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
     quantity: quantity
       }
     
-  axios.delete('http://localhost:8080/inventories', deletedInventory)
+    axios.delete('http://localhost:8080/inventories', deletedInventory)
       .then(res => {
           console.log(res.data)
+          window.location.reload()
       })
       .catch(err => console.log(err));
 }
 
-  findItem = (id, warehouseID) => {
-    // console.log(id, warehouseID);
-    // console.log(this.props)
-    let foundIt = this.props.inventoryList.find(item => item.id === id && item.warehouseID === warehouseID)
-    console.log(foundIt);
-
-    this.setState({
-      singleItem: foundIt
-    })
-  }
-
+findItem = (id, warehouseName) => {
+  window.location = `/inventories/${id}/${warehouseName}`
+}
 
   render(){
+    console.log()
+
     return (
       <>
-        {/* {console.log(this.state)} */}
+        
         <div className="inventoryList">
           <div className="inventoryList__form">
               <h1 className="inventoryList__title">Inventory</h1>
@@ -163,17 +157,16 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
                             alt="Sort Icon"
                           ></img>
                         </h4>
-                        <Link to='/inventories/:id'>
-                          <p className="inventoryList__text inventoryList__item"
-                            onClick={() => this.findItem(item.id, item.warehouseID)}>
-                            {item.itemName}
-                            <img
-                              className="inventoryList__chevron-right-icon"
-                              src={Right}
-                              alt="Chevron Right Icon"
-                            ></img>
-                          </p>
-                        </Link>
+                        <Link>
+                        <p className="inventoryList__text inventoryList__item" onClick={() => { this.findItem(item.id, item.warehouseName)}}>
+                          {item.itemName}
+                          <img
+                            className="inventoryList__chevron-right-icon"
+                            src={Right}
+                            alt="Chevron Right Icon"
+                          ></img>
+                        </p>
+                      </Link>
                       </div>
                       <div className="inventoryList__container">
                         <h4 className="inventoryList__category-heading inventoryList__heading">
@@ -314,4 +307,3 @@ deleteInventory = (id, warehouseID, warehouseName, itemName, description, catego
   }
 }
 export default InventoryList;
-
