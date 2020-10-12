@@ -42,7 +42,7 @@ class AddNewWarehouse extends React.Component {
                 }
                 
             };
-                
+            // I really tried to make this work. 
             // if (e.target.name.value === '') {
             //     this.setState({ name: true });
             // }

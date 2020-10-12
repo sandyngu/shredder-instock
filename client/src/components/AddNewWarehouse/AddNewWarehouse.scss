@@ -3,11 +3,9 @@
 
 .edit-warehouse {
     width: auto;
-    // height: 1073px;
     height: auto;
     margin-top: 0;
     margin-bottom: 96px;
-    // margin-bottom: 126px;
     background: $white;
     box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 3px;
@@ -26,7 +24,6 @@
         left: 123px;
         right: 123px;
         margin-bottom: 0;
-        
     }
     &__header-container {
         display: flex;
@@ -317,7 +314,6 @@
             width: 72px;
             height: 38px;
         }
-
     }
     &__button-add {
         height: 36px;
@@ -340,7 +336,10 @@
 }
 
 .footer {
-    background-color: $white;
+    background-color: $light-grey;
+    @include tablet {
+        margin-top: 200px;
+    }
 }
 input {
     font-family: 'Titillium Web';
@@ -352,8 +351,6 @@ input:focus {
     border-radius: 20px;
     border: 1px solid $instock-indigo;
     outline: none;
-    // field is req: border: $red;
-
   }
 
 ::placeholder {
