@@ -74,6 +74,40 @@ class EditItemForm extends Component {
             })
             .catch(error => console.log(error));
 
+        warehouseName: '',
+    };
+
+    submitForm = async (event) => {
+        event.preventDefault();
+
+            const addItem = {
+                id: uuidv4(),
+                itemName: event.target.itemName.value,
+                description: event.target.description.value,
+                category: event.target.category.value,
+                status: event.target.status.value,
+                quantity: event.target.quantity.value,
+                warehouseName: event.target.warehouseName.value,
+                warehouseID: 'make dynamic'
+            }
+
+            console.log(addItem);
+            await axios.post("http://localhost:8080/inventories", addItem)
+                .then(response => {
+                    console.log(event.target);
+                    this.setState(
+                        {
+                            itemName: '',
+                            description: '',
+                            category: '',
+                            status: '',
+                            quantity: 0,
+                            warehouseName: '',
+                        }
+                    );
+                    //window.location.replace('/');
+                })
+                .catch(error => console.log(error));
     };
 
     getNewInput = event => {
@@ -83,7 +117,6 @@ class EditItemForm extends Component {
     };
 
     render() {
-
         return (
             <>
                 <form className="item-form" onSubmit={this.submitForm} onChange={this.getNewInput}>
@@ -94,7 +127,7 @@ class EditItemForm extends Component {
                             <input className="item-form__input" type="text" name="itemName" required value={this.state.itemName} />
                             {this.state.itemName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error"> This field is required</div>
                                 </div>
                             )}
@@ -102,7 +135,7 @@ class EditItemForm extends Component {
                             <textarea className="item-form__description-input" type="text" name="description" required value={this.state.description} />
                             {this.state.description === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -116,7 +149,7 @@ class EditItemForm extends Component {
                             </select>
                             {this.state.category === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -137,10 +170,11 @@ class EditItemForm extends Component {
                             </div>
                             {this.state.status === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
+
                             <label className="item-form__label">Warehouse</label>
                             <select className="item-form__dropdown" type="text" name="warehouseName" required value={this.state.warehouseName}>
                                 <option type="text" value=''>Please Select</option>
@@ -155,7 +189,7 @@ class EditItemForm extends Component {
                             </select>
                             {this.state.warehouseName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} />
+                                    <img className="item-form__warning" src={Warning} alt="Warning Sign"/>
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -172,4 +206,5 @@ class EditItemForm extends Component {
         )
     }
 }
+
 export default EditItemForm;

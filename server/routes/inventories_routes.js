@@ -12,7 +12,6 @@ router.use(bodyParser.json());
 
 router.get('/', (req, res) => {
     const inventories = JSON.parse(fs.readFileSync("./inventories.json"));
-    console.log(inventories);
     res.send(inventories);
 })
 

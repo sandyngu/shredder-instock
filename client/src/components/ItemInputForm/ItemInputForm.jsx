@@ -129,7 +129,7 @@ class ItemInputForm extends Component {
                                 <option type="text" value="San Fran">San Fran</option>
                                 <option type="text" value="Santa Monica">Santa Monica</option>
                                 <option type="text" value="Seattle">Seattle</option>
-                                <option type="text" value="Montrea">Montreal</option>
+                                <option type="text" value="Montreal">Montreal</option>
                                 <option type="text" value="Boston">Boston</option>
                             </select>
                             {this.state.warehouseName === "" && (

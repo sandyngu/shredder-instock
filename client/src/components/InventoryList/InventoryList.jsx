@@ -143,7 +143,7 @@ findItem = (id, warehouseName) => {
               <h4 className="inventoryList__category-title inventoryList__category-actions">ACTIONS</h4>
             </div>
           </div>
-          {this.props.inventoryList.map((item) => {
+          {this.state.inventoryList.map((item) => {
             return (
               <>
                 <div className="inventoryList__main">
@@ -294,7 +294,6 @@ findItem = (id, warehouseName) => {
                     cancelModal={this.cancelModal} 
                   />
                 </div>
-                {console.log(this.deleteInventory)}
               </>
             );
           })}

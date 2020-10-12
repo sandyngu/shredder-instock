@@ -5,6 +5,7 @@ import InventoryList from '../InventoryList/InventoryList';
 class Inventories extends React.Component {
   state = {
     inventoryList: [],
+    warehousesList: [],
     singleItem: [],
     search: ''
   };
