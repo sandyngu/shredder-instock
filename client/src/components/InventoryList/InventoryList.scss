@@ -318,15 +318,7 @@ button {
   border: none;
   background: none;
 }
-.empty {
-  height: 4000px;
-  @include tablet {
-    height: 1000px;
-  }
-  @include desktop {
-    height: 1000px;
-  }
-}
+
 .footer__text {
   font-size: $p3-mobile-fontsize;
   background-color: $light-grey;

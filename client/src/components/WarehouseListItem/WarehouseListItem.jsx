@@ -4,7 +4,6 @@ import Delete from '../../assets/icons/delete_outline-24px.svg';
 import Edit from '../../assets/icons/edit-24px.svg';
 import Arrow from '../../assets/icons/chevron_right-24px.svg';
 import './warehouse-list-item.scss';
-import DeleteWarehouse from '../DeleteWarehouse/DeleteWarehouse';
 
 function WarehouseListItem(props) {
     const { name, address, city, country, contact, } = props
@@ -38,43 +37,19 @@ function WarehouseListItem(props) {
                         </div>
                     </div>
                     <div className="warehouse-list__icon-container warehouse-list__icon-container-desktab">
-                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
+                        <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={() => { props.activateModal(); props.findWarehouse(id) }} />
                         <Link to='/warehouses/edit-warehouse'>
                             <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
                         </Link>
                     </div>
                 </div>
                 <div className="warehouse-list__icon-container warehouse-list__icon-container-mobile warehouse__hide">
-                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={(e) => {props.activateModal()}}/>
+                    <img src={Delete} alt="Delete Icon" className="warehouse-list__icon warehouse-list__icon-delete" onClick={() => { props.activateModal(); props.findWarehouse(id) }} />
                     <Link to='/warehouses/edit-warehouse'>
-                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" />
+                        <img src={Edit} alt="Edit Icon" className="warehouse-list__icon warehouse-list__icon-edit" onClick={() => { props.findWarehouse(id) }}/>
                     </Link>
                 </div>
-               {/* <div>
-                   <h1>
-                        {name}
-                   </h1>
-                   <button>Edit</button>
-               </div>
-               <hr/>
-               <div>
-                   <h3>WAREHOUSE ADDRESS:</h3>
-                    <p>{address}</p>
-                    <p>{city}</p>
-                    <p>{country}</p>
-                    
-               </div>
-               <div>
-                   <h3>CONTACT NAME:</h3>
-                    <p>{contact.name}</p> 
-               </div>
-               <div>
-                    <h3>CONTACT INFORMATION</h3>
-                    <p>{contact.phone}</p>
-                    <p>{contact.email}</p>
-               </div> */}
             </div>
-            <DeleteWarehouse display={props.display}  city={city} address={address} country={country} name={name} contact={contact} deleteWarehouse= {props.deleteWarehouse} closeModal={props.closeModal} />
         </>
     )
 };

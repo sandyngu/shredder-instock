@@ -1,6 +1,6 @@
 @import  '../../partials/global';
 
-.item-form{
+.edit-item-form{
     display:flex;
     flex-direction: column;
     @include tablet{
@@ -130,7 +130,6 @@
         justify-content: space-between;
         align-items: center;
         height:68px;
-        background-color:$light-grey;
         padding-left:5%;
         padding-right:5%;
         margin: 7% 0 0 0;
@@ -144,19 +143,19 @@
                 height:36px;
                 max-height:36px;
                 border-radius:20px;
-                width:50%;
+                width:48%;
                 border: 1px solid $cloud;
                 @include tablet {
                     width:45%;
                 }
             }
-            &-add{
+            &-save{
                 background-color:$instock-indigo;
                 color:$white;
                 height:36px;
                 max-height:36px;
                 border-radius:20px;
-                width:45%;
+                width:48%;
                 border:none;
             }
             &-box{
@@ -191,7 +190,7 @@ select{
     color:$slate;
     padding-left:5%;
     appearance: none;
-    background-image:url(../../assets/icons/arrow_drop_down-24px.svg);
+    background-image:url('../../assets/icons/arrow_drop_down-24px.svg');
     background-repeat:no-repeat;
     background-position: 96% 50%;
 }
