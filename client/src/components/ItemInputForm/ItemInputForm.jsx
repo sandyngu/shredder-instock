@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './ItemInputForm.scss';
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
@@ -67,7 +68,7 @@ class ItemInputForm extends Component {
                             <input className="item-form__input" type="text" placeHolder="Item Name" name="itemName" required value={this.state.itemName} />
                             {this.state.itemName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <div className="item-form__error"> This field is required</div>
                                 </div>
                             )}
@@ -75,7 +76,7 @@ class ItemInputForm extends Component {
                             <textarea className="item-form__description-input" type="text" placeHolder="Please enter a brief item description..." name="description" required value={this.state.description} />
                             {this.state.description === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -89,7 +90,7 @@ class ItemInputForm extends Component {
                             </select>
                             {this.state.category === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
@@ -110,13 +111,13 @@ class ItemInputForm extends Component {
                             </div>
                             {this.state.status === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
                             {this.state.status === 'In Stock' && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <label className="item-form__label">Quantity</label>
                                     <input className="item-form__input" type="number" placeHolder="0" name="quantity" required value={this.state.quantity} />
                                 </div>)}
@@ -134,7 +135,7 @@ class ItemInputForm extends Component {
                             </select>
                             {this.state.warehouseName === "" && (
                                 <div className="item-form__error-box">
-                                    <img className="item-form__warning" src={Warning} alt="warning" />
+                                    <img className="item-form__warning" src={Warning} />
                                     <div className="item-form__error">This field is required</div>
                                 </div>
                             )}
