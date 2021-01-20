@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "homepage": "https://sandyngu.github.io/shredder-instock/",
   "version": "1.0.0",
   "description": "instock",
   "main": "server.js",
