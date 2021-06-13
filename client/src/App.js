@@ -18,7 +18,6 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route
-            exact
             path="/"
             component={() => {
               return <WarehousesList />;
