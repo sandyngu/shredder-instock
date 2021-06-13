@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/shredder-instock/static/css/main.a11ae52a.chunk.css",
-    "main.js": "/shredder-instock/static/js/main.c2661200.chunk.js",
-    "main.js.map": "/shredder-instock/static/js/main.c2661200.chunk.js.map",
+    "main.js": "/shredder-instock/static/js/main.0a2daecb.chunk.js",
+    "main.js.map": "/shredder-instock/static/js/main.0a2daecb.chunk.js.map",
     "runtime-main.js": "/shredder-instock/static/js/runtime-main.9168b42e.js",
     "runtime-main.js.map": "/shredder-instock/static/js/runtime-main.9168b42e.js.map",
     "static/js/2.96691b60.chunk.js": "/shredder-instock/static/js/2.96691b60.chunk.js",
     "static/js/2.96691b60.chunk.js.map": "/shredder-instock/static/js/2.96691b60.chunk.js.map",
     "index.html": "/shredder-instock/index.html",
-    "precache-manifest.b215e85bfb6b9106124c581328aeaf44.js": "/shredder-instock/precache-manifest.b215e85bfb6b9106124c581328aeaf44.js",
+    "precache-manifest.166b28ce5ab799f2910967213d209e99.js": "/shredder-instock/precache-manifest.166b28ce5ab799f2910967213d209e99.js",
     "service-worker.js": "/shredder-instock/service-worker.js",
     "static/css/main.a11ae52a.chunk.css.map": "/shredder-instock/static/css/main.a11ae52a.chunk.css.map",
     "static/js/2.96691b60.chunk.js.LICENSE.txt": "/shredder-instock/static/js/2.96691b60.chunk.js.LICENSE.txt",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.9168b42e.js",
     "static/js/2.96691b60.chunk.js",
     "static/css/main.a11ae52a.chunk.css",
-    "static/js/main.c2661200.chunk.js"
+    "static/js/main.0a2daecb.chunk.js"
   ]
 }

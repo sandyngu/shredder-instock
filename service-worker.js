@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shredder-instock/precache-manifest.b215e85bfb6b9106124c581328aeaf44.js"
+  "/shredder-instock/precache-manifest.166b28ce5ab799f2910967213d209e99.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "648879a628468bfca7203bf75b4ba81e",
+    "revision": "a1b094fa24ad95f490471abaf92bea21",
     "url": "/shredder-instock/index.html"
   },
   {
-    "revision": "7b2c01385a174f394d16",
+    "revision": "caf20db8e3e41920207a",
     "url": "/shredder-instock/static/css/main.a11ae52a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shredder-instock/static/js/2.96691b60.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7b2c01385a174f394d16",
-    "url": "/shredder-instock/static/js/main.c2661200.chunk.js"
+    "revision": "caf20db8e3e41920207a",
+    "url": "/shredder-instock/static/js/main.0a2daecb.chunk.js"
   },
   {
     "revision": "8a054dc97951b48f74a6",
